@@ -131,7 +131,7 @@
             background: #fff; border-radius: 20px; width: 90%; max-width: 480px; padding: 2rem;
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2); animation: modalUp 0.25s ease-out;
         }
-        @keyframes modalUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        @keyframes modalUp { from { transform: translateY(20px); opacity: 1; } to { transform: translateY(0); opacity: 1; } }
         .modal-title { font-size: 1.25rem; font-weight: 800; margin-bottom: 0.2rem; color: var(--text-main); }
         .modal-sub { font-size: 0.85rem; color: var(--text-sub); margin-bottom: 1.5rem; line-height: 1.4; }
         .modal-group { margin-bottom: 1rem; text-align: left; }
@@ -298,9 +298,8 @@
 </div>
 
 <script>
-// ★★★ 사장님의 Formspree 발급 엔드포인트 ★★★
+    // 사장님의 Formspree 발급 엔드포인트
     const FORMSPREE_ENDPOINT = "https://formspree.io/f/mnpjzgka";
-
 
     const CATEGORY_REGISTRY = [
         {
@@ -647,7 +646,9 @@
         document.getElementById('view-result').style.display = 'flex';
     }
 
+    // 대표 제휴처 및 플랫폼 매핑 레지스트리
     const REAL_WORLD_SOLUTIONS = {
+        // [초심자/홈트/운동 채널]
         "홈트": {
             name: "이지은 다이어트 (YouTube 공식 채널)",
             url: "https://www.youtube.com/@Jieun_Diet",
@@ -668,6 +669,8 @@
             url: "https://www.da-gym.co.kr",
             desc: "내 위치 기반 검증된 헬스장 및 1:1 초심자 PT 센터 찾기"
         },
+
+        // [식단/도시락/밀키트 커머스]
         "식단": {
             name: "랭킹닭컴 (Rankingdak)",
             url: "https://www.rankingdak.com",
@@ -693,6 +696,8 @@
             url: "https://drdiary.co.kr",
             desc: "연속혈당측정기(CGM) 센서 기반 실시간 혈당 케어"
         },
+
+        // [심리/행동/의학]
         "심리": {
             name: "마인드카페 (Mindcafe)",
             url: "https://mindcafe.co.kr",
@@ -712,6 +717,23 @@
             name: "굿닥 (Goodoc)",
             url: "https://www.goodoc.co.kr",
             desc: "내분비내과 및 대사 기능의학 전문 병의원 비대면 예약"
+        },
+
+        // [법률 / 금융]
+        "변호사": {
+            name: "로톡 (Lawtalk)",
+            url: "https://www.lawtalk.co.kr",
+            desc: "분야별 전문 변호사 15분 전화상담"
+        },
+        "법률": {
+            name: "로톡 (Lawtalk)",
+            url: "https://www.lawtalk.co.kr",
+            desc: "분야별 전문 변호사 15분 전화상담"
+        },
+        "재테크": {
+            name: "핀다 (Finda)",
+            url: "https://www.finda.co.kr",
+            desc: "대출 비교 및 개인 재정 건전성 분석"
         }
     };
 
@@ -721,6 +743,7 @@
         
         let targetSolution = null;
 
+        // 1. 등록된 대표 제휴 서비스 키워드 매칭
         for (const [key, sol] of Object.entries(REAL_WORLD_SOLUTIONS)) {
             if (title.includes(key) || desc.includes(key)) {
                 targetSolution = sol;
@@ -728,18 +751,19 @@
             }
         }
 
+        // 2. 일치 항목 부재 시 진단명 기반 동적 폴백 (엉뚱한 식단관 완전 제거)
         if (!targetSolution) {
             if (badge.includes('주요') || badge.includes('Primary')) {
                 targetSolution = {
-                    name: "유튜브 인기 홈트레이닝 채널",
-                    url: `https://www.youtube.com/results?search_query=${encodeURIComponent(title + ' 홈트')}`,
-                    desc: "집에서 비용 없이 바로 시작할 수 있는 검증된 홈트레이닝 가이드"
+                    name: `${title} 관련 전문 채널`,
+                    url: `https://www.youtube.com/results?search_query=${encodeURIComponent(title + ' 극복 가이드')}`,
+                    desc: "집에서 비용 없이 바로 참고할 수 있는 검증된 전문가 영상"
                 };
             } else {
                 targetSolution = {
-                    name: "네이버 스마트스토어 공식 식단관",
-                    url: `https://search.shopping.naver.com/search/all?query=${encodeURIComponent('다이어트 건강 식단 도시락')}`,
-                    desc: "구매 후기 평점 4.8 이상 검증된 클린 다이어트 식단"
+                    name: `${title} 전문 솔루션`,
+                    url: `https://search.shopping.naver.com/search/all?query=${encodeURIComponent(title)}`,
+                    desc: "후기와 평점으로 검증된 맞춤 솔루션 및 도서/프로그램"
                 };
             }
         }
@@ -747,7 +771,7 @@
         const separator = targetSolution.url.includes('?') ? '&' : '?';
         const trackingUrl = targetSolution.url.includes('youtube.com') 
             ? targetSolution.url 
-            : `${targetSolution.url}${separator}utm_source=map-of-the-soul&utm_medium=referral&utm_campaign=diet_solutions`;
+            : `${targetSolution.url}${separator}utm_source=map-of-the-soul&utm_medium=referral&utm_campaign=life_solutions`;
 
         return `
             <div class="biz-item">
@@ -774,7 +798,7 @@
         document.getElementById('request-modal').style.display = 'none';
     }
 
-    // 실제 이메일 전송 API 연동 함수
+    // 실제 이메일 전송 API 연동
     async function submitWorryRequest() {
         const topic = document.getElementById('modal-topic').value.trim();
         const desc = document.getElementById('modal-desc').value.trim();
@@ -790,7 +814,7 @@
         submitBtn.innerHTML = `전송 중... <span class="en-sub" style="color:#fff; margin:0;">Sending...</span>`;
 
         try {
-            // 1. Formspree API를 통해 사장님 메일함으로 즉각 데이터 발송
+            // Formspree API 실시간 전송
             const response = await fetch(FORMSPREE_ENDPOINT, {
                 method: "POST",
                 headers: {
@@ -806,7 +830,7 @@
                 })
             });
 
-            // 2. 브라우저 로컬 저장소에도 백업 저장
+            // 로컬 브라우저 백업 보관
             const currentRequests = JSON.parse(localStorage.getItem('mots_user_requests') || '[]');
             currentRequests.push({ topic, desc, contact, createdAt: new Date().toISOString() });
             localStorage.setItem('mots_user_requests', JSON.stringify(currentRequests));
