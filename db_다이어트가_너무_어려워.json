@@ -1,0 +1,839 @@
+{
+  "category": "다이어트 어려움",
+  "category_en": "Weight Management & Diet Difficulties",
+  "questions": {
+    "Q_START": {
+      "text": "다이어트를 시도하거나 유지할 때 현재 가장 큰 걸림돌은 무엇인가요?",
+      "options": [
+        {
+          "text": "다이어트를 시작하려는데 운동/식단 중 뭐부터 해야 할지 막막하다",
+          "nextNodeId": "Q_BEGINNER"
+        },
+        {
+          "text": "적게 먹어도 살이 안 빠지거나 생리 주기·붓기·피로 때문에 몸이 무겁다",
+          "nextNodeId": "Q_METABOLIC"
+        },
+        {
+          "text": "폭식 충동, 요요, 의지력 고갈 등 매번 심리적으로 무너진다",
+          "nextNodeId": "Q_PSYCH"
+        }
+      ]
+    },
+    "Q_BEGINNER": {
+      "text": "다이어트 초입에서 가장 헷갈리거나 어려운 우선순위는 어디인가요?",
+      "options": [
+        {
+          "text": "식단을 어떻게 짜야 하는지 몰라 굶거나 극단적으로 제한하게 된다",
+          "nextNodeId": "Q_BEG_DIET"
+        },
+        {
+          "text": "운동을 전혀 안 해봤거나 체력이 없어 헬스장 등록이 부담스럽다",
+          "nextNodeId": "Q_BEG_WORKOUT"
+        },
+        {
+          "text": "정보가 너무 많아 어떤 방법이 내 몸에 맞는지 기준을 못 잡겠다",
+          "nextNodeId": "Q_BEG_PLAN"
+        }
+      ]
+    },
+    "Q_BEG_DIET": {
+      "text": "현재 식사 패턴에서 가장 먼저 겪는 어려움은 무엇인가요?",
+      "options": [
+        {
+          "text": "칼로리 계산과 영양소 비율을 전혀 몰라 무엇을 먹어야 할지 모른다",
+          "nextNodeId": "Q_BEG_CALORIE"
+        },
+        {
+          "text": "배달음식이나 외식이 잦아 식단 관리를 시작할 엄두가 안 난다",
+          "nextNodeId": "Q_BEG_MEAL_ENV"
+        }
+      ]
+    },
+    "Q_BEG_CALORIE": {
+      "text": "하루 끼니를 챙길 때 주로 어떤 형태를 취하시나요?",
+      "options": [
+        {
+          "text": "불규칙하게 굶다가 한 끼에 몰아서 먹는 편이다",
+          "resultId": "R_01"
+        },
+        {
+          "text": "삼시 세끼를 먹지만 탄수화물이나 간식 위주로 채워진다",
+          "resultId": "R_02"
+        }
+      ]
+    },
+    "Q_BEG_MEAL_ENV": {
+      "text": "외식이나 배달 환경에서 식단을 바꿀 때 가장 큰 장벽은 무엇인가요?",
+      "options": [
+        {
+          "text": "직접 요리할 시간이나 여유가 전혀 없다",
+          "resultId": "R_03"
+        },
+        {
+          "text": "식단 메뉴를 고를 때 건강한 선택지를 구별하지 못하겠다",
+          "resultId": "R_04"
+        }
+      ]
+    },
+    "Q_BEG_WORKOUT": {
+      "text": "현재 본인의 신체 활동 수준은 어느 정도인가요?",
+      "options": [
+        {
+          "text": "하루 5,000보 미만으로 걷고 좌식 생활이 대부분이다",
+          "resultId": "R_05"
+        },
+        {
+          "text": "기본 걷기는 하지만 근력 운동은 기구 사용법조차 전혀 모른다",
+          "resultId": "R_06"
+        }
+      ]
+    },
+    "Q_BEG_PLAN": {
+      "text": "다이어트 목표를 세울 때 어떤 어려움을 느끼시나요?",
+      "options": [
+        {
+          "text": "단기간에 몇 kg을 빼야 한다는 무리한 목표를 세워 조급해진다",
+          "resultId": "R_07"
+        },
+        {
+          "text": "내 현재 기초대사량과 체지방 상태를 전혀 측정해보지 않았다",
+          "resultId": "R_08"
+        }
+      ]
+    },
+    "Q_METABOLIC": {
+      "text": "체중 감량이 정체되거나 신체 이상이 느껴지는 주된 양상은 무엇인가요?",
+      "options": [
+        {
+          "text": "칼로리를 줄였는데도 체중이 요지부동이거나 추위·피로가 심하다",
+          "nextNodeId": "Q_MET_THYROID"
+        },
+        {
+          "text": "식후에 급격히 졸립거나 공복 시 손 떨림·당 갈망이 심하다",
+          "nextNodeId": "Q_MET_GLUCOSE"
+        },
+        {
+          "text": "생리 전후로 체중이 급증하거나 복부 지방이 유독 빠지지 않는다",
+          "nextNodeId": "Q_MET_HORMONE"
+        }
+      ]
+    },
+    "Q_MET_THYROID": {
+      "text": "과거 다이어트 시 식이 제한을 얼마나 지속하셨나요?",
+      "options": [
+        {
+          "text": "초저열량(1,000kcal 미만) 식단을 수개월간 반복해왔다",
+          "resultId": "R_09"
+        },
+        {
+          "text": "식단 제한과 무관하게 만성 무기력과 부종이 지속된다",
+          "resultId": "R_10"
+        }
+      ]
+    },
+    "Q_MET_GLUCOSE": {
+      "text": "혈당 불안정 증상이 주로 나타나는 타이밍은 언제인가요?",
+      "options": [
+        {
+          "text": "탄수화물 위주 식사 후 1~2시간 뒤 극심한 식곤증과 허기가 온다",
+          "nextNodeId": "Q_GLU_SPIKE"
+        },
+        {
+          "text": "공복 시간이 4시간 이상 길어지면 두통과 어지럼증이 생긴다",
+          "nextNodeId": "Q_GLU_DIP"
+        }
+      ]
+    },
+    "Q_GLU_SPIKE": {
+      "text": "정밀 대사 검사나 연속혈당 측정을 받아보신 적이 있나요?",
+      "options": [
+        {
+          "text": "받아본 적 없으며 식단 순서 교정부터 시도하고 싶다",
+          "resultId": "R_11"
+        },
+        {
+          "text": "인슐린 저항성이나 당뇨 전단계가 강력히 의심된다",
+          "resultId": "R_12"
+        }
+      ]
+    },
+    "Q_GLU_DIP": {
+      "text": "단 음식이나 단순당 간식을 섭취했을 때의 반응은 어떤가요?",
+      "options": [
+        {
+          "text": "단것을 먹어야만 손 떨림이 멈추고 안정을 찾는다",
+          "resultId": "R_13"
+        },
+        {
+          "text": "식사를 정기적으로 챙겨도 저혈당 유사 증상이 반복된다",
+          "resultId": "R_14"
+        }
+      ]
+    },
+    "Q_MET_HORMONE": {
+      "text": "호르몬과 연관된 체형 및 주기 문제는 어떤 형태인가요?",
+      "options": [
+        {
+          "text": "생리 1~2주 전 식욕 폭발과 부종으로 감량 흐름이 끊긴다",
+          "nextNodeId": "Q_HORM_PMS"
+        },
+        {
+          "text": "수면 부족과 만성 스트레스로 복부 내장지방만 집중 축적된다",
+          "nextNodeId": "Q_HORM_CORTISOL"
+        }
+      ]
+    },
+    "Q_HORM_PMS": {
+      "text": "생리 주기별 맞춤 영양이나 사이클 다이어트를 실천해 보셨나요?",
+      "options": [
+        {
+          "text": "주기별 호르몬 변화에 맞는 식단과 영양소 보충이 필요하다",
+          "resultId": "R_15"
+        },
+        {
+          "text": "여성 호르몬 불균형 검진 및 정밀 상담을 원한다",
+          "resultId": "R_16"
+        }
+      ]
+    },
+    "Q_HORM_CORTISOL": {
+      "text": "평소 수면 시간과 스트레스 강도는 어느 정도인가요?",
+      "options": [
+        {
+          "text": "하루 6시간 미만 수면으로 식욕 호르몬(렙틴/그렐린) 교란이 심하다",
+          "resultId": "R_17"
+        },
+        {
+          "text": "만성 스트레스로 인한 부신 피로와 코르티솔 과다 분비가 의심된다",
+          "resultId": "R_18"
+        }
+      ]
+    },
+    "Q_PSYCH": {
+      "text": "심리적 무너짐이 일어나는 가장 주된 패턴은 무엇인가요?",
+      "options": [
+        {
+          "text": "억제하던 식욕이 터져 폭식한 뒤 극심한 죄책감과 보상행동이 온다",
+          "nextNodeId": "Q_PSY_BINGE"
+        },
+        {
+          "text": "식단을 조금만 어겨도 '이번 다이어트는 끝났다'며 포기해버린다",
+          "nextNodeId": "Q_PSY_ALLORNOTHING"
+        },
+        {
+          "text": "감량 후 원래 식단으로 돌아오면 바로 체중이 튀어 오르는 요요가 반복된다",
+          "nextNodeId": "Q_PSY_YOYO"
+        }
+      ]
+    },
+    "Q_PSY_BINGE": {
+      "text": "폭식 후 주로 어떤 대처를 취하시나요?",
+      "options": [
+        {
+          "text": "다음 날 끼니를 굶거나 과도하게 운동하여 만회하려 한다",
+          "resultId": "R_19"
+        },
+        {
+          "text": "세로토닌 저하로 감정적 허기를 음식으로만 달래려 한다",
+          "resultId": "R_20"
+        },
+        {
+          "text": "자책감에 빠져 며칠 동안 폭식을 이어간다",
+          "resultId": "R_21"
+        }
+      ]
+    },
+    "Q_PSY_ALLORNOTHING": {
+      "text": "식단 계획을 지킬 때 본인의 사고방식은 어느 쪽에 가깝나요?",
+      "options": [
+        {
+          "text": "100% 완벽하게 지키지 못하면 실패했다고 규정하는 흑백논리다",
+          "resultId": "R_22"
+        },
+        {
+          "text": "단 한 끼의 실패 후 다음 끼니로 자연스럽게 리셋하는 유연성이 없다",
+          "resultId": "R_23"
+        }
+      ]
+    },
+    "Q_PSY_YOYO": {
+      "text": "목표 체중에 도달했거나 식이를 정상화할 때 어떤 문제가 발생하나요?",
+      "options": [
+        {
+          "text": "단계적 칼로리 증량(리피딩) 원리를 몰라 급격히 지방이 붙는다",
+          "nextNodeId": "Q_YOYO_REFEED"
+        },
+        {
+          "text": "목표 달성 직후 보상심리와 긴장 해제로 이전 생활로 즉각 회귀한다",
+          "nextNodeId": "Q_YOYO_MAINTAIN"
+        }
+      ]
+    },
+    "Q_YOYO_REFEED": {
+      "text": "현재 필요한 회복 전략은 무엇인가요?",
+      "options": [
+        {
+          "text": "기초대사량을 복구하기 위한 단계적 칼로리 증량 가이드가 필요하다",
+          "resultId": "R_24"
+        },
+        {
+          "text": "평생 유지 가능한 적정 칼로리 식단 구조로 전환하고 싶다",
+          "resultId": "R_25"
+        }
+      ]
+    },
+    "Q_YOYO_MAINTAIN": {
+      "text": "체중 유지 기간 동안 겪는 인지적 혼란은 무엇인가요?",
+      "options": [
+        {
+          "text": "감량 종료 후 체중계 숫자가 조금만 흔들려도 공포를 느낀다",
+          "resultId": "R_26"
+        },
+        {
+          "text": "체중 감량 자체를 목표로 삼아 유지 단계의 새로운 동기가 없다",
+          "resultId": "R_27"
+        },
+        {
+          "text": "체중 중심에서 건강 지표 중심으로 목표를 재정의하지 못했다",
+          "resultId": "R_28"
+        }
+      ]
+    }
+  },
+  "solutions": {
+    "R_01": {
+      "title": "초심자 규칙 식사 리셋 처방",
+      "diagnosis": "불규칙한 단식과 폭식으로 체내 인슐린 변동성과 지방 축적 효율이 극대화된 상태임",
+      "cbt_analysis": "'한 끼 굶으면 살 빠진다'는 인지 오류가 과식을 유도하므로 식사 규칙성부터 확립해야 함",
+      "short_term_action": "기상 후 취침 전까지 4~5시간 간격의 고정 식사 시간을 정하고 알람을 설정하십시오",
+      "mid_term_action": "최소 3주간 정해진 시간에 식사하는 루틴을 유지하여 대사 리듬을 정상화하십시오"
+    },
+    "R_02": {
+      "title": "초심자 탄단지 밸런스 처방",
+      "diagnosis": "단백질과 섬유질 결핍, 정제 탄수화물 과잉으로 잦은 허기와 지방 축적이 유발되는 상태임",
+      "cbt_analysis": "'밥만 덜 먹으면 된다'는 단순화 오류를 교정하고 단백질의 포만감 효과를 인지해야 함",
+      "short_term_action": "매 끼니 손바닥 크기의 단백질(닭가슴살, 계란, 두부 등)을 반드시 먼저 배치하십시오",
+      "mid_term_action": "식판 구조(채소 50%, 단백질 25%, 복합탄수 25%)를 시각화하여 식습관을 고착화하십시오"
+    },
+    "R_03": {
+      "title": "바쁜 직장인 밀키트/클린 외식 처방",
+      "diagnosis": "요리 환경 부재로 가공식품과 고나트륨 외식에 노출되어 다이어트 진입 장벽이 높은 상태임",
+      "cbt_analysis": "'직접 요리하지 않으면 다이어트는 불가능하다'는 비합리적 신념을 버려야 함",
+      "short_term_action": "정기 배송 다이어트 도시락 또는 샐러드 밀키트를 즉시 1주일 단위로 구독하십시오",
+      "mid_term_action": "자주 가는 식당 5곳에서 건강 메뉴(포케, 백반 단백질 위주 등)를 기본 선택지로 지정하십시오"
+    },
+    "R_04": {
+      "title": "초심자 외식 스마트 선택 처방",
+      "diagnosis": "메뉴 선택 시 숨겨진 당류와 단순 탄수화물을 구별하지 못해 체중이 감량되지 않는 상태임",
+      "cbt_analysis": "'다이어트 메뉴는 맛없다'는 선입견 대신 클린한 일반식을 선별하는 안목을 길러야 함",
+      "short_term_action": "국물 요리의 국물 남기기, 소스 따로 요청하기 원칙을 오늘 식사부터 적용하십시오",
+      "mid_term_action": "영양 성분표 확인 습관을 들이고 영양 코치와 함께 주간 외식 가이드를 확립하십시오"
+    },
+    "R_05": {
+      "title": "초심자 생활 활동량(NEAT) 극대화 처방",
+      "diagnosis": "극단적 좌식 생활로 비운동성 활동 열량 소비(NEAT)가 극도로 저하된 상태임",
+      "cbt_analysis": "'헬스장에서 땀을 뻘뻘 흘려야만 살이 빠진다'는 운동 강박 인지를 해체해야 함",
+      "short_term_action": "스마트워치나 폰으로 하루 7,000보 걷기 목표를 설정하고 엘리베이터 대신 계단을 이용하십시오",
+      "mid_term_action": "점심 식후 15분 걷기와 출퇴근 한 정거장 먼저 내리기를 4주간 자동화하십시오"
+    },
+    "R_06": {
+      "title": "초심자 기초 근력 입문 처방",
+      "diagnosis": "근육 자극 경험 부족으로 기구 운동에 대한 심리적 두려움과 부상 위험이 있는 상태임",
+      "cbt_analysis": "'헬스장은 몸 좋은 사람들만 가는 곳'이라는 사회적 비교 왜곡을 교정해야 함",
+      "short_term_action": "집에서 맨몸 스쿼트 15회 3세트 및 벽 대고 팔굽혀펴기를 오늘 밤 즉시 시작하십시오",
+      "mid_term_action": "전문 트레이너와 함께 기본 5대 다관절 운동 자세를 1:1로 학습하여 기립 안정성을 확보하십시오"
+    },
+    "R_07": {
+      "title": "현실적 마이크로 골(Goal) 수립 처방",
+      "diagnosis": "비현실적 단기 감량 목표로 인해 쉽게 좌절하고 다이어트를 포기하는 조급증 상태임",
+      "cbt_analysis": "'한 달에 10kg을 빼야 의미가 있다'는 마법적 사고가 반복 실패의 원인임을 자각해야 함",
+      "short_term_action": "체중의 5% 감량을 3개월 목표로 재설정하고 이번 주 행동 목표(물 1.5L 마시기)를 정하십시오",
+      "mid_term_action": "숫자 중심 목표를 행동 습관 달성률 중심으로 전환하여 지속적인 자기 효능감을 형성하십시오"
+    },
+    "R_08": {
+      "title": "기초 체성분 및 대사 기준점 진단 처방",
+      "diagnosis": "자신의 체지방률, 골격근량, 기초대사량을 파악하지 못한 채 막연한 짐작으로 다이어트하는 상태임",
+      "cbt_analysis": "'막연한 두려움'으로 측정을 회피하는 행동을 중단하고 객관적 수치를 마주해야 함",
+      "short_term_action": "보건소나 피트니스 센터에서 인바디 체성분 검사를 즉시 측정하고 결과를 기록하십시오",
+      "mid_term_action": "체성분 데이터를 기반으로 1일 목표 섭취 칼로리와 단백질 요구량을 정밀 설계하십시오"
+    },
+    "R_09": {
+      "title": "만성 저칼로리 대사 적응 회복 처방",
+      "diagnosis": "극단적 절식 반복으로 신체가 기아 모드에 돌입하여 기초대사량이 급락한 상태임",
+      "cbt_analysis": "'덜 먹으면 빠진다'는 단순 셈법이 오히려 대사를 억제한다는 생리학적 사실을 수용해야 함",
+      "short_term_action": "극단적 절식을 즉시 중단하고 최소 기초대사량 수준까지 칼로리를 복구하십시오",
+      "mid_term_action": "복합 탄수화물과 근력 운동을 결합하여 8주간 대사율을 정상 기준선으로 끌어올리십시오"
+    },
+    "R_10": {
+      "title": "갑상선 및 대사 기능 혈액 검사 처방",
+      "diagnosis": "식이 조절에도 체중 감량이 전혀 없으며 추위, 부종, 극심한 피로가 동반되는 호르몬 저하 의심 상태임",
+      "cbt_analysis": "'내 노력이 부족해서 안 빠진다'는 자책을 멈추고 생물학적 원인을 규명해야 함",
+      "short_term_action": "내분비내과 또는 기능의학 클리닉에서 갑상선 호르몬(TSH, fT3, fT4) 검사를 예약하십시오",
+      "mid_term_action": "검사 결과에 따라 전문의 치료와 함께 요오드, 셀레늄 등 대사 필수 미네랄을 보충하십시오"
+    },
+    "R_11": {
+      "title": "혈당 스파이크 식사 순서 처방",
+      "diagnosis": "탄수화물 단독 섭취로 혈당이 급등락하며 졸음, 피로, 가짜 배고픔이 유발되는 상태임",
+      "cbt_analysis": "'배고프면 무조건 먹어야 한다'는 반응적 인지를 식사 순서 제어 전략으로 대체해야 함",
+      "short_term_action": "식사 시 [채소/식이섬유 $\\rightarrow$ 단백질/지방 $\\rightarrow$ 탄수화물] 순서로 섭취를 고정하십시오",
+      "mid_term_action": "저GI 식품 중심으로 탄수화물을 전면 교체하고 식후 15분 산책을 일상화하십시오"
+    },
+    "R_12": {
+      "title": "인슐린 저항성 정밀 진단 처방",
+      "diagnosis": "식후 피로와 잦은 허기가 만성 고인슐린혈증 및 인슐린 저항성에 기인할 가능성이 높은 상태임",
+      "cbt_analysis": "'피곤한 건 체력 탓'이라는 회피적 귀인을 멈추고 객관적 지표를 확인해야 함",
+      "short_term_action": "공복 혈당, 공복 인슐린, 당화혈색소(HbA1c) 검사를 즉시 의뢰하십시오",
+      "mid_term_action": "연속혈당측정기(CGM)를 활용해 2주간 개인별 혈당 반응 식품을 추적하고 맞춤 식단을 구성하십시오"
+    },
+    "R_13": {
+      "title": "혈당 안정화 단백질/지방 보충 처방",
+      "diagnosis": "급격한 혈당 저하로 손 떨림과 당 갈망이 반복되는 반응성 저혈당 양상임",
+      "cbt_analysis": "'단 것을 먹어야만 살아난다'는 즉각 보상 오류가 혈당 롤러코스터를 악화시킴을 인지해야 함",
+      "short_term_action": "단순당 간식을 치우고 견과류나 삶은 달걀, 스트링 치즈 등 단백질·건강한 지방 간식으로 대체하십시오",
+      "mid_term_action": "식사 간격을 균등히 유지하고 정제 설탕을 배제한 지속 가능한 혈당 안정 식단을 정착시키십시오"
+    },
+    "R_14": {
+      "title": "자율신경 및 저혈당 이상 검진 처방",
+      "diagnosis": "식사와 무관하게 빈혈 또는 저혈당 유사 발작이 반복되어 자율신경계 이상이 의심되는 상태임",
+      "cbt_analysis": "'체질이라 어쩔 수 없다'는 체념적 사고가 적절한 의학적 개입을 차단하고 있음",
+      "short_term_action": "가정의학과 또는 내과에서 자율신경 기능 및 정밀 대사 패널 검사를 진행하십시오",
+      "mid_term_action": "의학적 처방에 맞추어 염분·수분 밸런스와 응급 저혈당 대처 프로토콜을 상시 구비하십시오"
+    },
+    "R_15": {
+      "title": "PMS 사이클 다이어트 처방",
+      "diagnosis": "황체기 프로게스테론 상승 및 세로토닌 감소로 인한 생리 전 식욕 폭발 상태임",
+      "cbt_analysis": "'생리 전 의지박약으로 실패했다'는 자책을 호르몬 주기에 따른 자연스러운 신체 반응으로 재구성해야 함",
+      "short_term_action": "생리 전 10일간 마그네슘 300mg과 비타민 B6를 보충하여 신경 전달 물질을 안정화하십시오",
+      "mid_term_action": "생리 주기를 4단계(월경-여포-배란-황체)로 나누어 운동 강도와 탄수화물 비율을 조절하는 사이클 다이어트를 실행하십시오"
+    },
+    "R_16": {
+      "title": "여성 호르몬 밸런스 기능의학 처방",
+      "diagnosis": "에스트로겐 우세증 또는 다낭성 난소 양상으로 복부 비만과 주기 불안정이 지속되는 상태임",
+      "cbt_analysis": "'호르몬은 통제 불가능하다'는 무력감을 걷어내고 환경호르몬 및 생활습관 관리에 집중해야 함",
+      "short_term_action": "산부인과 또는 기능의학 클리닉에서 여성 호르몬 패널 검사를 의뢰하십시오",
+      "mid_term_action": "십자화과 채소 섭취와 간 해독 지원 영양소를 통해 에스트로겐 대사 산물을 안정화하십시오"
+    },
+    "R_17": {
+      "title": "수면 위생 및 렙틴/그렐린 정상화 처방",
+      "diagnosis": "수면 결핍으로 렙틴(식욕억제)이 감소하고 그렐린(식욕촉진)이 치솟아 고열량 갈망이 일어나는 상태임",
+      "cbt_analysis": "'잠을 줄여서라도 식욕을 참을 수 있다'는 과신을 버리고 수면을 다이어트 1순위로 두어야 함",
+      "short_term_action": "취침 1시간 전 스마트폰 블루라이트를 차단하고 7시간 이상 수면을 오늘 밤 확보하십시오",
+      "mid_term_action": "수면 환경(온도, 암막 커튼, 마그네슘)을 개선하여 깊은 수면 비율을 높이고 호르몬 균형을 회복하십시오"
+    },
+    "R_18": {
+      "title": "만성 스트레스 코르티솔 조절 처방",
+      "diagnosis": "지속적 스트레스로 코르티솔이 과분비되어 인슐린을 자극하고 내장 지방을 축적시키는 상태임",
+      "cbt_analysis": "'피곤해도 더 채찍질해야 한다'는 강박적 사고가 부신 피로를 심화시키고 있음을 자각해야 함",
+      "short_term_action": "타액 코르티솔 호르몬 검사를 예약하고 고강도 운동을 중단한 뒤 가벼운 산책과 명상으로 전환하십시오",
+      "mid_term_action": "아답토젠(홍경천, 아쉬와간다 등) 섭취와 호흡 이완 루틴을 통해 신경계를 부교감 모드로 리셋하십시오"
+    },
+    "R_19": {
+      "title": "폭식-보상 사이클 인지 차단 처방",
+      "diagnosis": "폭식 후 단식과 과도한 유산소 운동으로 신체를 다시 굶주림에 빠뜨려 폭식을 재발시키는 악순환임",
+      "cbt_analysis": "'운동으로 다 태워버려야 한다'는 보상 신념이 폭식 사이클을 유지시키는 핵심 오류임",
+      "short_term_action": "폭식 후 다음 날 절대 굶지 말고 예정된 일반 식사를 규칙적으로 드십시오",
+      "mid_term_action": "CBT 전문 상담을 통해 폭식 유발 감정 일지를 작성하고 보상 행동을 체계적으로 소거하십시오"
+    },
+    "R_20": {
+      "title": "신경전달물질 영양 및 감정 분리 처방",
+      "diagnosis": "세로토닌과 도파민 결핍을 음식의 단맛으로 빠르게 충당하려는 신경화학적 갈망 상태임",
+      "cbt_analysis": "'음식만이 유일한 위로'라는 도식을 재구성하여 비음식적 보상 체계를 발굴해야 함",
+      "short_term_action": "트립토판, 오메가3 보충제를 섭취하고 폭식 충동 시 15분간 산책이나 샤워로 주의를 분산하십시오",
+      "mid_term_action": "햇빛 쬐기, 가벼운 대화, 성취 경험 등 비음식 도파민 분비 루틴을 일상에 3가지 이상 구축하십시오"
+    },
+    "R_21": {
+      "title": "자책 탈피 마음챙김 식사(Mindful Eating) 처방",
+      "diagnosis": "폭식 후 극단적 자기 비난이 스트레스를 유발하여 다시 음식으로 도피하는 인지 왜곡 상태임",
+      "cbt_analysis": "'폭식했으니 나는 패배자다'라는 과잉 일반화를 '몸이 영양이나 휴식을 원했다'는 신호로 재해석해야 함",
+      "short_term_action": "음식을 먹을 때 스마트폰을 끄고 씹는 맛과 포만감을 천천히 음미하는 마음챙김 식사를 시작하십시오",
+      "mid_term_action": "8주간 마음챙김 명상 기반 식이 훈련(MB-EAT)을 통해 식사 자율성을 회복하십시오"
+    },
+    "R_22": {
+      "title": "완벽주의 흑백사고 교정 처방",
+      "diagnosis": "'완벽한 식단'이 아니면 '완전한 실패'로 규정하여 극단적 포기를 반복하는 인지 오류임",
+      "cbt_analysis": "'한 번 어겼으니 다 망했다'는 전부 아니면 전무(All-or-Nothing) 사고를 해체해야 함",
+      "short_term_action": "식단 중 한 끼를 계획대로 못 먹었을 때 '괜찮아, 100점 만점에 80점이면 충분해'라고 소리 내어 말하십시오",
+      "mid_term_action": "80:20 법칙(80% 건강식, 20% 즐거움)을 의도적으로 식단표에 적용하여 유연성을 훈련하십시오"
+    },
+    "R_23": {
+      "title": "다음 끼니 리셋(Next Meal Reset) 프로토콜 처방",
+      "diagnosis": "실패를 만회하려는 조급함 때문에 다음 식사를 건너뛰어 결국 야식으로 이어지는 패턴임",
+      "cbt_analysis": "'어제의 실패를 오늘 굶어서 갚는다'는 부채 의식이 다이어트 지속성을 파괴함",
+      "short_term_action": "과식 직후 즉시 타이머를 설정하고 '다음 끼니는 정해진 시간에 평소대로 먹는다'는 규칙을 적용하십시오",
+      "mid_term_action": "식단 실패를 기록이 아닌 데이터 피드백으로 취급하는 객관적 식사 일기 루틴을 정착시키십시오"
+    },
+    "R_24": {
+      "title": "단계적 칼로리 증량(Refeeding) 프로토콜 처방",
+      "diagnosis": "감량 후 급작스럽게 일반 식사로 복귀하여 대사가 닫힌 상태에서 급격한 지방 반동이 일어난 요요 상태임",
+      "cbt_analysis": "'일반식을 먹으면 무조건 살이 찐다'는 공포증을 과학적인 단계적 증량 프로토콜로 치환해야 함",
+      "short_term_action": "현재 섭취 칼로리에서 주당 100~150kcal씩 탄수화물 위주로 천천히 늘려 대사를 깨우십시오",
+      "mid_term_action": "4~8주간 체중 변동 폭을 ±1kg 이내로 제어하며 유지 칼로리(TDEE)까지 안전하게 증량하십시오"
+    },
+    "R_25": {
+      "title": "평생 지속 가능한 유지어터 식단 전환 처방",
+      "diagnosis": "단기 프로젝트성 다이어트 후 식단 관리를 '종료'해버려 이전 생활 습관으로 회귀한 상태임",
+      "cbt_analysis": "'다이어트는 끝이 있다'는 인지 오류를 교정하고 '평생 누릴 건강한 식습관'으로 프레임을 전환해야 함",
+      "short_term_action": "평생 못 먹을 것 같은 극단적인 닭가슴살·고구마 식단을 멈추고 일반 건강 한식으로 전환하십시오",
+      "mid_term_action": "영양 전문가와 함께 자신의 라이프스타일에 최적화된 주간 식단 템플릿을 완성하십시오"
+    },
+    "R_26": {
+      "title": "체중 범위(Set-Point) 안착 및 집착 탈피 처방",
+      "diagnosis": "수분·글리코겐 변동에 의한 일일 체중 1~2kg 변화에 과도하게 일희일비하여 식습관이 붕괴되는 상태임",
+      "cbt_analysis": "'체중 숫자가 내 가치다'라는 정서적 융합을 깨고 체중의 자연스러운 진폭을 인정해야 함",
+      "short_term_action": "매일 체중 재기를 중단하고 주 1회 일정한 조건(금요일 아침 공복)에서만 측정하십시오",
+      "mid_term_action": "목표 체중을 단일 숫자가 아닌 ±2kg 범위의 버퍼존으로 설정하여 심리적 안정감을 확보하십시오"
+    },
+    "R_27": {
+      "title": "감량 후 목표 공백 극복 처방",
+      "diagnosis": "목표 체중 달성 후 성취 동기가 소멸되어 긴장이 풀리고 공허감에 과식하는 상태임",
+      "cbt_analysis": "'살을 뺐으니 이제 끝났다'는 완료 오류가 이전의 나쁜 습관을 재소환하고 있음",
+      "short_term_action": "체중 대신 새로운 퍼포먼스 목표(달리기 5km 완주, 풀업 1회, 바디프로필 등)를 오늘 설정하십시오",
+      "mid_term_action": "외형 변화를 넘어 신체 역량과 활력을 증진시키는 새로운 취미 스포츠를 정착시키십시오"
+    },
+    "R_28": {
+      "title": "전인적 웰니스 건강 지표 재정의 처방",
+      "diagnosis": "체중계 숫자만 바라보느라 혈압, 혈당, 수면의 질, 활력 등 본질적인 건강 지표를 간과한 상태임",
+      "cbt_analysis": "'날씬한 몸이 곧 건강하고 행복한 삶'이라는 단일 가치 축을 다차원적 웰니스로 확장해야 함",
+      "short_term_action": "아침 기상 시 에너지 레벨, 수면 만족도, 소화 상태를 10점 만점으로 기록하는 건강 일지를 쓰십시오",
+      "mid_term_action": "정기 건강검진 혈액 수치와 체력 지표 개선을 최종 목표로 삼는 라이프스타일 코칭을 시작하십시오"
+    }
+  },
+  "matchings": {
+    "R_01": {
+      "primaryRecommendation": {
+        "service": "임상영양사 1:1 식습관 코칭",
+        "description": "규칙적인 식사 시간표 및 대사 리듬 수립"
+      },
+      "supplementaryRecommendations": [
+        {
+          "service": "건강식 밀키트 정기 구독",
+          "description": "시간에 맞춘 정량 균형 식단 제공"
+        }
+      ]
+    },
+    "R_02": {
+      "primaryRecommendation": {
+        "service": "맞춤 영양 식단 설계 서비스",
+        "description": "단백질·복합탄수 중심 비율 구성"
+      },
+      "supplementaryRecommendations": [
+        {
+          "service": "식단 기록 코칭 앱 (눔/닥터다이어리)",
+          "description": "매 끼니 탄단지 비율 피드백 제공"
+        }
+      ]
+    },
+    "R_03": {
+      "primaryRecommendation": {
+        "service": "클린 식단 도시락 정기배송",
+        "description": "요리 부담 없는 저염 고단백 식사"
+      },
+      "supplementaryRecommendations": [
+        {
+          "service": "직장인 건강 외식 컨설팅",
+          "description": "외식 메뉴 선별 및 대체 전략 가이드"
+        }
+      ]
+    },
+    "R_04": {
+      "primaryRecommendation": {
+        "service": "외식 영양 가이드 코칭",
+        "description": "소스·조리법 필터링 및 스마트 외식법"
+      },
+      "supplementaryRecommendations": [
+        {
+          "service": "혈당 케어 샐러드 구독",
+          "description": "외식 전 식이섬유 섭취 루틴 지원"
+        }
+      ]
+    },
+    "R_05": {
+      "primaryRecommendation": {
+        "service": "보행·활동량 루틴 코칭",
+        "description": "생활 속 NEAT 열량 소비 증대 프로그램"
+      },
+      "supplementaryRecommendations": [
+        {
+          "service": "스마트 헬스케어 워치 연동 케어",
+          "description": "일일 걸음 수 및 활동 칼로리 모니터링"
+        }
+      ]
+    },
+    "R_06": {
+      "primaryRecommendation": {
+        "service": "초심자 퍼스널 트레이닝(PT)",
+        "description": "부상 없는 기본 5대 맨몸 운동 자세 지도"
+      },
+      "supplementaryRecommendations": [
+        {
+          "service": "체형 교정 전문 필라테스",
+          "description": "코어 근육 강화 및 관절 안정성 확보"
+        }
+      ]
+    },
+    "R_07": {
+      "primaryRecommendation": {
+        "service": "다이어트 심리 목표설정 코칭",
+        "description": "현실적 마이크로 골 및 조급증 해소"
+      },
+      "supplementaryRecommendations": [
+        {
+          "service": "습관 형성 행동 설계 프로그램",
+          "description": "매일 작은 성공 경험 누적 관리"
+        }
+      ]
+    },
+    "R_08": {
+      "primaryRecommendation": {
+        "service": "인바디 체성분 정밀 분석 클리닉",
+        "description": "골격근량·체지방률 객관적 데이터 측정"
+      },
+      "supplementaryRecommendations": [
+        {
+          "service": "스포츠 영양 기준점 설계",
+          "description": "기초대사량 기반 개인 맞춤 섭취량 처방"
+        }
+      ]
+    },
+    "R_09": {
+      "primaryRecommendation": {
+        "service": "기능의학 대사 회복 클리닉",
+        "description": "대사 적응 탈피를 위한 점진적 열량 회복"
+      },
+      "supplementaryRecommendations": [
+        {
+          "service": "임상영양사 1:1 대사 복구 식단",
+          "description": "기아 모드 해제를 위한 영양 재구성"
+        }
+      ]
+    },
+    "R_10": {
+      "primaryRecommendation": {
+        "service": "내분비내과 갑상선 기능 검진",
+        "description": "호르몬 패널 정밀 혈액 검사 및 처방"
+      },
+      "supplementaryRecommendations": [
+        {
+          "service": "기능의학 미네랄 영양 치료",
+          "description": "갑상선 활성 지원 필수 영양소 보충"
+        }
+      ]
+    },
+    "R_11": {
+      "primaryRecommendation": {
+        "service": "저GI 혈당 관리 영양 코칭",
+        "description": "식사 순서 교정 및 식후 혈당 안정화"
+      },
+      "supplementaryRecommendations": [
+        {
+          "service": "연속혈당측정기(CGM) 프로그램",
+          "description": "실시간 식후 혈당 반응 정밀 추적"
+        }
+      ]
+    },
+    "R_12": {
+      "primaryRecommendation": {
+        "service": "가정의학과 인슐린 저항성 검진",
+        "description": "공복 인슐린 및 HOMA-IR 지수 정밀 진단"
+      },
+      "supplementaryRecommendations": [
+        {
+          "service": "대사증후군 전문 운동 처방 센터",
+          "description": "인슐린 감수성 개선 유산소·근력 복합 운동"
+        }
+      ]
+    },
+    "R_13": {
+      "primaryRecommendation": {
+        "service": "저혈당 예방 영양 식단 설계",
+        "description": "단백질·건강한 지방 중심 간식 및 식사 배분"
+      },
+      "supplementaryRecommendations": [
+        {
+          "service": "식이 인지행동 심리 상담",
+          "description": "단순당 충동 갈망 인지 패턴 교정"
+        }
+      ]
+    },
+    "R_14": {
+      "primaryRecommendation": {
+        "service": "종합병원 내과 정밀 대사 검사",
+        "description": "반응성 저혈당 및 자율신경계 이상 감별"
+      },
+      "supplementaryRecommendations": [
+        {
+          "service": "기능의학 맞춤 영양 수액 클리닉",
+          "description": "전해질 및 에너지 대사 필수인자 공급"
+        }
+      ]
+    },
+    "R_15": {
+      "primaryRecommendation": {
+        "service": "여성 생리주기 맞춤 코칭",
+        "description": "황체기 식욕 제어 및 영양소 보충 전략"
+      },
+      "supplementaryRecommendations": [
+        {
+          "service": "여성 전문 영양제 큐레이션",
+          "description": "PMS 완화 마그네슘·비타민B6 정기 배송"
+        }
+      ]
+    },
+    "R_16": {
+      "primaryRecommendation": {
+        "service": "기능의학 여성 호르몬 검사 클리닉",
+        "description": "에스트로겐·프로게스테론 균형 평가"
+      },
+      "supplementaryRecommendations": [
+        {
+          "service": "산부인과 호르몬 불균형 상담",
+          "description": "다낭성 난소 및 주기 불순 의학적 치료"
+        }
+      ]
+    },
+    "R_17": {
+      "primaryRecommendation": {
+        "service": "수면 클리닉 전문 검진",
+        "description": "수면 구조 분석 및 식욕 호르몬 교란 회복"
+      },
+      "supplementaryRecommendations": [
+        {
+          "service": "수면 위생 습관 코칭 프로그램",
+          "description": "취침 루틴 설계 및 블루라이트 차단 환경"
+        }
+      ]
+    },
+    "R_18": {
+      "primaryRecommendation": {
+        "service": "부신 기능 코르티솔 정밀 검사",
+        "description": "타액 호르몬 일주기 검사 및 피로도 진단"
+      },
+      "supplementaryRecommendations": [
+        {
+          "service": "스트레스 완화 마인드풀 이완 센터",
+          "description": "부교감신경 활성화 호흡 및 명상 세션"
+        }
+      ]
+    },
+    "R_19": {
+      "primaryRecommendation": {
+        "service": "섭식장애 전문 CBT 심리상담 센터",
+        "description": "폭식-단식 보상 행동 사이클 차단 치료"
+      },
+      "supplementaryRecommendations": [
+        {
+          "service": "정신건강의학과 식이행동 클리닉",
+          "description": "충동성 조절 및 심리 안정 의학적 개입"
+        }
+      ]
+    },
+    "R_20": {
+      "primaryRecommendation": {
+        "service": "신경전달물질 영양 상담 센터",
+        "description": "세로토닌·도파민 분비 촉진 식단 설계"
+      },
+      "supplementaryRecommendations": [
+        {
+          "service": "정서 웰니스 코칭 프로그램",
+          "description": "비음식적 보상 및 스트레스 해소 통로 구축"
+        }
+      ]
+    },
+    "R_21": {
+      "primaryRecommendation": {
+        "service": "마음챙김 식사(MB-EAT) 훈련 과정",
+        "description": "포만감 신호 자각 및 자책감 탈피 훈련"
+      },
+      "supplementaryRecommendations": [
+        {
+          "service": "CBT 기반 자기수용 심리상담",
+          "description": "흑백사고와 수치심 감정 재구성 상담"
+        }
+      ]
+    },
+    "R_22": {
+      "primaryRecommendation": {
+        "service": "인지행동치료(CBT) 전문 상담",
+        "description": "완벽주의 흑백논리 및 올오어나씽 사고 교정"
+      },
+      "supplementaryRecommendations": [
+        {
+          "service": "유연한 식단 설계 코칭",
+          "description": "80:20 법칙 기반의 지속 가능한 식단 실천"
+        }
+      ]
+    },
+    "R_23": {
+      "primaryRecommendation": {
+        "service": "식단 리셋 행동 코칭 프로그램",
+        "description": "과식 후 즉시 일상 식단 복귀 자동화 훈련"
+      },
+      "supplementaryRecommendations": [
+        {
+          "service": "습관 관리 앱 기반 코칭",
+          "description": "끼니별 회복 탄력성 모니터링"
+        }
+      ]
+    },
+    "R_24": {
+      "primaryRecommendation": {
+        "service": "스포츠 영양 리피딩 클리닉",
+        "description": "대사 회복을 위한 체계적 단계별 증량 처방"
+      },
+      "supplementaryRecommendations": [
+        {
+          "service": "요요 방지 대사 체형 관리 센터",
+          "description": "근육량 유지 및 체지방 반동 억제 관리"
+        }
+      ]
+    },
+    "R_25": {
+      "primaryRecommendation": {
+        "service": "평생 유지 식단 전문 컨설팅",
+        "description": "단기 제한이 아닌 지속 가능한 일상 식단 정착"
+      },
+      "supplementaryRecommendations": [
+        {
+          "service": "웰니스 헬스 코칭",
+          "description": "외식·사회생활과 공존하는 식습관 구축"
+        }
+      ]
+    },
+    "R_26": {
+      "primaryRecommendation": {
+        "service": "체중 집착 완화 인지 코칭",
+        "description": "수분 변동폭 수용 및 버퍼존 중심 체중 관리"
+      },
+      "supplementaryRecommendations": [
+        {
+          "service": "체성분 추적 정기 모니터링",
+          "description": "숫자가 아닌 근육/지방 비율 중심 점검"
+        }
+      ]
+    },
+    "R_27": {
+      "primaryRecommendation": {
+        "service": "웰니스 퍼포먼스 라이프 코칭",
+        "description": "체중 달성 이후의 새로운 운동·신체 목표 수립"
+      },
+      "supplementaryRecommendations": [
+        {
+          "service": "스포츠 피트니스 클럽 멤버십",
+          "description": "지속적인 활력을 주는 신체 활동 커뮤니티"
+        }
+      ]
+    },
+    "R_28": {
+      "primaryRecommendation": {
+        "service": "통합 웰니스 건강검진 센터",
+        "description": "혈관·수면·대사 전반의 다차원적 건강 지표 평가"
+      },
+      "supplementaryRecommendations": [
+        {
+          "service": "토탈 라이프스타일 헬스케어 코칭",
+          "description": "신체적·정신적 삶의 질 극대화 장기 플랜"
+        }
+      ]
+    }
+  }
+}

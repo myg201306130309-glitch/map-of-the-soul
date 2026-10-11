@@ -1,0 +1,1059 @@
+{
+    "questions": {
+        "Q_START": {
+            "id": "Q_START",
+            "category": "중독 의심",
+            "text": "현재 가장 걱정되는 중독 유형은 무엇인가요?",
+            "isRoot": true,
+            "branches": [
+                {
+                    "text": "알코올 또는 니코틴(술·담배)",
+                    "nextNodeId": "Q_2A",
+                    "resultId": ""
+                },
+                {
+                    "text": "도박 또는 게임·SNS(행위 중독)",
+                    "nextNodeId": "Q_2B",
+                    "resultId": ""
+                },
+                {
+                    "text": "마약·약물 또는 기타 물질",
+                    "nextNodeId": "Q_2C",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_2A": {
+            "id": "Q_2A",
+            "category": "중독 의심",
+            "text": "술이나 담배를 줄이거나 끊으려 시도했을 때 어떤 경험을 했나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "손 떨림, 불안, 식은땀 등 신체 금단 증상이 나타났다",
+                    "nextNodeId": "Q_3A",
+                    "resultId": ""
+                },
+                {
+                    "text": "줄이려 해도 번번이 실패하고 양이 오히려 늘었다",
+                    "nextNodeId": "Q_3B",
+                    "resultId": ""
+                },
+                {
+                    "text": "아직 줄이려 시도해 본 적이 없다",
+                    "nextNodeId": "Q_3C",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_2B": {
+            "id": "Q_2B",
+            "category": "중독 의심",
+            "text": "도박·게임·SNS 등 행위를 하지 못할 때 어떤 감정이 드나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "극심한 초조함·분노가 생기고 일상생활이 불가능하다",
+                    "nextNodeId": "Q_3D",
+                    "resultId": ""
+                },
+                {
+                    "text": "불편하지만 어느 정도 참을 수 있다",
+                    "nextNodeId": "Q_3E",
+                    "resultId": ""
+                },
+                {
+                    "text": "별로 불편하지 않지만 습관적으로 반복하게 된다",
+                    "nextNodeId": "Q_3F",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_2C": {
+            "id": "Q_2C",
+            "category": "중독 의심",
+            "text": "마약·약물 사용과 관련해 현재 상황을 가장 잘 설명하는 것은?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "이미 사용 중이며 스스로 멈추기 어렵다",
+                    "nextNodeId": "Q_3G",
+                    "resultId": ""
+                },
+                {
+                    "text": "과거에 사용했고 재발이 걱정된다",
+                    "nextNodeId": "Q_3H",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3A": {
+            "id": "Q_3A",
+            "category": "중독 의심",
+            "text": "금단 증상이 나타날 때 주변 사람(가족·친구)이 그 심각성을 알고 있나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "알고 있으며 함께 도움을 찾고 있다",
+                    "nextNodeId": "Q_4A",
+                    "resultId": ""
+                },
+                {
+                    "text": "모르거나 혼자 숨기고 있다",
+                    "nextNodeId": "Q_4B",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3B": {
+            "id": "Q_3B",
+            "category": "중독 의심",
+            "text": "음주·흡연으로 인해 직장, 학업, 대인관계에서 구체적인 문제가 생긴 적 있나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "예, 실직·결석·갈등 등 실질적 피해가 있었다",
+                    "nextNodeId": "Q_4C",
+                    "resultId": ""
+                },
+                {
+                    "text": "아직 큰 피해는 없지만 걱정이 된다",
+                    "nextNodeId": "Q_4D",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3C": {
+            "id": "Q_3C",
+            "category": "중독 의심",
+            "text": "술·담배를 하는 주된 이유는 무엇인가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "스트레스·불안·우울을 달래기 위해서다",
+                    "nextNodeId": "Q_4E",
+                    "resultId": ""
+                },
+                {
+                    "text": "사교·습관·즐거움 때문이며 감정 조절과는 무관하다",
+                    "nextNodeId": "Q_4F",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3D": {
+            "id": "Q_3D",
+            "category": "중독 의심",
+            "text": "행위 중독으로 인해 빚, 직업 상실, 가족 갈등 등 심각한 결과가 발생했나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "예, 이미 심각한 피해가 발생했다",
+                    "nextNodeId": "Q_4G",
+                    "resultId": ""
+                },
+                {
+                    "text": "아직 없지만 통제력을 잃어가는 느낌이다",
+                    "nextNodeId": "Q_4H",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3E": {
+            "id": "Q_3E",
+            "category": "중독 의심",
+            "text": "하루 중 해당 행위를 생각하는 시간이 얼마나 되나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "깨어 있는 시간의 절반 이상을 생각하거나 계획한다",
+                    "nextNodeId": "Q_4I",
+                    "resultId": ""
+                },
+                {
+                    "text": "가끔 생각나지만 다른 활동에 집중할 수 있다",
+                    "nextNodeId": "Q_4J",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3F": {
+            "id": "Q_3F",
+            "category": "중독 의심",
+            "text": "해당 행위를 하지 않으면 무언가 빠진 것 같은 공허함을 느끼나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "예, 그 공허함을 채우기 위해 다시 하게 된다",
+                    "nextNodeId": "Q_4K",
+                    "resultId": ""
+                },
+                {
+                    "text": "아니요, 단순히 재미있어서 반복하는 것 같다",
+                    "nextNodeId": "Q_4L",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3G": {
+            "id": "Q_3G",
+            "category": "중독 의심",
+            "text": "현재 사용 중인 약물로 인해 건강·안전에 즉각적인 위험을 느끼고 있나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "예, 과용·사고 위험 등 즉각적 위기 상황이다",
+                    "nextNodeId": "Q_4M",
+                    "resultId": ""
+                },
+                {
+                    "text": "위험은 인지하지만 당장 응급 상황은 아니다",
+                    "nextNodeId": "Q_4N",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3H": {
+            "id": "Q_3H",
+            "category": "중독 의심",
+            "text": "재발을 유발하는 주된 요인이 무엇이라고 생각하나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "특정 사람·장소·감정(트리거)에 노출될 때 충동이 생긴다",
+                    "nextNodeId": "Q_4O",
+                    "resultId": ""
+                },
+                {
+                    "text": "트리거보다는 만성적인 외로움·우울감이 더 크다",
+                    "nextNodeId": "Q_4P",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_4A": {
+            "id": "Q_4A",
+            "category": "중독 의심",
+            "text": "지금 당장 전문 치료 기관(중독관리통합지원센터 등)에 함께 방문할 의향이 있나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "예, 바로 행동할 준비가 되어 있다",
+                    "nextNodeId": "",
+                    "resultId": "R_01"
+                },
+                {
+                    "text": "아직 망설여지며 좀 더 정보가 필요하다",
+                    "nextNodeId": "",
+                    "resultId": "R_02"
+                }
+            ]
+        },
+        "Q_4B": {
+            "id": "Q_4B",
+            "category": "중독 의심",
+            "text": "혼자 숨기는 가장 큰 이유는 무엇인가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "창피하거나 가족에게 실망을 줄까 봐 두렵다",
+                    "nextNodeId": "",
+                    "resultId": "R_03"
+                },
+                {
+                    "text": "아직 스스로 해결할 수 있다고 믿는다",
+                    "nextNodeId": "",
+                    "resultId": "R_04"
+                }
+            ]
+        },
+        "Q_4C": {
+            "id": "Q_4C",
+            "category": "중독 의심",
+            "text": "현재 피해 회복을 위한 구체적인 계획이 있나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "예, 치료와 피해 회복을 동시에 진행하고 싶다",
+                    "nextNodeId": "",
+                    "resultId": "R_05"
+                },
+                {
+                    "text": "아니요, 어디서부터 시작해야 할지 모르겠다",
+                    "nextNodeId": "",
+                    "resultId": "R_06"
+                }
+            ]
+        },
+        "Q_4D": {
+            "id": "Q_4D",
+            "category": "중독 의심",
+            "text": "음주·흡연량이 최근 6개월 사이 늘었나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "예, 점점 양이 늘고 있다",
+                    "nextNodeId": "",
+                    "resultId": "R_07"
+                },
+                {
+                    "text": "비슷하거나 줄었다",
+                    "nextNodeId": "",
+                    "resultId": "R_08"
+                }
+            ]
+        },
+        "Q_4E": {
+            "id": "Q_4E",
+            "category": "중독 의심",
+            "text": "스트레스·불안·우울을 술·담배 외에 해소하는 방법이 있나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "없거나 거의 없다. 술·담배가 유일한 탈출구다",
+                    "nextNodeId": "",
+                    "resultId": "R_09"
+                },
+                {
+                    "text": "운동·대화 등 다른 방법도 있지만 효과가 약하다",
+                    "nextNodeId": "",
+                    "resultId": "R_10"
+                }
+            ]
+        },
+        "Q_4F": {
+            "id": "Q_4F",
+            "category": "중독 의심",
+            "text": "지금 당장 줄이거나 끊을 의지가 있나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "예, 건강을 위해 줄이고 싶다",
+                    "nextNodeId": "",
+                    "resultId": "R_11"
+                },
+                {
+                    "text": "아직 문제라고 느끼지 않아 변화 의지가 없다",
+                    "nextNodeId": "",
+                    "resultId": "R_12"
+                }
+            ]
+        },
+        "Q_4G": {
+            "id": "Q_4G",
+            "category": "중독 의심",
+            "text": "발생한 피해(빚·관계 단절 등) 중 가장 시급하게 해결해야 할 것은?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "재정적 피해(빚·파산)가 가장 심각하다",
+                    "nextNodeId": "",
+                    "resultId": "R_13"
+                },
+                {
+                    "text": "가족·관계 붕괴가 가장 고통스럽다",
+                    "nextNodeId": "",
+                    "resultId": "R_14"
+                }
+            ]
+        },
+        "Q_4H": {
+            "id": "Q_4H",
+            "category": "중독 의심",
+            "text": "통제력을 잃어가고 있다고 느낄 때 스스로 멈출 수 있었던 경험이 있나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "예, 가끔 스스로 멈출 수 있었다",
+                    "nextNodeId": "",
+                    "resultId": "R_15"
+                },
+                {
+                    "text": "아니요, 한번 시작하면 멈추지 못했다",
+                    "nextNodeId": "",
+                    "resultId": "R_16"
+                }
+            ]
+        },
+        "Q_4I": {
+            "id": "Q_4I",
+            "category": "중독 의심",
+            "text": "그 생각이 수면·식사·업무를 방해할 정도로 강렬한가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "예, 일상 기능이 심각하게 저하되었다",
+                    "nextNodeId": "",
+                    "resultId": "R_17"
+                },
+                {
+                    "text": "불편하지만 기본적인 일상은 유지된다",
+                    "nextNodeId": "",
+                    "resultId": "R_18"
+                }
+            ]
+        },
+        "Q_4J": {
+            "id": "Q_4J",
+            "category": "중독 의심",
+            "text": "해당 행위에 쓰는 시간·돈이 최근 늘어나고 있나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "예, 점점 더 많은 자원을 쏟고 있다",
+                    "nextNodeId": "",
+                    "resultId": "R_19"
+                },
+                {
+                    "text": "아니요, 일정 수준을 유지하고 있다",
+                    "nextNodeId": "",
+                    "resultId": "R_20"
+                }
+            ]
+        },
+        "Q_4K": {
+            "id": "Q_4K",
+            "category": "중독 의심",
+            "text": "그 공허함이 우울증·불안장애 등 다른 심리적 문제와 연결되어 있다고 느끼나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "예, 우울·불안이 근본 원인인 것 같다",
+                    "nextNodeId": "",
+                    "resultId": "R_21"
+                },
+                {
+                    "text": "잘 모르겠다. 그냥 습관처럼 굳어진 것 같다",
+                    "nextNodeId": "",
+                    "resultId": "R_22"
+                }
+            ]
+        },
+        "Q_4L": {
+            "id": "Q_4L",
+            "category": "중독 의심",
+            "text": "주변 사람들이 해당 행위에 대해 걱정이나 불만을 표현한 적 있나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "예, 여러 번 지적을 받았다",
+                    "nextNodeId": "",
+                    "resultId": "R_23"
+                },
+                {
+                    "text": "아니요, 주변에서 별 반응이 없다",
+                    "nextNodeId": "",
+                    "resultId": "R_24"
+                }
+            ]
+        },
+        "Q_4M": {
+            "id": "Q_4M",
+            "category": "중독 의심",
+            "text": "지금 즉시 응급 도움(119, 위기상담전화 등)을 요청할 수 있는 상황인가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "예, 지금 바로 연락할 수 있다",
+                    "nextNodeId": "",
+                    "resultId": "R_25"
+                },
+                {
+                    "text": "아니요, 혼자이거나 연락이 어려운 상황이다",
+                    "nextNodeId": "",
+                    "resultId": "R_26"
+                }
+            ]
+        },
+        "Q_4N": {
+            "id": "Q_4N",
+            "category": "중독 의심",
+            "text": "전문 약물 치료(해독 프로그램·입원 재활)를 받을 의향이 있나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "예, 전문 치료를 받고 싶다",
+                    "nextNodeId": "",
+                    "resultId": "R_27"
+                },
+                {
+                    "text": "아직 결정하지 못했거나 두렵다",
+                    "nextNodeId": "",
+                    "resultId": "R_28"
+                }
+            ]
+        },
+        "Q_4O": {
+            "id": "Q_4O",
+            "category": "중독 의심",
+            "text": "해당 트리거(사람·장소·감정)를 현재 피하거나 관리하고 있나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "예, 의식적으로 피하려 노력하고 있다",
+                    "nextNodeId": "",
+                    "resultId": "R_15"
+                },
+                {
+                    "text": "아니요, 트리거를 피하기 어렵거나 방법을 모른다",
+                    "nextNodeId": "",
+                    "resultId": "R_16"
+                }
+            ]
+        },
+        "Q_4P": {
+            "id": "Q_4P",
+            "category": "중독 의심",
+            "text": "만성적인 외로움·우울감을 해소하기 위해 현재 심리 상담이나 치료를 받고 있나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "예, 상담 중이거나 받을 계획이 있다",
+                    "nextNodeId": "",
+                    "resultId": "R_21"
+                },
+                {
+                    "text": "아니요, 심리 지원을 전혀 받지 못하고 있다",
+                    "nextNodeId": "",
+                    "resultId": "R_22"
+                }
+            ]
+        }
+    },
+    "solutions": {
+        "R_01": {
+            "title": "전문 치료 즉시 연계",
+            "diagnosis": "신체 금단 증상이 있으나 치료 의지가 높은 상태다.",
+            "cbt_analysis": "변화 준비 단계에 있어 즉각적 행동 전환이 가능하다.",
+            "short_term_action": "오늘 중독관리통합지원센터에 전화 예약을 하라.",
+            "mid_term_action": "가족과 함께 정기 상담 및 단주·금연 프로그램에 참여하라."
+        },
+        "R_02": {
+            "title": "정보 탐색 후 치료 준비",
+            "diagnosis": "금단 증상이 있으나 치료 결정에 망설임이 있는 상태다.",
+            "cbt_analysis": "치료에 대한 과도한 두려움이 행동을 지연시키고 있다.",
+            "short_term_action": "중독관리통합지원센터 홈페이지에서 치료 정보를 수집하라.",
+            "mid_term_action": "익명 상담 전화(1899-0075)로 부담 없이 첫 상담을 시작하라."
+        },
+        "R_03": {
+            "title": "수치심 극복 및 공개 지원",
+            "diagnosis": "수치심과 실망 우려로 혼자 금단 증상을 감추고 있는 상태다.",
+            "cbt_analysis": "도움 요청을 약함으로 보는 인지 왜곡이 고립을 심화시킨다.",
+            "short_term_action": "신뢰하는 가족 한 명에게 오늘 솔직하게 상황을 털어놓아라.",
+            "mid_term_action": "익명 자조 모임(AA 등)에 참여해 수치심을 점진적으로 해소하라."
+        },
+        "R_04": {
+            "title": "자기 과신 교정 및 현실 점검",
+            "diagnosis": "신체 금단 증상에도 스스로 해결 가능하다고 과신하는 상태다.",
+            "cbt_analysis": "자기 효능감 과잉으로 전문 도움의 필요성을 부정하고 있다.",
+            "short_term_action": "지난 한 달간 금단 증상 빈도를 일지에 기록해 객관화하라.",
+            "mid_term_action": "전문가 평가를 받아 실제 의존 수준을 정확히 파악하라."
+        },
+        "R_05": {
+            "title": "치료·회복 동시 진행 계획",
+            "diagnosis": "중독으로 실질적 피해가 발생했으나 회복 의지가 있는 상태다.",
+            "cbt_analysis": "피해 직면이 변화 동기를 강화하는 긍정적 전환점이 될 수 있다.",
+            "short_term_action": "중독 전문 병원과 법률·재정 상담 기관을 동시에 예약하라.",
+            "mid_term_action": "치료 일정과 피해 회복 단계를 주간 계획표로 구조화하라."
+        },
+        "R_06": {
+            "title": "피해 회복 첫 걸음 안내",
+            "diagnosis": "중독으로 인한 피해가 있으나 회복 방향을 모르는 혼란 상태다.",
+            "cbt_analysis": "압도감으로 인한 사고 마비가 행동 시작을 막고 있다.",
+            "short_term_action": "중독관리통합지원센터에 전화해 첫 상담 일정을 잡아라.",
+            "mid_term_action": "문제를 작은 단위로 나눠 한 번에 하나씩 해결해 나가라."
+        },
+        "R_07": {
+            "title": "내성 진행 조기 개입",
+            "diagnosis": "음주·흡연량이 증가하며 내성이 형성되고 있는 초기 중독 상태다.",
+            "cbt_analysis": "'조금 더는 괜찮다'는 허용적 사고가 양을 점진적으로 늘린다.",
+            "short_term_action": "오늘부터 음주·흡연량을 수첩에 매일 기록해 패턴을 파악하라.",
+            "mid_term_action": "금연·절주 클리닉을 방문해 전문가의 감량 계획을 수립하라."
+        },
+        "R_08": {
+            "title": "예방적 절제 습관 형성",
+            "diagnosis": "현재 큰 피해는 없으나 중독 가능성을 인식하고 걱정하는 상태다.",
+            "cbt_analysis": "현재 안정이 미래 위험을 과소평가하게 만드는 낙관 편향이 있다.",
+            "short_term_action": "주간 음주·흡연 허용 한도를 스스로 정하고 지켜보라.",
+            "mid_term_action": "건강검진을 통해 신체 영향을 확인하고 절제 동기를 강화하라."
+        },
+        "R_09": {
+            "title": "감정 조절 대안 행동 개발",
+            "diagnosis": "술·담배가 유일한 감정 해소 수단인 정서 의존 중독 상태다.",
+            "cbt_analysis": "부정 감정 회피를 위한 물질 사용이 의존을 고착화시키고 있다.",
+            "short_term_action": "스트레스 발생 시 5분 복식호흡을 즉시 실행하라.",
+            "mid_term_action": "CBT 기반 감정 조절 프로그램에 등록해 대안 행동을 훈련하라."
+        },
+        "R_10": {
+            "title": "대안 행동 효과 강화",
+            "diagnosis": "술·담배 외 해소법이 있으나 효과가 부족해 의존이 지속되는 상태다.",
+            "cbt_analysis": "대안 행동의 효능감 부족이 물질로의 회귀를 반복시키고 있다.",
+            "short_term_action": "운동·대화 등 대안 행동 후 기분 변화를 점수로 기록하라.",
+            "mid_term_action": "상담사와 함께 가장 효과적인 개인 맞춤 대처 전략을 개발하라."
+        },
+        "R_11": {
+            "title": "자발적 절제 실행 지원",
+            "diagnosis": "건강 동기로 줄이려는 의지가 있는 초기 변화 준비 상태다.",
+            "cbt_analysis": "변화 동기가 명확해 행동 계획 수립 시 성공 가능성이 높다.",
+            "short_term_action": "금연·절주 앱을 설치하고 오늘부터 목표량을 설정하라.",
+            "mid_term_action": "보건소 금연 클리닉에 등록해 전문적 지원과 약물 치료를 받아라."
+        },
+        "R_12": {
+            "title": "변화 동기 탐색 및 인식 제고",
+            "diagnosis": "음주·흡연을 문제로 인식하지 못해 변화 의지가 없는 상태다.",
+            "cbt_analysis": "문제 부정이라는 인지 방어가 중독 심화를 방치하게 만든다.",
+            "short_term_action": "음주·흡연이 건강에 미치는 영향을 구체적 수치로 검색해 보라.",
+            "mid_term_action": "동기 강화 상담(MI)을 통해 스스로 변화 이유를 발견하라."
+        },
+        "R_13": {
+            "title": "행위 중독 재정 피해 회복",
+            "diagnosis": "행위 중독으로 심각한 재정적 피해가 발생한 위기 상태다.",
+            "cbt_analysis": "'한 번만 더 하면 만회할 수 있다'는 도박사 오류가 피해를 키운다.",
+            "short_term_action": "신용회복위원회 또는 법률구조공단에 오늘 상담을 신청하라.",
+            "mid_term_action": "도박 중독 전문 치료와 재정 회복 계획을 병행해 진행하라."
+        },
+        "R_14": {
+            "title": "행위 중독 관계 회복 치료",
+            "diagnosis": "행위 중독으로 가족 관계가 심각하게 붕괴된 고통 상태다.",
+            "cbt_analysis": "관계 상실 고통이 다시 중독 행위로 도피하게 만드는 악순환이다.",
+            "short_term_action": "가족 중 한 명에게 진심 어린 사과와 치료 의지를 전달하라.",
+            "mid_term_action": "가족 치료 프로그램과 개인 중독 상담을 동시에 시작하라."
+        },
+        "R_15": {
+            "title": "자기 통제력 강화 훈련",
+            "diagnosis": "가끔 스스로 멈출 수 있어 부분적 통제력이 남아 있는 상태다.",
+            "cbt_analysis": "간헐적 성공 경험을 활용해 자기 효능감을 체계적으로 강화할 수 있다.",
+            "short_term_action": "멈출 수 있었던 상황의 공통 조건을 기록해 패턴을 찾아라.",
+            "mid_term_action": "CBT 충동 조절 훈련으로 성공 경험을 일관된 습관으로 발전시켜라."
+        },
+        "R_16": {
+            "title": "충동 통제 불능 집중 치료",
+            "diagnosis": "한번 시작하면 멈추지 못하는 심각한 충동 통제 장애 상태다.",
+            "cbt_analysis": "통제 불능 경험이 '나는 의지가 없다'는 무력감 신념을 강화한다.",
+            "short_term_action": "중독 전문 병원에 즉시 예약하고 입원 치료 가능성을 문의하라.",
+            "mid_term_action": "변증법적 행동치료(DBT)로 충동 조절 기술을 집중적으로 훈련하라."
+        },
+        "R_17": {
+            "title": "행위 중독 집중 치료 긴급 개입",
+            "diagnosis": "행위 중독 집착으로 수면·식사·업무가 심각하게 무너진 상태다.",
+            "cbt_analysis": "중독 행위가 생존 욕구보다 우선시되는 심각한 인지 왜곡 상태다.",
+            "short_term_action": "오늘 정신건강 위기상담 전화(1577-0199)에 연락해 도움을 받아라.",
+            "mid_term_action": "입원 또는 집중 외래 치료 프로그램에 즉시 등록하라."
+        },
+        "R_18": {
+            "title": "행위 집착 조기 개입",
+            "diagnosis": "행위에 대한 생각이 많으나 기본 일상은 유지되는 경계 상태다.",
+            "cbt_analysis": "과도한 행위 집착이 점진적으로 일상 기능을 잠식할 위험이 있다.",
+            "short_term_action": "해당 행위 접근 시간을 하루 1시간으로 제한하고 타이머를 사용하라.",
+            "mid_term_action": "인지행동치료로 행위 집착 사고를 인식하고 전환하는 훈련을 하라."
+        },
+        "R_19": {
+            "title": "자원 소모 증가 경보 개입",
+            "diagnosis": "행위에 쓰는 시간과 돈이 점점 늘어나는 내성 진행 상태다.",
+            "cbt_analysis": "점진적 자원 소모를 정상화하는 인지 왜곡이 중독을 심화시킨다.",
+            "short_term_action": "이번 주 해당 행위에 쓴 시간과 금액을 정확히 계산해 기록하라.",
+            "mid_term_action": "행동 중독 전문 상담사와 함께 자원 한도 계획을 수립하라."
+        },
+        "R_20": {
+            "title": "습관적 행위 점검 및 예방",
+            "diagnosis": "행위 수준은 유지되나 습관적 반복이 고착화될 위험이 있는 상태다.",
+            "cbt_analysis": "현재 안정이 잠재적 중독 위험을 인식하지 못하게 가리고 있다.",
+            "short_term_action": "해당 행위 없이 보내는 날을 주 1회 의도적으로 만들어 보라.",
+            "mid_term_action": "대안적 여가 활동을 개발해 행위 의존도를 점진적으로 낮춰라."
+        },
+        "R_21": {
+            "title": "이중 진단 통합 치료",
+            "diagnosis": "우울·불안이 행위 중독의 근본 원인으로 작용하는 이중 진단 상태다.",
+            "cbt_analysis": "부정 감정 회피를 위한 행위 사용이 우울과 중독을 동시에 악화시킨다.",
+            "short_term_action": "정신건강의학과에서 우울·불안과 중독을 함께 평가받아라.",
+            "mid_term_action": "우울·불안 치료와 중독 치료를 통합한 이중 진단 프로그램에 참여하라."
+        },
+        "R_22": {
+            "title": "습관성 중독 원인 탐색",
+            "diagnosis": "공허함이 습관으로 굳어진 원인을 스스로 인식하지 못하는 상태다.",
+            "cbt_analysis": "원인 불명의 공허감이 자동화된 중독 행동을 무의식적으로 유지시킨다.",
+            "short_term_action": "공허함을 느끼는 순간의 상황·감정을 일주일간 일지에 기록하라.",
+            "mid_term_action": "심리 상담을 통해 공허감의 근본 원인을 탐색하고 해결하라."
+        },
+        "R_23": {
+            "title": "타인 우려 수용 및 행동 전환",
+            "diagnosis": "주변의 반복적 지적에도 행위를 지속하는 부정 방어 상태다.",
+            "cbt_analysis": "타인의 우려를 과소평가하거나 무시하는 방어 기제가 작동하고 있다.",
+            "short_term_action": "지적한 사람에게 구체적으로 어떤 점이 걱정되는지 경청하라.",
+            "mid_term_action": "외부 피드백을 변화 동기로 활용하는 동기 강화 상담을 받아라."
+        },
+        "R_24": {
+            "title": "자기 점검 및 예방적 관리",
+            "diagnosis": "주변 반응은 없으나 습관적 행위가 반복되는 잠재적 위험 상태다.",
+            "cbt_analysis": "외부 피드백 부재가 문제 행동을 정상으로 인식하게 만들 수 있다.",
+            "short_term_action": "중독 자가 진단 체크리스트를 온라인에서 찾아 직접 평가해 보라.",
+            "mid_term_action": "예방 차원에서 정신건강 전문가와 연 1회 이상 점검 상담을 하라."
+        },
+        "R_25": {
+            "title": "약물 과용 즉각 응급 대응",
+            "diagnosis": "약물 과용·사고 위험이 있는 즉각적 생명 위기 상황이다.",
+            "cbt_analysis": "위기 상황에서도 도움 요청을 망설이는 인지 장벽을 즉시 제거해야 한다.",
+            "short_term_action": "지금 즉시 119 또는 정신건강 위기상담 전화(1577-0199)에 전화하라.",
+            "mid_term_action": "응급 처치 후 전문 해독 및 재활 치료 기관에 즉시 연계하라."
+        },
+        "R_26": {
+            "title": "고립 위기 긴급 안전 확보",
+            "diagnosis": "약물 위기 상황에서 혼자 고립되어 도움을 받지 못하는 극위험 상태다.",
+            "cbt_analysis": "'혼자 해결해야 한다'는 고립 신념이 생명을 위협하는 장벽이 되고 있다.",
+            "short_term_action": "가장 가까운 사람에게 문자라도 보내 현재 위치와 상태를 알려라.",
+            "mid_term_action": "퇴원 후 반드시 지지 네트워크를 구축하고 위기 대응 계획을 세워라."
+        },
+        "R_27": {
+            "title": "약물 전문 치료 즉시 연계",
+            "diagnosis": "약물 위험을 인지하고 전문 치료 의지가 있는 회복 준비 상태다.",
+            "cbt_analysis": "치료 의지가 있을 때 즉각 행동하지 않으면 동기가 약해질 수 있다.",
+            "short_term_action": "오늘 국립부곡병원 또는 지역 중독 재활 센터에 입원 문의를 하라.",
+            "mid_term_action": "해독 치료 완료 후 장기 재활 프로그램과 사후 관리 계획을 수립하라."
+        },
+        "R_28": {
+            "title": "치료 결정 두려움 극복 지원",
+            "diagnosis": "약물 위험을 알면서도 치료 결정을 두려워하며 망설이는 상태다.",
+            "cbt_analysis": "치료에 대한 과장된 두려움이 필요한 도움을 받지 못하게 막고 있다.",
+            "short_term_action": "익명으로 중독 상담 전화(1899-0075)에 전화해 치료 정보를 얻어라.",
+            "mid_term_action": "치료 경험자의 회복 사례를 접하며 치료에 대한 현실적 인식을 높여라."
+        }
+    },
+    "matchings": {
+        "R_01": {
+            "primaryRecommendation": {
+                "service": "중독관리통합지원센터 집중 치료 프로그램",
+                "description": "금단 증상 즉시 개입 및 단주 지원"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "국립부곡병원 중독 전문 입원 치료",
+                    "description": "가족 동반 재활 프로그램 연계"
+                }
+            ]
+        },
+        "R_02": {
+            "primaryRecommendation": {
+                "service": "중독 익명 상담 전화 1899-0075",
+                "description": "익명으로 부담 없이 첫 상담 시작"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "중독관리통합지원센터 홈페이지 정보 제공",
+                    "description": "치료 두려움 해소 정보 탐색"
+                }
+            ]
+        },
+        "R_03": {
+            "primaryRecommendation": {
+                "service": "AA(익명 단주 모임) 자조 그룹",
+                "description": "수치심 없이 동료 회복 경험 공유"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "트로스트 익명 1:1 심리 상담",
+                    "description": "비대면으로 고립감 완화 지원"
+                }
+            ]
+        },
+        "R_04": {
+            "primaryRecommendation": {
+                "service": "중독관리통합지원센터 중독 수준 전문 평가",
+                "description": "객관적 의존도 측정으로 과신 교정"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "알코올 중독 자가 진단 앱 DrinkControl",
+                    "description": "음주 일지 기록으로 패턴 객관화"
+                }
+            ]
+        },
+        "R_05": {
+            "primaryRecommendation": {
+                "service": "국립부곡병원 중독 전문 외래·입원 치료",
+                "description": "회복 의지 활용한 즉각 치료 연계"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "대한법률구조공단 법률 상담 서비스",
+                    "description": "중독 피해 법률·재정 동시 회복"
+                }
+            ]
+        },
+        "R_06": {
+            "primaryRecommendation": {
+                "service": "중독관리통합지원센터 초기 상담 연계",
+                "description": "압도감 해소 후 첫 상담 구조화"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "정신건강 위기상담 전화 1577-0199",
+                    "description": "혼란 상태 즉각 전화 개입 지원"
+                }
+            ]
+        },
+        "R_07": {
+            "primaryRecommendation": {
+                "service": "보건소 금연·절주 클리닉",
+                "description": "내성 초기 단계 전문 감량 계획 수립"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "금연 앱 금연길라잡이(보건복지부)",
+                    "description": "매일 음주·흡연량 기록 패턴 파악"
+                }
+            ]
+        },
+        "R_08": {
+            "primaryRecommendation": {
+                "service": "국가건강검진 및 보건소 건강 상담",
+                "description": "신체 영향 확인으로 절제 동기 강화"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "절주 앱 Drink Less",
+                    "description": "주간 허용 한도 설정 및 자기 관리"
+                }
+            ]
+        },
+        "R_09": {
+            "primaryRecommendation": {
+                "service": "트로스트 CBT 기반 감정 조절 상담",
+                "description": "물질 대신 감정 조절 대안 행동 훈련"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "마음챙김 앱 코끼리(명상)",
+                    "description": "스트레스 시 즉각 복식호흡 실천"
+                }
+            ]
+        },
+        "R_10": {
+            "primaryRecommendation": {
+                "service": "해피마인드 CBT 개인 맞춤 상담",
+                "description": "대안 행동 효능감 강화 전략 개발"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "운동 기록 앱 Nike Run Club",
+                    "description": "대안 행동 후 기분 변화 점수 추적"
+                }
+            ]
+        },
+        "R_11": {
+            "primaryRecommendation": {
+                "service": "보건소 금연 클리닉 니코틴 대체 치료",
+                "description": "전문 약물 치료로 금연 성공률 향상"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "금연 앱 금연길라잡이",
+                    "description": "목표량 설정 및 절제 동기 유지"
+                }
+            ]
+        },
+        "R_12": {
+            "primaryRecommendation": {
+                "service": "중독관리통합지원센터 동기 강화 상담(MI)",
+                "description": "스스로 변화 이유 발견하도록 촉진"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "국가암정보센터 금연 정보 포털",
+                    "description": "건강 수치 기반 문제 인식 제고"
+                }
+            ]
+        },
+        "R_13": {
+            "primaryRecommendation": {
+                "service": "신용회복위원회 채무 조정 상담",
+                "description": "도박 재정 피해 즉각 법적 회복 지원"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "한국도박문제관리센터 전문 치료",
+                    "description": "도박사 오류 교정 집중 치료 연계"
+                }
+            ]
+        },
+        "R_14": {
+            "primaryRecommendation": {
+                "service": "한국도박문제관리센터 가족 치료 프로그램",
+                "description": "관계 회복과 중독 치료 동시 진행"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "가족 상담 전문 기관 두란노아버지학교",
+                    "description": "가족 관계 복원 구조적 지원"
+                }
+            ]
+        },
+        "R_15": {
+            "primaryRecommendation": {
+                "service": "트로스트 CBT 충동 조절 온라인 상담",
+                "description": "성공 경험 패턴화로 자기 효능감 강화"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "마음챙김 기반 인지치료 앱 Headspace",
+                    "description": "충동 인식 및 전환 훈련 일상화"
+                }
+            ]
+        },
+        "R_16": {
+            "primaryRecommendation": {
+                "service": "국립부곡병원 중독 전문 입원 집중 치료",
+                "description": "충동 통제 불능 즉각 입원 치료 개입"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "변증법적 행동치료(DBT) 전문 클리닉",
+                    "description": "충동 조절 기술 집중 훈련 프로그램"
+                }
+            ]
+        },
+        "R_17": {
+            "primaryRecommendation": {
+                "service": "정신건강 위기상담 전화 1577-0199",
+                "description": "생활 붕괴 위기 즉각 긴급 개입 연계"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "정신건강의학과 집중 외래 치료 프로그램",
+                    "description": "입원 또는 집중 외래 즉시 등록"
+                }
+            ]
+        },
+        "R_18": {
+            "primaryRecommendation": {
+                "service": "마음이음 CBT 인지행동치료 상담",
+                "description": "행위 집착 사고 인식 및 전환 훈련"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "스크린 타임 제한 앱 Forest",
+                    "description": "하루 1시간 접근 제한 타이머 실천"
+                }
+            ]
+        },
+        "R_19": {
+            "primaryRecommendation": {
+                "service": "한국도박문제관리센터 행동 중독 전문 상담",
+                "description": "자원 소모 한도 계획 전문가 수립"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "가계부 앱 뱅크샐러드",
+                    "description": "시간·금액 정확한 기록으로 내성 인식"
+                }
+            ]
+        },
+        "R_20": {
+            "primaryRecommendation": {
+                "service": "정신건강복지센터 예방적 중독 점검 상담",
+                "description": "습관 고착 전 조기 예방 관리 지원"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "여가 활동 플랫폼 클래스101",
+                    "description": "대안 여가 개발로 행위 의존도 감소"
+                }
+            ]
+        },
+        "R_21": {
+            "primaryRecommendation": {
+                "service": "정신건강의학과 이중 진단 통합 치료",
+                "description": "우울·불안·중독 동시 평가 및 치료"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "중독관리통합지원센터 이중 진단 프로그램",
+                    "description": "감정 회피 중독 통합 치료 연계"
+                }
+            ]
+        },
+        "R_22": {
+            "primaryRecommendation": {
+                "service": "트로스트 심층 심리 상담(공허감 탐색)",
+                "description": "공허감 근본 원인 탐색 및 해결"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "감정 일기 앱 Daylio",
+                    "description": "공허 순간 상황·감정 일주일 기록"
+                }
+            ]
+        },
+        "R_23": {
+            "primaryRecommendation": {
+                "service": "중독관리통합지원센터 동기 강화 상담(MI)",
+                "description": "외부 피드백을 변화 동기로 전환"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "해피마인드 방어 기제 교정 상담",
+                    "description": "타인 우려 수용 인지 왜곡 교정"
+                }
+            ]
+        },
+        "R_24": {
+            "primaryRecommendation": {
+                "service": "정신건강복지센터 연 1회 예방 점검 상담",
+                "description": "외부 피드백 없는 자기 점검 구조화"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "중독 자가 진단 온라인 체크리스트(복지부)",
+                    "description": "잠재 위험 스스로 조기 발견"
+                }
+            ]
+        },
+        "R_25": {
+            "primaryRecommendation": {
+                "service": "119 응급 출동 및 응급실 즉각 연계",
+                "description": "약물 과용 생명 위기 즉각 응급 대응"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "정신건강 위기상담 전화 1577-0199",
+                    "description": "응급 후 해독·재활 기관 즉시 연계"
+                }
+            ]
+        },
+        "R_26": {
+            "primaryRecommendation": {
+                "service": "정신건강 위기상담 전화 1577-0199 긴급 개입",
+                "description": "고립 위기 즉각 위치·상태 신고 지원"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "국립부곡병원 퇴원 후 사후 관리 프로그램",
+                    "description": "지지 네트워크 구축 및 위기 계획 수립"
+                }
+            ]
+        },
+        "R_27": {
+            "primaryRecommendation": {
+                "service": "국립부곡병원 약물 중독 입원 치료",
+                "description": "치료 의지 즉각 활용 입원 연계"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "지역 중독 재활 센터 장기 재활 프로그램",
+                    "description": "해독 후 장기 재활 및 사후 관리"
+                }
+            ]
+        },
+        "R_28": {
+            "primaryRecommendation": {
+                "service": "중독 익명 상담 전화 1899-0075",
+                "description": "익명 상담으로 치료 두려움 단계적 해소"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "한국마약퇴치운동본부 회복 사례 프로그램",
+                    "description": "치료 경험자 사례로 현실적 인식 제고"
+                }
+            ]
+        }
+    }
+}

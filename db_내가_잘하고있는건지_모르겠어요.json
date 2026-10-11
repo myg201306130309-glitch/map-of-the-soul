@@ -1,0 +1,1000 @@
+{
+    "questions": {
+        "Q_START": {
+            "id": "Q_START",
+            "category": "자기점검",
+            "text": "지금 '잘하고 있는건지 모르겠다'는 느낌이 가장 강하게 드는 영역은 어디인가요?",
+            "isRoot": true,
+            "branches": [
+                {
+                    "text": "일·공부·성과 측면에서 내가 제대로 하고 있는지 모르겠다",
+                    "nextNodeId": "Q_2A",
+                    "resultId": ""
+                },
+                {
+                    "text": "사람들과의 관계나 타인의 시선이 신경 쓰인다",
+                    "nextNodeId": "Q_2B",
+                    "resultId": ""
+                },
+                {
+                    "text": "삶의 방향 자체가 맞는지, 앞으로가 막막하다",
+                    "nextNodeId": "Q_2C",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_2A": {
+            "id": "Q_2A",
+            "category": "일·성과",
+            "text": "일이나 공부에서 '잘 못하고 있다'는 느낌의 주된 원인은 무엇인가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "노력은 하는데 결과(성적·성과·피드백)가 안 나온다",
+                    "nextNodeId": "Q_3A1",
+                    "resultId": ""
+                },
+                {
+                    "text": "무엇을 어떻게 해야 할지 방법 자체를 모르겠다",
+                    "nextNodeId": "Q_3A2",
+                    "resultId": ""
+                },
+                {
+                    "text": "하긴 하는데 집중이 안 되고 의욕이 없다",
+                    "nextNodeId": "Q_3A3",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_2B": {
+            "id": "Q_2B",
+            "category": "인간관계·타인시선",
+            "text": "관계나 타인 시선에서 가장 힘든 부분은 무엇인가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "내가 충분히 잘하고 있는지 타인의 평가가 계속 신경 쓰인다",
+                    "nextNodeId": "Q_3B1",
+                    "resultId": ""
+                },
+                {
+                    "text": "주변 사람들과 비교될 때 내가 뒤처진 것 같다",
+                    "nextNodeId": "Q_3B2",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_2C": {
+            "id": "Q_2C",
+            "category": "삶의방향·불안",
+            "text": "삶의 방향에 대한 막막함은 어떤 형태로 나타나나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "지금 하는 일·공부가 내 길이 맞는지 확신이 없다",
+                    "nextNodeId": "Q_3C1",
+                    "resultId": ""
+                },
+                {
+                    "text": "목표 자체가 없거나 무엇을 원하는지 모르겠다",
+                    "nextNodeId": "Q_3C2",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3A1": {
+            "id": "Q_3A1",
+            "category": "일·성과",
+            "text": "노력 대비 결과가 안 나올 때, 지금 상황을 더 정확히 표현하면?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "내 방법이 잘못된 건지, 객관적으로 점검해본 적이 없다",
+                    "nextNodeId": "Q_4A1a",
+                    "resultId": ""
+                },
+                {
+                    "text": "방법은 알겠는데 실행이 꾸준히 안 된다",
+                    "nextNodeId": "Q_4A1b",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3A2": {
+            "id": "Q_3A2",
+            "category": "일·성과",
+            "text": "방법을 모르겠다는 느낌, 어디서 막히나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "정보나 자원(멘토·자료·피드백)이 부족해서 막막하다",
+                    "nextNodeId": "Q_4A2a",
+                    "resultId": ""
+                },
+                {
+                    "text": "정보는 있는데 어디서부터 시작해야 할지 모르겠다",
+                    "nextNodeId": "Q_4A2b",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3A3": {
+            "id": "Q_3A3",
+            "category": "일·성과",
+            "text": "의욕이 없고 집중이 안 되는 이유가 무엇에 가깝나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "번아웃이나 피로감 때문에 몸과 마음이 지쳐있다",
+                    "nextNodeId": "Q_4A3a",
+                    "resultId": ""
+                },
+                {
+                    "text": "이걸 왜 해야 하는지 의미를 못 느끼겠다",
+                    "nextNodeId": "Q_4A3b",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3B1": {
+            "id": "Q_3B1",
+            "category": "인간관계·타인시선",
+            "text": "타인의 평가가 신경 쓰일 때, 그 감정의 핵심은?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "잘못하면 실망시킬까봐 두렵고 인정받고 싶다",
+                    "nextNodeId": "Q_4B1a",
+                    "resultId": ""
+                },
+                {
+                    "text": "내 기준이 없어서 타인 반응에 흔들리는 것 같다",
+                    "nextNodeId": "Q_4B1b",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3B2": {
+            "id": "Q_3B2",
+            "category": "인간관계·타인시선",
+            "text": "비교에서 오는 뒤처짐의 느낌, 어떤 상황에서 가장 강한가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "SNS나 주변 지인의 성취를 볼 때 자동으로 비교된다",
+                    "nextNodeId": "Q_4B2a",
+                    "resultId": ""
+                },
+                {
+                    "text": "부모님이나 가족의 기대와 내 현실 사이의 괴리가 크다",
+                    "nextNodeId": "Q_4B2b",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3C1": {
+            "id": "Q_3C1",
+            "category": "삶의방향",
+            "text": "지금 하는 것이 내 길인지 확신이 없을 때, 더 가까운 상황은?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "적성·흥미를 제대로 탐색해본 적이 없어서 모르겠다",
+                    "nextNodeId": "Q_4C1a",
+                    "resultId": ""
+                },
+                {
+                    "text": "탐색은 해봤는데 현실 조건(돈·시간·주변 시선)이 발목을 잡는다",
+                    "nextNodeId": "Q_4C1b",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3C2": {
+            "id": "Q_3C2",
+            "category": "삶의방향",
+            "text": "목표나 원하는 것이 없다는 느낌, 어떤 상태에 가깝나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "무기력하고 아무것도 하기 싫은 상태가 지속되고 있다",
+                    "nextNodeId": "Q_4C2a",
+                    "resultId": ""
+                },
+                {
+                    "text": "하고 싶은 게 너무 많거나 갈팡질팡해서 결정을 못 한다",
+                    "nextNodeId": "Q_4C2b",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_4A1a": {
+            "id": "Q_4A1a",
+            "category": "일·성과",
+            "text": "지금 내 방법을 객관적으로 점검하려면 무엇이 가장 필요한가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "나보다 앞선 사람의 피드백이나 조언을 직접 구해보겠다",
+                    "nextNodeId": "",
+                    "resultId": "R_01"
+                },
+                {
+                    "text": "내 루틴과 결과를 기록해서 스스로 패턴을 분석해보겠다",
+                    "nextNodeId": "",
+                    "resultId": "R_02"
+                }
+            ]
+        },
+        "Q_4A1b": {
+            "id": "Q_4A1b",
+            "category": "일·성과",
+            "text": "꾸준한 실행이 안 되는 가장 큰 이유는 무엇인가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "계획이 너무 크고 막연해서 시작 자체가 부담스럽다",
+                    "nextNodeId": "",
+                    "resultId": "R_03"
+                },
+                {
+                    "text": "실패할까봐 두려워서 완벽하게 준비되기를 기다리게 된다",
+                    "nextNodeId": "",
+                    "resultId": "R_04"
+                }
+            ]
+        },
+        "Q_4A2a": {
+            "id": "Q_4A2a",
+            "category": "일·성과",
+            "text": "정보와 자원이 부족할 때, 지금 당장 취할 수 있는 행동은?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "관련 커뮤니티·강의·책 등 구체적 자료를 먼저 찾아보겠다",
+                    "nextNodeId": "",
+                    "resultId": "R_05"
+                },
+                {
+                    "text": "그 분야 경험자를 찾아 직접 물어보는 것부터 시작하겠다",
+                    "nextNodeId": "",
+                    "resultId": "R_06"
+                }
+            ]
+        },
+        "Q_4A2b": {
+            "id": "Q_4A2b",
+            "category": "일·성과",
+            "text": "시작점을 못 찾는 이유가 무엇에 가깝나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "선택지가 너무 많아서 무엇이 최선인지 고르지 못하겠다",
+                    "nextNodeId": "",
+                    "resultId": "R_07"
+                },
+                {
+                    "text": "틀린 선택을 할까봐 결정 자체를 미루고 있다",
+                    "nextNodeId": "",
+                    "resultId": "R_08"
+                }
+            ]
+        },
+        "Q_4A3a": {
+            "id": "Q_4A3a",
+            "category": "일·성과",
+            "text": "번아웃 상태에서 지금 가장 필요한 것은 무엇인가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "일단 쉬고 회복하는 시간이 필요하다는 걸 인정하겠다",
+                    "nextNodeId": "",
+                    "resultId": "R_09"
+                },
+                {
+                    "text": "쉬기보다 작은 성취감을 쌓아 다시 동력을 만들고 싶다",
+                    "nextNodeId": "",
+                    "resultId": "R_10"
+                }
+            ]
+        },
+        "Q_4A3b": {
+            "id": "Q_4A3b",
+            "category": "일·성과",
+            "text": "하는 일에서 의미를 못 느끼는 이유는 무엇인가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "내가 원해서 시작한 게 아니라 떠밀려서 하게 된 일이다",
+                    "nextNodeId": "",
+                    "resultId": "R_11"
+                },
+                {
+                    "text": "처음엔 원했는데 반복되면서 흥미와 목적의식이 사라졌다",
+                    "nextNodeId": "",
+                    "resultId": "R_12"
+                }
+            ]
+        },
+        "Q_4B1a": {
+            "id": "Q_4B1a",
+            "category": "인간관계·타인시선",
+            "text": "인정받고 싶은 마음, 그 대상이 누구인가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "부모님이나 가족 등 가까운 사람들의 인정이 가장 중요하다",
+                    "nextNodeId": "",
+                    "resultId": "R_13"
+                },
+                {
+                    "text": "직장·학교 등 사회적 관계에서의 평가가 신경 쓰인다",
+                    "nextNodeId": "",
+                    "resultId": "R_14"
+                }
+            ]
+        },
+        "Q_4B1b": {
+            "id": "Q_4B1b",
+            "category": "인간관계·타인시선",
+            "text": "내 기준이 없다는 느낌, 어디서 비롯된 것 같나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "어릴 때부터 타인의 기준에 맞춰 살아온 습관 때문인 것 같다",
+                    "nextNodeId": "",
+                    "resultId": "R_15"
+                },
+                {
+                    "text": "내가 무엇을 좋아하고 원하는지 탐색할 기회가 없었다",
+                    "nextNodeId": "",
+                    "resultId": "R_16"
+                }
+            ]
+        },
+        "Q_4B2a": {
+            "id": "Q_4B2a",
+            "category": "인간관계·타인시선",
+            "text": "비교로 인한 감정, 지금 나에게 더 필요한 것은?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "비교 자극(SNS 등)을 의도적으로 줄이는 환경 변화가 필요하다",
+                    "nextNodeId": "",
+                    "resultId": "R_17"
+                },
+                {
+                    "text": "남이 아닌 어제의 나와 비교하는 관점 전환 연습이 필요하다",
+                    "nextNodeId": "",
+                    "resultId": "R_18"
+                }
+            ]
+        },
+        "Q_4B2b": {
+            "id": "Q_4B2b",
+            "category": "인간관계·타인시선",
+            "text": "가족 기대와 내 현실의 괴리, 지금 가장 힘든 부분은?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "기대에 못 미친다는 죄책감과 실망시킬까봐 두려운 감정이 크다",
+                    "nextNodeId": "",
+                    "resultId": "R_19"
+                },
+                {
+                    "text": "내 선택을 존중받지 못한다는 답답함과 억울함이 크다",
+                    "nextNodeId": "",
+                    "resultId": "R_20"
+                }
+            ]
+        },
+        "Q_4C1a": {
+            "id": "Q_4C1a",
+            "category": "삶의방향",
+            "text": "적성과 흥미를 탐색하기 위해 지금 할 수 있는 것은?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "직업·적성 검사나 다양한 경험(인턴·봉사·취미)을 먼저 해보겠다",
+                    "nextNodeId": "",
+                    "resultId": "R_21"
+                },
+                {
+                    "text": "내가 언제 가장 몰입하고 즐거웠는지 과거를 돌아보겠다",
+                    "nextNodeId": "",
+                    "resultId": "R_22"
+                }
+            ]
+        },
+        "Q_4C1b": {
+            "id": "Q_4C1b",
+            "category": "삶의방향",
+            "text": "현실 조건이 발목을 잡을 때, 지금 가장 현실적인 접근은?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "지금 조건 안에서 할 수 있는 작은 시도부터 병행해보겠다",
+                    "nextNodeId": "",
+                    "resultId": "R_23"
+                },
+                {
+                    "text": "현실 제약을 바꾸기 위한 구체적 계획(저축·시간 확보 등)을 세우겠다",
+                    "nextNodeId": "",
+                    "resultId": "R_24"
+                }
+            ]
+        },
+        "Q_4C2a": {
+            "id": "Q_4C2a",
+            "category": "삶의방향",
+            "text": "무기력이 지속될 때, 지금 상태를 더 정확히 표현하면?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "오랫동안 쌓인 피로와 감정 소진으로 아무것도 하기 싫다",
+                    "nextNodeId": "",
+                    "resultId": "R_25"
+                },
+                {
+                    "text": "무엇을 해도 의미 없을 것 같다는 생각이 자꾸 든다",
+                    "nextNodeId": "",
+                    "resultId": "R_26"
+                }
+            ]
+        },
+        "Q_4C2b": {
+            "id": "Q_4C2b",
+            "category": "삶의방향",
+            "text": "갈팡질팡하며 결정을 못 하는 이유는 무엇인가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "잘못된 선택을 할까봐 두려워서 아예 고르지 못하고 있다",
+                    "nextNodeId": "",
+                    "resultId": "R_27"
+                },
+                {
+                    "text": "선택지마다 장단점이 명확해서 무엇이 더 나은지 판단이 안 된다",
+                    "nextNodeId": "",
+                    "resultId": "R_28"
+                }
+            ]
+        }
+    },
+    "solutions": {
+        "R_01": {
+            "title": "외부 피드백을 통한 방법론 점검",
+            "diagnosis": "노력의 방향이 잘못되었을 가능성을 인식하지 못한 상태",
+            "cbt_analysis": "자기 방식이 옳다는 확증 편향이 성장을 막고 있음",
+            "short_term_action": "이번 주 내 선배·멘토 1인에게 구체적 피드백을 요청한다",
+            "mid_term_action": "월 1회 정기적으로 외부 조언을 구하는 루틴을 만든다"
+        },
+        "R_02": {
+            "title": "루틴 기록을 통한 자기 패턴 분석",
+            "diagnosis": "노력의 질과 양을 객관적으로 파악하지 못한 상태",
+            "cbt_analysis": "막연한 자기 평가가 왜곡된 무능감을 강화하고 있음",
+            "short_term_action": "오늘부터 매일 행동과 결과를 노트에 5분간 기록한다",
+            "mid_term_action": "2주 후 기록을 검토해 비효율 패턴을 찾아 수정한다"
+        },
+        "R_03": {
+            "title": "과도한 계획을 작은 단위로 분해하기",
+            "diagnosis": "목표가 너무 커서 시작 자체가 심리적 부담이 된 상태",
+            "cbt_analysis": "전부 아니면 전무 사고가 행동 회피를 정당화하고 있음",
+            "short_term_action": "오늘 할 일을 15분 단위 1가지 행동으로만 쪼개어 시작한다",
+            "mid_term_action": "주간 목표를 일일 소과제로 분해하는 습관을 정착시킨다"
+        },
+        "R_04": {
+            "title": "완벽주의 극복과 불완전한 실행 허용",
+            "diagnosis": "실패 공포로 인해 준비만 반복하며 실행을 미루는 상태",
+            "cbt_analysis": "완벽한 준비라는 조건이 영구적 회피의 핑계가 되고 있음",
+            "short_term_action": "60점짜리 결과물이라도 오늘 제출하거나 실행해본다",
+            "mid_term_action": "실패를 데이터로 재정의하고 시도 횟수 자체를 목표로 삼는다"
+        },
+        "R_05": {
+            "title": "구체적 학습 자원 탐색 및 확보",
+            "diagnosis": "정보 부족으로 인해 방향 설정 자체가 불가능한 상태",
+            "cbt_analysis": "막막함이 행동 회피를 합리화하는 인지적 장벽이 되고 있음",
+            "short_term_action": "오늘 관련 커뮤니티·유튜브·책 1가지를 찾아 저장한다",
+            "mid_term_action": "주 1회 새로운 학습 자료를 탐색하는 시간을 고정 배치한다"
+        },
+        "R_06": {
+            "title": "경험자 직접 접촉을 통한 정보 획득",
+            "diagnosis": "혼자 해결하려다 정보 공백이 장기화된 상태",
+            "cbt_analysis": "도움 요청을 약함으로 인식하는 신념이 고립을 심화시킴",
+            "short_term_action": "이번 주 해당 분야 경험자 1인에게 질문 메시지를 보낸다",
+            "mid_term_action": "네트워크를 점진적으로 넓혀 정보 접근 경로를 다양화한다"
+        },
+        "R_07": {
+            "title": "선택지 과부하 해소를 위한 기준 설정",
+            "diagnosis": "너무 많은 선택지가 오히려 결정 마비를 유발한 상태",
+            "cbt_analysis": "최선을 찾으려는 집착이 차선의 실행 기회를 소멸시키고 있음",
+            "short_term_action": "나만의 선택 기준 3가지를 종이에 적고 그 기준으로 고른다",
+            "mid_term_action": "선택지를 3개 이하로 제한하는 의사결정 규칙을 습관화한다"
+        },
+        "R_08": {
+            "title": "결정 회피 극복과 실험적 선택 연습",
+            "diagnosis": "틀린 선택에 대한 공포로 결정 자체를 무한 연기하는 상태",
+            "cbt_analysis": "결정하지 않는 것도 하나의 선택임을 인식하지 못하고 있음",
+            "short_term_action": "오늘 작은 것 하나를 5분 안에 결정하고 즉시 실행한다",
+            "mid_term_action": "선택을 실험으로 프레이밍하여 수정 가능성을 열어두고 결정한다"
+        },
+        "R_09": {
+            "title": "번아웃 회복을 위한 휴식 수용",
+            "diagnosis": "지속적 소진으로 심신이 한계에 도달한 번아웃 상태",
+            "cbt_analysis": "쉬는 것을 나태함으로 보는 신념이 회복 자체를 방해하고 있음",
+            "short_term_action": "오늘 하루 생산성 목표를 내려놓고 온전한 휴식을 허용한다",
+            "mid_term_action": "주 1회 완전한 회복일을 일정에 공식적으로 배치한다"
+        },
+        "R_10": {
+            "title": "작은 성취 누적으로 동력 재점화",
+            "diagnosis": "번아웃 상태에서 동기 재건이 필요한 상태",
+            "cbt_analysis": "큰 목표만 바라보다 작은 성공 경험의 회복력을 간과하고 있음",
+            "short_term_action": "오늘 5분 안에 끝낼 수 있는 과제 1개를 완료하고 기록한다",
+            "mid_term_action": "매일 소성취 1개를 달성하고 누적 기록으로 자기효능감을 회복한다"
+        },
+        "R_11": {
+            "title": "외부 강요된 역할에서 자기 주도성 회복",
+            "diagnosis": "타인의 선택으로 시작된 일에서 의미를 찾지 못하는 상태",
+            "cbt_analysis": "자율성 결핍이 무의미감과 만성적 의욕 저하를 만들어내고 있음",
+            "short_term_action": "현재 일 안에서 내가 직접 선택할 수 있는 요소 1가지를 찾는다",
+            "mid_term_action": "장기적으로 자기 선택 비중을 늘리는 진로 재설계를 시작한다"
+        },
+        "R_12": {
+            "title": "반복으로 소멸된 의미 재발견",
+            "diagnosis": "초기 동기가 습관화와 반복으로 희석된 상태",
+            "cbt_analysis": "처음 시작했던 이유를 망각하면서 목적의식이 단절되고 있음",
+            "short_term_action": "이 일을 처음 시작했을 때의 이유를 글로 다시 써본다",
+            "mid_term_action": "월 1회 현재 활동의 의미와 성장을 점검하는 리뷰를 진행한다"
+        },
+        "R_13": {
+            "title": "가족 인정 욕구와 자기 기준 분리",
+            "diagnosis": "가족의 인정이 자기 가치 판단의 핵심 기준이 된 상태",
+            "cbt_analysis": "조건부 사랑 경험이 인정 의존적 자아상을 형성시키고 있음",
+            "short_term_action": "오늘 내가 스스로 만족한 행동 1가지를 찾아 인정해본다",
+            "mid_term_action": "가족 반응과 무관하게 내 기준으로 평가하는 연습을 매일 한다"
+        },
+        "R_14": {
+            "title": "사회적 평가 불안 완화와 내적 기준 강화",
+            "diagnosis": "직장·학교 등 사회적 시선이 자기 평가를 지배하는 상태",
+            "cbt_analysis": "타인 평가를 생존 신호로 처리하는 과각성 패턴이 작동하고 있음",
+            "short_term_action": "타인 반응과 내 실제 수행을 분리해서 오늘 하루 기록해본다",
+            "mid_term_action": "내 성과 기준표를 직접 작성하고 자기 평가 루틴을 만든다"
+        },
+        "R_15": {
+            "title": "타인 기준 의존 습관에서 자기 기준 형성",
+            "diagnosis": "오랜 순응 습관으로 자기 기준 자체가 형성되지 않은 상태",
+            "cbt_analysis": "타인 기준 충족이 안전이라는 학습된 신념이 자율성을 억압함",
+            "short_term_action": "오늘 사소한 선택 1가지를 타인 의견 없이 스스로 결정한다",
+            "mid_term_action": "매주 내 선호와 가치관을 탐색하는 저널 쓰기를 실천한다"
+        },
+        "R_16": {
+            "title": "자기 탐색 기회 부재 극복과 흥미 발견",
+            "diagnosis": "자신이 무엇을 원하는지 탐색 경험 자체가 부족한 상태",
+            "cbt_analysis": "탐색 없이 정체성을 확립하려는 시도가 공허감을 심화시키고 있음",
+            "short_term_action": "이번 주 한 번도 안 해본 활동 1가지를 부담 없이 시도한다",
+            "mid_term_action": "3개월간 다양한 경험을 의도적으로 쌓으며 반응을 기록한다"
+        },
+        "R_17": {
+            "title": "비교 자극 환경 차단과 디지털 디톡스",
+            "diagnosis": "SNS 노출로 인한 자동적 비교가 자존감을 반복 훼손하는 상태",
+            "cbt_analysis": "비교 자극이 열등감을 조건반사적으로 유발하는 회로가 형성됨",
+            "short_term_action": "오늘부터 1주일간 SNS 앱을 삭제하거나 알림을 전면 차단한다",
+            "mid_term_action": "SNS 사용 시간을 하루 15분으로 제한하는 규칙을 정착시킨다"
+        },
+        "R_18": {
+            "title": "어제의 나와 비교하는 관점 전환 훈련",
+            "diagnosis": "타인과의 비교가 기본값이 되어 자기 성장을 보지 못하는 상태",
+            "cbt_analysis": "상향 비교 편향이 자기 발전을 무효화하는 인지 왜곡을 만들고 있음",
+            "short_term_action": "오늘 1달 전 나보다 나아진 점 3가지를 구체적으로 적어본다",
+            "mid_term_action": "매일 아침 어제 대비 성장 1가지를 기록하는 루틴을 만든다"
+        },
+        "R_19": {
+            "title": "가족 기대 미충족 죄책감 해소",
+            "diagnosis": "가족을 실망시킬까봐 만성적 죄책감과 두려움을 안고 사는 상태",
+            "cbt_analysis": "타인 감정 책임을 자신이 전담해야 한다는 신념이 죄책감을 유발함",
+            "short_term_action": "가족의 감정은 내 책임이 아님을 오늘 글로 써서 확인한다",
+            "mid_term_action": "가족과의 기대 차이를 솔직하게 대화하는 자리를 마련한다"
+        },
+        "R_20": {
+            "title": "자기 선택 존중받기 위한 경계 설정",
+            "diagnosis": "내 선택이 무시당하는 경험이 반복되어 억울함이 누적된 상태",
+            "cbt_analysis": "경계 부재가 자기 결정권 침해를 반복적으로 허용하게 만들고 있음",
+            "short_term_action": "내 선택의 이유를 논리적으로 정리해 가족에게 차분히 전달한다",
+            "mid_term_action": "나의 경계와 가치관을 명확히 하고 일관되게 표현하는 연습을 한다"
+        },
+        "R_21": {
+            "title": "다양한 경험을 통한 적성·흥미 탐색",
+            "diagnosis": "직접 경험 없이 적성을 판단하려다 막막함이 커진 상태",
+            "cbt_analysis": "완벽한 확신을 얻은 후 행동하려는 태도가 탐색 자체를 막고 있음",
+            "short_term_action": "이번 달 직업 적성 검사 1개와 새로운 활동 1가지를 실행한다",
+            "mid_term_action": "6개월간 인턴·봉사·취미 등 3가지 이상 다양한 경험을 쌓는다"
+        },
+        "R_22": {
+            "title": "과거 몰입 경험에서 적성 단서 발굴",
+            "diagnosis": "자신의 강점과 흥미를 외부에서만 찾으려 하는 상태",
+            "cbt_analysis": "이미 내면에 존재하는 적성 단서를 인식하지 못하고 있음",
+            "short_term_action": "살면서 가장 몰입했던 순간 5가지를 지금 바로 적어본다",
+            "mid_term_action": "몰입 경험의 공통 요소를 분석해 진로 방향의 실마리로 삼는다"
+        },
+        "R_23": {
+            "title": "현실 조건 안에서 병행 가능한 소시도 실행",
+            "diagnosis": "현실 제약을 이유로 원하는 방향을 완전히 포기한 상태",
+            "cbt_analysis": "전환이 전부여야 한다는 사고가 부분적 시도의 가능성을 차단함",
+            "short_term_action": "지금 조건에서 주 1시간이라도 원하는 활동을 시작해본다",
+            "mid_term_action": "현재 일과 병행하며 점진적으로 전환 비중을 늘려가는 계획을 세운다"
+        },
+        "R_24": {
+            "title": "현실 제약 해소를 위한 구체적 전환 계획 수립",
+            "diagnosis": "현실 조건 변화 없이는 원하는 삶이 불가능하다고 느끼는 상태",
+            "cbt_analysis": "막연한 제약 인식이 구체적 해결책 탐색을 포기하게 만들고 있음",
+            "short_term_action": "제약 조건별 해결 방법을 오늘 종이에 구체적으로 나열해본다",
+            "mid_term_action": "6개월 단위 저축·시간 확보 계획을 세우고 주간 단위로 점검한다"
+        },
+        "R_25": {
+            "title": "감정 소진 회복을 위한 에너지 재충전",
+            "diagnosis": "오랜 피로 누적으로 감정과 신체 모두 소진된 상태",
+            "cbt_analysis": "소진 상태에서도 계속 해야 한다는 강박이 회복을 방해하고 있음",
+            "short_term_action": "오늘 하루 모든 의무를 내려놓고 좋아하는 것 1가지만 한다",
+            "mid_term_action": "수면·식사·운동 등 기본 회복 루틴을 2주간 최우선으로 실천한다"
+        },
+        "R_26": {
+            "title": "무의미감 극복과 삶의 작은 가치 재발견",
+            "diagnosis": "무엇을 해도 의미 없다는 생각이 반복되는 무기력 상태",
+            "cbt_analysis": "의미 없음이라는 자동적 사고가 모든 행동 동기를 선제 차단하고 있음",
+            "short_term_action": "오늘 아주 작은 즐거움 1가지를 의도적으로 찾아 경험해본다",
+            "mid_term_action": "전문 상담을 통해 무의미감의 근원을 탐색하고 치료적 지원을 받는다"
+        },
+        "R_27": {
+            "title": "선택 공포 극복과 결정 근육 강화",
+            "diagnosis": "잘못된 선택에 대한 공포로 모든 결정을 회피하는 상태",
+            "cbt_analysis": "선택의 결과를 돌이킬 수 없다는 과장된 신념이 결정 마비를 유발함",
+            "short_term_action": "오늘 결과가 가벼운 선택 1가지를 즉시 결정하고 실행해본다",
+            "mid_term_action": "대부분의 선택은 수정 가능함을 경험으로 확인하며 결정 연습을 쌓는다"
+        },
+        "R_28": {
+            "title": "장단점 분석 후 가치 기반 의사결정",
+            "diagnosis": "선택지 간 장단점이 명확해 합리적 판단이 어려운 상태",
+            "cbt_analysis": "최적 선택 강박이 충분히 좋은 선택을 받아들이지 못하게 막고 있음",
+            "short_term_action": "내 핵심 가치 3가지를 적고 그 기준으로 선택지를 점수화해본다",
+            "mid_term_action": "가치 기반 의사결정 프레임을 익혀 반복적으로 적용하는 연습을 한다"
+        }
+    },
+    "matchings": {
+        "R_01": {
+            "primaryRecommendation": {
+                "service": "1:1 커리어 코칭 플랫폼 (탈잉·크몽)",
+                "description": "방향 오류를 전문가가 즉시 교정"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "멘토링 매칭 서비스 (잇다·멘토링클럽)",
+                    "description": "현직자 피드백으로 맹점 발견"
+                }
+            ]
+        },
+        "R_02": {
+            "primaryRecommendation": {
+                "service": "생산성 코칭 앱 (Notion AI 플랜·모노)",
+                "description": "행동 기록·패턴 분석 자동화"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "1:1 퍼포먼스 코칭 (크몽 전문가)",
+                    "description": "기록 데이터 기반 비효율 제거"
+                }
+            ]
+        },
+        "R_03": {
+            "primaryRecommendation": {
+                "service": "ADHD·실행력 전문 심리상담 (마인드카페)",
+                "description": "과부하 사고 구조 전문 치료"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "GTD 기반 생산성 코칭 (탈잉)",
+                    "description": "목표 분해 기술 1:1 훈련"
+                }
+            ]
+        },
+        "R_04": {
+            "primaryRecommendation": {
+                "service": "완벽주의 CBT 전문 심리상담 (트로스트·마인드카페)",
+                "description": "실패 공포 근원 치료적 개입"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "실행력 강화 코칭 (크몽 전문가)",
+                    "description": "불완전 실행 허용 훈련 지원"
+                }
+            ]
+        },
+        "R_05": {
+            "primaryRecommendation": {
+                "service": "직무 부트캠프 (패스트캠퍼스·코드스테이츠)",
+                "description": "검증된 커리큘럼으로 방향 확보"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "헤드헌터 상담 (원티드·사람인 헤드헌팅)",
+                    "description": "업계 정보·학습 방향 즉시 파악"
+                }
+            ]
+        },
+        "R_06": {
+            "primaryRecommendation": {
+                "service": "멘토링 매칭 플랫폼 (잇다·멘토링클럽)",
+                "description": "경험자 직접 연결로 정보 공백 해소"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "커뮤니티 기반 네트워킹 서비스 (링크드인 프리미엄)",
+                    "description": "업계 인맥 확장 경로 확보"
+                }
+            ]
+        },
+        "R_07": {
+            "primaryRecommendation": {
+                "service": "의사결정 전문 코칭 (크몽·탈잉)",
+                "description": "선택 기준 설계 전문가 지원"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "커리어 컨설팅 (퍼스널 브랜딩 전문가)",
+                    "description": "가치 기반 선택 프레임 구축"
+                }
+            ]
+        },
+        "R_08": {
+            "primaryRecommendation": {
+                "service": "결정 회피 CBT 심리상담 (트로스트·마인드카페)",
+                "description": "결정 공포 심리 구조 전문 치료"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "행동활성화 코칭 (탈잉 심리 전문가)",
+                    "description": "소결정 실행 근육 단계적 훈련"
+                }
+            ]
+        },
+        "R_09": {
+            "primaryRecommendation": {
+                "service": "번아웃 전문 정신건강의학과 외래",
+                "description": "소진 상태 의학적 진단·치료"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "번아웃 회복 심리상담 (마인드카페·트로스트)",
+                    "description": "휴식 죄책감 해소 전문 상담"
+                }
+            ]
+        },
+        "R_10": {
+            "primaryRecommendation": {
+                "service": "번아웃 회복 심리상담 (트로스트·마인드카페)",
+                "description": "동기 재건 전문 치료적 개입"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "행동활성화 코칭 (탈잉 전문가)",
+                    "description": "소성취 누적 루틴 설계 지원"
+                }
+            ]
+        },
+        "R_11": {
+            "primaryRecommendation": {
+                "service": "커리어 전환 코칭 (퍼스널 브랜딩·탈잉)",
+                "description": "자기주도 진로 재설계 전문 지원"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "자율성 회복 심리상담 (마인드카페)",
+                    "description": "외부 강요 역할 심리 분리 치료"
+                }
+            ]
+        },
+        "R_12": {
+            "primaryRecommendation": {
+                "service": "의미치료 기반 심리상담 (트로스트·마인드카페)",
+                "description": "목적의식 단절 전문 상담 치료"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "커리어 리뷰 코칭 (잇다·크몽)",
+                    "description": "현재 활동 의미 재발견 지원"
+                }
+            ]
+        },
+        "R_13": {
+            "primaryRecommendation": {
+                "service": "가족 관계 전문 심리상담 (트로스트·마인드카페)",
+                "description": "인정 의존 자아상 치료적 분리"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "자존감 회복 CBT 상담 (마음이음)",
+                    "description": "내적 기준 형성 전문 훈련"
+                }
+            ]
+        },
+        "R_14": {
+            "primaryRecommendation": {
+                "service": "사회불안 전문 심리상담 (트로스트·마인드카페)",
+                "description": "평가 불안 과각성 패턴 치료"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "정신건강의학과 외래 (사회불안장애 클리닉)",
+                    "description": "필요 시 약물·CBT 병행 치료"
+                }
+            ]
+        },
+        "R_15": {
+            "primaryRecommendation": {
+                "service": "자기결정력 심리상담 (마인드카페·트로스트)",
+                "description": "순응 습관 해체 자율성 회복"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "가치관 탐색 코칭 (탈잉·크몽)",
+                    "description": "내 기준 형성 1:1 전문 훈련"
+                }
+            ]
+        },
+        "R_16": {
+            "primaryRecommendation": {
+                "service": "적성·흥미 탐색 커리어 코칭 (잇다·탈잉)",
+                "description": "경험 기반 자기 발견 전문 지원"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "다양한 직무 체험 부트캠프 (패스트캠퍼스)",
+                    "description": "실제 경험으로 흥미 영역 확인"
+                }
+            ]
+        },
+        "R_17": {
+            "primaryRecommendation": {
+                "service": "자존감 회복 심리상담 (트로스트·마인드카페)",
+                "description": "비교 열등감 조건반사 회로 치료"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "디지털 웰니스 앱 (오팔·원초적본능)",
+                    "description": "SNS 사용 시간 강제 제한 관리"
+                }
+            ]
+        },
+        "R_18": {
+            "primaryRecommendation": {
+                "service": "자기성장 심리상담 (마인드카페·트로스트)",
+                "description": "상향 비교 편향 인지 교정 치료"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "성장 저널링 코칭 앱 (그로우·Reflectly)",
+                    "description": "어제의 나 비교 루틴 자동화"
+                }
+            ]
+        },
+        "R_19": {
+            "primaryRecommendation": {
+                "service": "가족 관계 전문 심리상담 (트로스트·마인드카페)",
+                "description": "만성 죄책감 근원 치료적 해소"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "가족 상담 전문 센터 (가족치료 클리닉)",
+                    "description": "기대 차이 대화 전문가 중재"
+                }
+            ]
+        },
+        "R_20": {
+            "primaryRecommendation": {
+                "service": "경계 설정 전문 심리상담 (마인드카페·트로스트)",
+                "description": "자기결정권 침해 반복 구조 치료"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "가족 갈등 전문 상담 센터",
+                    "description": "경계 표현 실전 훈련 전문 지원"
+                }
+            ]
+        },
+        "R_21": {
+            "primaryRecommendation": {
+                "service": "적성 탐색 커리어 코칭 (잇다·탈잉)",
+                "description": "직접 경험 기반 진로 방향 설계"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "직무 체험 인턴십 매칭 (원티드·링커리어)",
+                    "description": "실전 경험으로 적성 즉시 검증"
+                }
+            ]
+        },
+        "R_22": {
+            "primaryRecommendation": {
+                "service": "강점 기반 커리어 코칭 (갤럽 강점 코칭·탈잉)",
+                "description": "몰입 경험 분석으로 적성 발굴"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "심리검사 기반 진로 상담 (커리어넷·마음사랑)",
+                    "description": "검사 결과로 내면 강점 객관화"
+                }
+            ]
+        },
+        "R_23": {
+            "primaryRecommendation": {
+                "service": "병행 전환 커리어 코칭 (크몽·탈잉)",
+                "description": "현실 조건 내 병행 실행 설계"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "직무 전환 부트캠프 야간·주말반 (패스트캠퍼스)",
+                    "description": "현직 유지하며 전환 역량 확보"
+                }
+            ]
+        },
+        "R_24": {
+            "primaryRecommendation": {
+                "service": "재무·커리어 통합 코칭 (크몽 전문가)",
+                "description": "제약 조건별 구체적 해결 설계"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "재무 설계 상담 (한국FPSB 공인 재무설계사)",
+                    "description": "전환 자금 확보 현실 계획 수립"
+                }
+            ]
+        },
+        "R_25": {
+            "primaryRecommendation": {
+                "service": "번아웃 전문 정신건강의학과 외래",
+                "description": "감정·신체 소진 의학적 진단 치료"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "회복 전문 심리상담 (트로스트·마인드카페)",
+                    "description": "강박적 지속 신념 치료적 해소"
+                }
+            ]
+        },
+        "R_26": {
+            "primaryRecommendation": {
+                "service": "우울·무기력 전문 정신건강의학과 외래",
+                "description": "무의미감 반복 의학적 정밀 진단"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "의미치료 전문 심리상담 (마인드카페·트로스트)",
+                    "description": "삶의 가치 재발견 치료적 탐색"
+                }
+            ]
+        },
+        "R_27": {
+            "primaryRecommendation": {
+                "service": "결정 공포 CBT 심리상담 (트로스트·마인드카페)",
+                "description": "선택 회피 과장 신념 전문 치료"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "의사결정 코칭 (크몽·탈잉 전문가)",
+                    "description": "결정 근육 단계적 실전 훈련"
+                }
+            ]
+        },
+        "R_28": {
+            "primaryRecommendation": {
+                "service": "가치 기반 의사결정 코칭 (탈잉·크몽)",
+                "description": "핵심 가치 정렬 선택 프레임 구축"
+            },
+            "supplementaryRecommendations": [
+                {
+                    "service": "최적화 강박 CBT 상담 (마인드카페)",
+                    "description": "최선 집착 인지 왜곡 치료"
+                }
+            ]
+        }
+    }
+}

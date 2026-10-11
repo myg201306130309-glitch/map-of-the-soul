@@ -1,0 +1,630 @@
+{
+    "questions": {
+        "Q_START": {
+            "id": "Q_START",
+            "category": "건강염려증 초기 진단",
+            "text": "몸의 증상이나 건강에 대해 걱정이 생겼을 때, 가장 먼저 어떤 반응이 나타나나요?",
+            "isRoot": true,
+            "branches": [
+                {
+                    "text": "인터넷이나 의학 정보를 즉시 검색하며 원인을 찾으려 한다",
+                    "nextNodeId": "Q_2A",
+                    "resultId": ""
+                },
+                {
+                    "text": "주변 사람(가족, 친구)에게 증상을 이야기하며 확인을 구한다",
+                    "nextNodeId": "Q_2B",
+                    "resultId": ""
+                },
+                {
+                    "text": "병원 예약을 반복하거나 여러 병원을 전전한다",
+                    "nextNodeId": "Q_2C",
+                    "resultId": ""
+                },
+                {
+                    "text": "혼자 불안을 키우며 최악의 상황을 상상한다",
+                    "nextNodeId": "Q_2D",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_2A": {
+            "id": "Q_2A",
+            "category": "정보 탐색 행동 분석",
+            "text": "건강 정보를 검색할 때, 검색 결과가 '이상 없음'으로 나와도 안심이 되나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "잠깐 안심되지만 곧 다른 증상이 걱정되어 다시 검색한다",
+                    "nextNodeId": "Q_3A",
+                    "resultId": ""
+                },
+                {
+                    "text": "안심이 전혀 되지 않고 더 심각한 질환을 찾아보게 된다",
+                    "nextNodeId": "Q_3B",
+                    "resultId": ""
+                },
+                {
+                    "text": "검색 자체를 멈추지 못하고 수 시간씩 반복한다",
+                    "nextNodeId": "Q_3C",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_2B": {
+            "id": "Q_2B",
+            "category": "타인 확인 추구 행동",
+            "text": "주변 사람에게 증상을 이야기할 때, 어떤 반응을 기대하나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "'별거 아니야'라는 말로 안심받고 싶다",
+                    "nextNodeId": "Q_3D",
+                    "resultId": ""
+                },
+                {
+                    "text": "내 걱정을 진지하게 들어주고 공감해 주길 바란다",
+                    "nextNodeId": "Q_3E",
+                    "resultId": ""
+                },
+                {
+                    "text": "함께 병원에 동행해 주거나 적극적으로 도와주길 원한다",
+                    "nextNodeId": "Q_3F",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_2C": {
+            "id": "Q_2C",
+            "category": "의료 이용 패턴 분석",
+            "text": "병원에서 '이상 없다'는 진단을 받았을 때 어떤 생각이 드나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "의사가 놓친 것이 있을 것 같아 다른 병원을 찾아간다",
+                    "nextNodeId": "Q_3G",
+                    "resultId": ""
+                },
+                {
+                    "text": "일시적으로 안심되지만 며칠 후 다시 불안해진다",
+                    "nextNodeId": "Q_3A",
+                    "resultId": ""
+                },
+                {
+                    "text": "진단 결과를 믿지 못하고 검사를 추가로 요청한다",
+                    "nextNodeId": "Q_3B",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_2D": {
+            "id": "Q_2D",
+            "category": "내면 불안 패턴",
+            "text": "혼자 건강 걱정을 키울 때, 머릿속에 주로 어떤 생각이 반복되나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "'내가 큰 병에 걸렸는데 아무도 모르는 것 같다'는 생각",
+                    "nextNodeId": "Q_3H",
+                    "resultId": ""
+                },
+                {
+                    "text": "'내가 아프면 아무도 신경 써주지 않을 것 같다'는 생각",
+                    "nextNodeId": "Q_3E",
+                    "resultId": ""
+                },
+                {
+                    "text": "'이 증상이 사라지지 않으면 일상이 무너질 것 같다'는 생각",
+                    "nextNodeId": "Q_3C",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3A": {
+            "id": "Q_3A",
+            "category": "안심 효과의 일시성",
+            "text": "안심이 오래 지속되지 않는 이 패턴이 언제부터 시작되었나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "특정 스트레스 사건(이직, 이별, 상실 등) 이후부터",
+                    "nextNodeId": "Q_4A",
+                    "resultId": ""
+                },
+                {
+                    "text": "어릴 때부터 몸에 대한 걱정이 많았다",
+                    "nextNodeId": "Q_4B",
+                    "resultId": ""
+                },
+                {
+                    "text": "주변에 큰 병을 앓은 사람이 생긴 이후부터",
+                    "nextNodeId": "Q_4C",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3B": {
+            "id": "Q_3B",
+            "category": "불안의 확장성",
+            "text": "건강 외에도 일상에서 '최악의 상황'을 자주 상상하는 편인가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "건강뿐 아니라 관계, 직장, 미래 등 여러 영역에서 그렇다",
+                    "nextNodeId": "Q_4D",
+                    "resultId": ""
+                },
+                {
+                    "text": "유독 건강과 신체 증상에만 집중된다",
+                    "nextNodeId": "Q_4E",
+                    "resultId": ""
+                },
+                {
+                    "text": "특정 상황(혼자 있을 때, 밤 등)에서만 심해진다",
+                    "nextNodeId": "Q_4F",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3C": {
+            "id": "Q_3C",
+            "category": "강박적 반복 행동",
+            "text": "건강 걱정으로 인해 일상생활(업무, 수면, 관계)에 실질적인 지장이 생기고 있나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "수면이 어렵고 집중력이 크게 떨어진다",
+                    "nextNodeId": "Q_4G",
+                    "resultId": ""
+                },
+                {
+                    "text": "사람들과의 약속을 취소하거나 활동을 회피하게 된다",
+                    "nextNodeId": "Q_4H",
+                    "resultId": ""
+                },
+                {
+                    "text": "업무나 학업 성과가 눈에 띄게 저하되었다",
+                    "nextNodeId": "Q_4G",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3D": {
+            "id": "Q_3D",
+            "category": "안심 추구와 인정욕구",
+            "text": "'별거 아니야'라는 말을 들었을 때 어떤 감정이 드나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "안심보다 '내 걱정을 무시당한 것 같다'는 서운함이 든다",
+                    "nextNodeId": "Q_4I",
+                    "resultId": ""
+                },
+                {
+                    "text": "잠깐 안심되지만 곧 '그 사람이 틀렸을 수도 있다'고 생각한다",
+                    "nextNodeId": "Q_4A",
+                    "resultId": ""
+                },
+                {
+                    "text": "더 심각하게 걱정해 주는 사람을 찾아 이야기하게 된다",
+                    "nextNodeId": "Q_4J",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3E": {
+            "id": "Q_3E",
+            "category": "공감 욕구와 내면 결핍",
+            "text": "건강 걱정을 이야기할 때, 사실 건강보다 다른 무언가를 원하는 것 같다는 느낌이 드나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "누군가 나를 걱정해 주고 돌봐주길 바라는 마음이 있는 것 같다",
+                    "nextNodeId": "Q_4I",
+                    "resultId": ""
+                },
+                {
+                    "text": "내가 힘들다는 것을 인정받고 싶은 마음이 있는 것 같다",
+                    "nextNodeId": "Q_4J",
+                    "resultId": ""
+                },
+                {
+                    "text": "잘 모르겠다. 그냥 진짜로 아픈 것 같다",
+                    "nextNodeId": "Q_4E",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3F": {
+            "id": "Q_3F",
+            "category": "의존 행동 패턴",
+            "text": "건강 문제로 타인의 도움을 요청할 때, 거절당하면 어떤 감정이 드나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "버려진 것 같은 느낌이나 강한 외로움이 든다",
+                    "nextNodeId": "Q_4I",
+                    "resultId": ""
+                },
+                {
+                    "text": "화가 나거나 상대방에 대한 실망감이 크다",
+                    "nextNodeId": "Q_4J",
+                    "resultId": ""
+                },
+                {
+                    "text": "혼자 해결해야 한다는 무력감이 든다",
+                    "nextNodeId": "Q_4B",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3G": {
+            "id": "Q_3G",
+            "category": "의료 불신과 통제 욕구",
+            "text": "의사의 진단을 믿지 못하는 이유가 무엇이라고 생각하나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "과거에 의사가 실제로 중요한 것을 놓친 경험이 있다",
+                    "nextNodeId": "Q_4C",
+                    "resultId": ""
+                },
+                {
+                    "text": "내 몸은 내가 가장 잘 안다는 확신이 강하다",
+                    "nextNodeId": "Q_4E",
+                    "resultId": ""
+                },
+                {
+                    "text": "'혹시라도'라는 불확실성 자체를 견디기 어렵다",
+                    "nextNodeId": "Q_4D",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3H": {
+            "id": "Q_3H",
+            "category": "고립감과 인정욕구",
+            "text": "'아무도 모른다'는 생각이 들 때, 그 이면에 어떤 감정이 있나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "내가 충분히 중요한 사람으로 여겨지지 않는다는 서러움",
+                    "nextNodeId": "Q_4I",
+                    "resultId": ""
+                },
+                {
+                    "text": "혼자 모든 것을 감당해야 한다는 두려움과 피로감",
+                    "nextNodeId": "Q_4B",
+                    "resultId": ""
+                },
+                {
+                    "text": "내 고통이 증명되어야만 쉴 수 있다는 압박감",
+                    "nextNodeId": "Q_4J",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_4A": {
+            "id": "Q_4A",
+            "category": "촉발 사건과 심리적 연결",
+            "text": "그 스트레스 사건 당시, 감정을 충분히 표현하거나 도움을 받을 수 있었나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "혼자 감당했고 누구에게도 제대로 털어놓지 못했다",
+                    "nextNodeId": "Q_5A",
+                    "resultId": ""
+                },
+                {
+                    "text": "도움을 요청했지만 충분한 지지를 받지 못했다",
+                    "nextNodeId": "Q_5B",
+                    "resultId": ""
+                },
+                {
+                    "text": "감정보다 빨리 일상으로 복귀해야 한다는 압박이 있었다",
+                    "nextNodeId": "Q_5C",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_4B": {
+            "id": "Q_4B",
+            "category": "어린 시절 학습된 패턴",
+            "text": "어릴 때 아프거나 힘들 때 주변(부모 등)의 반응은 어땠나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "아플 때만 관심과 돌봄을 받을 수 있었다",
+                    "nextNodeId": "Q_5B",
+                    "resultId": ""
+                },
+                {
+                    "text": "아프다고 해도 무시되거나 과장이라는 말을 들었다",
+                    "nextNodeId": "Q_5D",
+                    "resultId": ""
+                },
+                {
+                    "text": "부모님 자신이 건강 걱정이 많아 나도 영향을 받은 것 같다",
+                    "nextNodeId": "Q_5E",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_4C": {
+            "id": "Q_4C",
+            "category": "외상 경험과 건강 불안",
+            "text": "주변의 아픔이나 상실 경험이 지금의 건강 불안에 영향을 주고 있다고 느끼나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "그 사람처럼 나도 갑자기 아플 수 있다는 공포가 생겼다",
+                    "nextNodeId": "Q_5E",
+                    "resultId": ""
+                },
+                {
+                    "text": "그때 충분히 슬퍼하지 못한 감정이 남아있는 것 같다",
+                    "nextNodeId": "Q_5A",
+                    "resultId": ""
+                },
+                {
+                    "text": "내가 그 사람을 지키지 못했다는 죄책감이 있다",
+                    "nextNodeId": "Q_5D",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_4D": {
+            "id": "Q_4D",
+            "category": "범불안과 통제 욕구",
+            "text": "불확실한 상황을 견디기 어려운 것이 건강 외 다른 영역에서도 나타나나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "계획이 틀어지거나 예측 불가한 상황에서 극도로 불안해진다",
+                    "nextNodeId": "Q_5C",
+                    "resultId": ""
+                },
+                {
+                    "text": "완벽하게 준비하지 않으면 시작을 못 하는 경향이 있다",
+                    "nextNodeId": "Q_5C",
+                    "resultId": ""
+                },
+                {
+                    "text": "타인의 감정이나 반응도 항상 예측하고 통제하려 한다",
+                    "nextNodeId": "Q_5B",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_4E": {
+            "id": "Q_4E",
+            "category": "신체 감각 과민과 자기 인식",
+            "text": "몸의 감각에 집중하는 시간이 하루 중 얼마나 되나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "수시로 몸 상태를 체크하며 이상 신호를 찾는다",
+                    "nextNodeId": "Q_5E",
+                    "resultId": ""
+                },
+                {
+                    "text": "특정 신체 부위를 반복적으로 만지거나 확인한다",
+                    "nextNodeId": "Q_5C",
+                    "resultId": ""
+                },
+                {
+                    "text": "증상 일지나 기록을 남기며 변화를 추적한다",
+                    "nextNodeId": "Q_5A",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_4F": {
+            "id": "Q_4F",
+            "category": "상황별 불안 촉발 요인",
+            "text": "혼자 있거나 밤에 불안이 심해지는 이유가 무엇이라고 생각하나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "혼자 있으면 생각을 멈출 수 없고 아무도 도와줄 사람이 없다는 느낌",
+                    "nextNodeId": "Q_5B",
+                    "resultId": ""
+                },
+                {
+                    "text": "낮에는 바빠서 억누르던 불안이 밤에 터져 나오는 것 같다",
+                    "nextNodeId": "Q_5A",
+                    "resultId": ""
+                },
+                {
+                    "text": "어두움이나 고요함 자체가 불안을 자극하는 것 같다",
+                    "nextNodeId": "Q_5E",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_4G": {
+            "id": "Q_4G",
+            "category": "기능 저하와 실질적 개입 필요성",
+            "text": "수면 장애나 집중력 저하가 얼마나 지속되었나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "1개월 이상 지속되고 있으며 점점 심해지는 것 같다",
+                    "nextNodeId": "Q_5F",
+                    "resultId": ""
+                },
+                {
+                    "text": "간헐적으로 나타나며 스트레스 상황에서 악화된다",
+                    "nextNodeId": "Q_5A",
+                    "resultId": ""
+                },
+                {
+                    "text": "최근 2주 이내에 갑자기 심해졌다",
+                    "nextNodeId": "Q_5F",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_4H": {
+            "id": "Q_4H",
+            "category": "회피 행동과 삶의 축소",
+            "text": "건강 걱정으로 인해 포기하거나 줄인 활동이 있나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "운동, 외출, 사람 만남 등 신체 활동을 줄였다",
+                    "nextNodeId": "Q_5E",
+                    "resultId": ""
+                },
+                {
+                    "text": "새로운 도전이나 계획을 건강 이유로 미루고 있다",
+                    "nextNodeId": "Q_5C",
+                    "resultId": ""
+                },
+                {
+                    "text": "즐거웠던 취미나 활동에 흥미를 잃었다",
+                    "nextNodeId": "Q_5F",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_4I": {
+            "id": "Q_4I",
+            "category": "인정욕구 결핍 핵심 탐색",
+            "text": "평소 자신이 충분히 사랑받고 있다고 느끼나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "아니다. 늘 내가 더 노력해야 사랑받을 수 있다고 느낀다",
+                    "nextNodeId": "Q_5B",
+                    "resultId": ""
+                },
+                {
+                    "text": "사랑받고 있는지 확신이 없어 자꾸 확인하게 된다",
+                    "nextNodeId": "Q_5D",
+                    "resultId": ""
+                },
+                {
+                    "text": "아플 때나 힘들 때만 관심을 받는 것 같아 복잡한 감정이 든다",
+                    "nextNodeId": "Q_5B",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_4J": {
+            "id": "Q_4J",
+            "category": "고통의 정당화 욕구",
+            "text": "건강 문제가 '증명'되어야만 쉬거나 도움을 요청할 수 있다고 느끼나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "그렇다. 아프다는 증거가 없으면 나 자신도 나를 인정하지 않는다",
+                    "nextNodeId": "Q_5D",
+                    "resultId": ""
+                },
+                {
+                    "text": "타인에게 약하거나 게으른 사람으로 보일까봐 두렵다",
+                    "nextNodeId": "Q_5C",
+                    "resultId": ""
+                },
+                {
+                    "text": "아프지 않으면 쉬는 것이 죄책감으로 느껴진다",
+                    "nextNodeId": "Q_5D",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_5A": {
+            "id": "Q_5A",
+            "category": "억압된 감정 해소 전략",
+            "text": "지금까지 혼자 감당해온 감정들을 안전하게 표현할 공간이 있었나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "없었다. 감정을 표현하는 것 자체가 낯설고 어렵다",
+                    "nextNodeId": "",
+                    "resultId": "R_THERAPY_EMOTION"
+                },
+                {
+                    "text": "일기나 글쓰기로 혼자 해소하려 했지만 한계를 느낀다",
+                    "nextNodeId": "",
+                    "resultId": "R_JOURNALING_PLUS"
+                },
+                {
+                    "text": "신뢰할 수 있는 사람이 있지만 건강 이야기는 꺼내기 어렵다",
+                    "nextNodeId": "",
+                    "resultId": "R_COMMUNICATION_SKILL"
+                }
+            ]
+        },
+        "Q_5B": {
+            "id": "Q_5B",
+            "category": "애착 결핍과 관계 패턴",
+            "text": "어릴 때부터 지금까지, 나의 감정과 필요를 있는 그대로 받아준 사람이 있었나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "없었다. 항상 강해야 하거나 조건을 충족해야 인정받았다",
+                    "nextNodeId": "",
+                    "resultId": "R_ATTACHMENT_THERAPY"
+                },
+                {
+                    "text": "있었지만 그 사람을 잃거나 멀어진 이후 불안이 커졌다",
+                    "nextNodeId": "",
+                    "resultId": "R_GRIEF_SUPPORT"
+                },
+                {
+                    "text": "잘 모르겠다. 받은 것 같기도 하고 아닌 것 같기도 하다",
+                    "nextNodeId": "",
+                    "resultId": "R_SELF_EXPLORATION"
+                }
+            ]
+        },
+        "Q_5C": {
+            "id": "Q_5C",
+            "category": "완벽주의와 통제 욕구 해소",
+            "text": "불확실성을 견디는 연습을 해본 적이 있나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "없다. 불확실한 상황은 무조건 해결하거나 피하려 한다",
+                    "nextNodeId": "",
+                    "resultId": "R_TOLERANCE_TRAINING"
+                },
+                {
+                    "text": "마음챙김이나 명상을 시도했지만 오히려 더 불안해졌다",
+                    "nextNodeId": "",
+                    "resultId": "R_CBT_APPROACH"
+                },
+                {
+                    "text": "어느 정도 연습 중이지만 건강 불안에서만큼은 통하지 않는다",
+                    "nextNodeId": "",
+                    "resultId": "R_SPECIALIZED_CBT"
+                }
+            ]
+        },
+        "Q_5D": {
+            "id": "Q_5D",
+            "category": "자기 허용과 내면 비판자",
+            "text": "아프지 않아도, 성과가 없어도 나 자신이 충분히 가치 있다고 느끼나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "아니다. 무언가를 해내거나 인정받아야 가치 있다고 느낀다",
+                    "nextNodeId": "",
+                    "resultId": "R_SELF_WORTH_WORK"
+                },
+                {
+                    "text": "머리로는 알지만 감정적으로는 그렇게 느껴지지 않는다",
+                    "nextNodeId": "",
+                    "resultId": "R_SCHEMA_THERAPY"
+                },
+                {
+                    "text": "나 자신에게 매우 가혹한 편이고 실수를 용납하지 못한다",
+                    "nextNodeId": "",
+                    "resultId": "R_INNER_CRITIC_WORK"
+                }
+            ]
+        }
+    }
+}

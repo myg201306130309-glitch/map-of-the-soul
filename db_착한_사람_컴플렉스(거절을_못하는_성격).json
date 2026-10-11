@@ -1,0 +1,595 @@
+{
+    "meta": {
+        "category": "착한 사람 컴플렉스",
+        "title": "거절하지 못하는 마음, 착한 사람 컴플렉스 통합 진단 시스템",
+        "description": "거절을 어려워하는 심리적 패턴을 영역별로 진단하고, 맞춤형 솔루션과 실질적 전문가 연계 서비스를 제공하는 통합 시스템입니다.",
+        "version": "1.0",
+        "integrityStatus": {
+            "totalNodes": 34,
+            "totalResults": 34,
+            "completeResults": 6,
+            "incompleteResults": 28,
+            "note": "질문 트리는 완전하나, 6개 결과(R_A1a_1, R_A1a_2, R_A1b_1, R_A1b_2, R_A2a_1은 솔루션만 존재)만 콘텐츠가 확보됨. 솔루션 및 비즈니스 매칭이 유실된 28개 노드는 오류 리포트에 근거하여 placeholder로 명시함."
+        }
+    },
+    "questions": {
+        "Q_START": {
+            "id": "Q_START",
+            "category": "착한 사람 컴플렉스",
+            "text": "거절을 어려워하는 상황이 주로 어느 영역에서 가장 크게 나타나나요?",
+            "isRoot": true,
+            "branches": [
+                {
+                    "text": "직장/학교 등 사회적 관계에서",
+                    "nextNodeId": "Q_2A",
+                    "resultId": ""
+                },
+                {
+                    "text": "가족/연인 등 친밀한 관계에서",
+                    "nextNodeId": "Q_2B",
+                    "resultId": ""
+                },
+                {
+                    "text": "모든 관계에서 전반적으로",
+                    "nextNodeId": "Q_2C",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_2A": {
+            "id": "Q_2A",
+            "category": "사회적 관계",
+            "text": "직장이나 학교에서 거절하지 못할 때, 가장 큰 이유는 무엇인가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "평가나 불이익이 두려워서",
+                    "nextNodeId": "Q_3A1",
+                    "resultId": ""
+                },
+                {
+                    "text": "상대방이 실망할까봐 미안해서",
+                    "nextNodeId": "Q_3A2",
+                    "resultId": ""
+                },
+                {
+                    "text": "거절하는 방법 자체를 몰라서",
+                    "nextNodeId": "Q_3A3",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_2B": {
+            "id": "Q_2B",
+            "category": "친밀한 관계",
+            "text": "가족이나 연인에게 거절하지 못할 때, 가장 큰 이유는 무엇인가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "관계가 틀어지거나 갈등이 생길까봐",
+                    "nextNodeId": "Q_3B1",
+                    "resultId": ""
+                },
+                {
+                    "text": "어릴 때부터 형성된 습관이나 가족 분위기 때문에",
+                    "nextNodeId": "Q_3B2",
+                    "resultId": ""
+                },
+                {
+                    "text": "내가 참으면 된다는 생각이 강해서",
+                    "nextNodeId": "Q_3B3",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_2C": {
+            "id": "Q_2C",
+            "category": "전반적 관계",
+            "text": "모든 관계에서 거절이 어렵다면, 현재 본인의 상태를 가장 잘 표현한 것은?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "거절 후 죄책감과 불안이 오래 지속된다",
+                    "nextNodeId": "Q_3C1",
+                    "resultId": ""
+                },
+                {
+                    "text": "거절해야 한다는 걸 알지만 실제로 행동이 안 된다",
+                    "nextNodeId": "Q_3C2",
+                    "resultId": ""
+                },
+                {
+                    "text": "내 욕구나 감정 자체를 잘 인식하지 못한다",
+                    "nextNodeId": "Q_3C3",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3A1": {
+            "id": "Q_3A1",
+            "category": "사회적 관계 - 평가 두려움",
+            "text": "평가나 불이익이 두렵다면, 현재 그 두려움이 실제 상황과 얼마나 일치하나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "실제로 불이익을 받은 경험이 있다",
+                    "nextNodeId": "Q_4A1a",
+                    "resultId": ""
+                },
+                {
+                    "text": "불이익을 받은 적은 없지만 항상 걱정된다",
+                    "nextNodeId": "Q_4A1b",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3A2": {
+            "id": "Q_3A2",
+            "category": "사회적 관계 - 미안함",
+            "text": "상대방의 실망이 두렵다면, 그 감정의 근원은 어디에 가깝나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "어릴 때 인정받지 못했던 경험에서 비롯된 것 같다",
+                    "nextNodeId": "Q_4A2a",
+                    "resultId": ""
+                },
+                {
+                    "text": "상대방이 실제로 감정 표현이 강하거나 예민한 편이다",
+                    "nextNodeId": "Q_4A2b",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3A3": {
+            "id": "Q_3A3",
+            "category": "사회적 관계 - 방법 부재",
+            "text": "거절하는 방법을 모른다면, 지금까지 시도해본 적이 있나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "시도해봤지만 어색하거나 실패한 경험이 있다",
+                    "nextNodeId": "Q_4A3a",
+                    "resultId": ""
+                },
+                {
+                    "text": "시도 자체를 거의 해본 적이 없다",
+                    "nextNodeId": "Q_4A3b",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3B1": {
+            "id": "Q_3B1",
+            "category": "친밀한 관계 - 갈등 회피",
+            "text": "갈등이 두렵다면, 현재 그 관계에서 본인의 감정 소진 정도는 어떤가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "많이 지쳐있고 한계에 가깝다",
+                    "nextNodeId": "Q_4B1a",
+                    "resultId": ""
+                },
+                {
+                    "text": "불편하지만 아직 감당할 수 있는 수준이다",
+                    "nextNodeId": "Q_4B1b",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3B2": {
+            "id": "Q_3B2",
+            "category": "친밀한 관계 - 성장 환경",
+            "text": "가족 분위기나 성장 환경이 원인이라면, 그 패턴을 스스로 인식하고 있었나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "최근에야 인식하게 됐고 어떻게 바꿔야 할지 모르겠다",
+                    "nextNodeId": "Q_4B2a",
+                    "resultId": ""
+                },
+                {
+                    "text": "오래전부터 알고 있었지만 변화가 어렵다",
+                    "nextNodeId": "Q_4B2b",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3B3": {
+            "id": "Q_3B3",
+            "category": "친밀한 관계 - 자기희생",
+            "text": "'내가 참으면 된다'는 생각이 강하다면, 그 결과로 현재 어떤 상태인가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "억울함이나 분노가 쌓여 가끔 폭발하거나 무기력해진다",
+                    "nextNodeId": "Q_4B3a",
+                    "resultId": ""
+                },
+                {
+                    "text": "참는 것이 익숙해서 내 감정이 잘 느껴지지 않는다",
+                    "nextNodeId": "Q_4B3b",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3C1": {
+            "id": "Q_3C1",
+            "category": "전반적 - 죄책감",
+            "text": "거절 후 죄책감이 오래 지속된다면, 그 죄책감의 성격은 어떤가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "'나쁜 사람이 된 것 같다'는 자기 비난이 강하다",
+                    "nextNodeId": "Q_4C1a",
+                    "resultId": ""
+                },
+                {
+                    "text": "상대방이 어떻게 생각할지 계속 신경 쓰인다",
+                    "nextNodeId": "Q_4C1b",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3C2": {
+            "id": "Q_3C2",
+            "category": "전반적 - 실행 장벽",
+            "text": "알면서도 행동이 안 된다면, 가장 큰 실행 장벽은 무엇인가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "거절하는 순간 몸이 굳거나 말이 안 나온다",
+                    "nextNodeId": "Q_4C2a",
+                    "resultId": ""
+                },
+                {
+                    "text": "거절 후 벌어질 상황을 과도하게 상상하고 포기한다",
+                    "nextNodeId": "Q_4C2b",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_3C3": {
+            "id": "Q_3C3",
+            "category": "전반적 - 자기 인식 부재",
+            "text": "내 욕구나 감정을 잘 모른다면, 일상에서 어떤 방식으로 나타나나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "무엇을 원하는지 물어보면 항상 '모르겠다'고 답한다",
+                    "nextNodeId": "Q_4C3a",
+                    "resultId": ""
+                },
+                {
+                    "text": "타인의 기분에 맞추느라 내 감정을 확인할 틈이 없다",
+                    "nextNodeId": "Q_4C3b",
+                    "resultId": ""
+                }
+            ]
+        },
+        "Q_4A1a": {
+            "id": "Q_4A1a",
+            "category": "사회적 관계 - 실제 불이익 경험",
+            "text": "실제 불이익 경험이 있다면, 지금 그 환경 자체가 문제일 수 있습니다. 현재 가장 필요한 것은 무엇인가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "그 환경에서 나를 보호하는 현실적 전략이 필요하다",
+                    "nextNodeId": "",
+                    "resultId": "R_A1a_1"
+                },
+                {
+                    "text": "환경을 바꾸거나 벗어나는 것을 진지하게 고민해야 한다",
+                    "nextNodeId": "",
+                    "resultId": "R_A1a_2"
+                }
+            ]
+        },
+        "Q_4A1b": {
+            "id": "Q_4A1b",
+            "category": "사회적 관계 - 과도한 걱정",
+            "text": "실제 불이익은 없지만 걱정이 크다면, 그 걱정을 다루는 데 무엇이 도움이 될까요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "내 걱정이 과장된 것임을 인지하는 인지 재구성 훈련",
+                    "nextNodeId": "",
+                    "resultId": "R_A1b_1"
+                },
+                {
+                    "text": "작은 거절부터 실험해보며 결과를 직접 확인하는 연습",
+                    "nextNodeId": "",
+                    "resultId": "R_A1b_2"
+                }
+            ]
+        },
+        "Q_4A2a": {
+            "id": "Q_4A2a",
+            "category": "사회적 관계 - 인정 욕구 기원",
+            "text": "인정받지 못한 과거 경험이 원인이라면, 지금 가장 필요한 접근은 무엇인가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "내면 아이 치유나 심리 상담을 통한 근본 원인 해소",
+                    "nextNodeId": "",
+                    "resultId": "R_A2a_1"
+                },
+                {
+                    "text": "타인의 인정 없이도 스스로를 인정하는 자기 확인 루틴 만들기",
+                    "nextNodeId": "",
+                    "resultId": "R_A2a_2"
+                }
+            ]
+        },
+        "Q_4A2b": {
+            "id": "Q_4A2b",
+            "category": "사회적 관계 - 상대방 문제",
+            "text": "상대방이 실제로 감정적으로 예민하다면, 관계 구조 자체를 점검할 필요가 있습니다. 어떤 방향이 맞나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "상대방과의 경계를 명확히 설정하는 대화 방법을 배운다",
+                    "nextNodeId": "",
+                    "resultId": "R_A2b_1"
+                },
+                {
+                    "text": "그 관계가 나에게 건강한지 객관적으로 재평가한다",
+                    "nextNodeId": "",
+                    "resultId": "R_A2b_2"
+                }
+            ]
+        },
+        "Q_4A3a": {
+            "id": "Q_4A3a",
+            "category": "사회적 관계 - 거절 실패 경험",
+            "text": "거절을 시도했지만 실패했다면, 그 실패의 주된 원인은 무엇이었나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "표현 방식이 너무 강하거나 약해서 역효과가 났다",
+                    "nextNodeId": "",
+                    "resultId": "R_A3a_1"
+                },
+                {
+                    "text": "상대방의 반응에 압도되어 결국 수락하고 말았다",
+                    "nextNodeId": "",
+                    "resultId": "R_A3a_2"
+                }
+            ]
+        },
+        "Q_4A3b": {
+            "id": "Q_4A3b",
+            "category": "사회적 관계 - 거절 미시도",
+            "text": "거절을 거의 시도해본 적 없다면, 지금 당장 시작할 수 있는 방법은 무엇인가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "부담 없는 상황에서 작은 거절을 매일 1번씩 연습한다",
+                    "nextNodeId": "",
+                    "resultId": "R_A3b_1"
+                },
+                {
+                    "text": "거절 스크립트를 미리 작성해두고 상황별로 활용한다",
+                    "nextNodeId": "",
+                    "resultId": "R_A3b_2"
+                }
+            ]
+        },
+        "Q_4B1a": {
+            "id": "Q_4B1a",
+            "category": "친밀한 관계 - 감정 소진 심각",
+            "text": "감정 소진이 심각하다면, 지금 가장 시급한 것은 무엇인가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "즉각적인 감정 회복을 위한 나만의 에너지 충전 루틴 확보",
+                    "nextNodeId": "",
+                    "resultId": "R_B1a_1"
+                },
+                {
+                    "text": "전문 상담을 통해 관계 패턴과 소진 원인을 함께 분석한다",
+                    "nextNodeId": "",
+                    "resultId": "R_B1a_2"
+                }
+            ]
+        },
+        "Q_4B1b": {
+            "id": "Q_4B1b",
+            "category": "친밀한 관계 - 감정 소진 경미",
+            "text": "아직 감당 가능한 수준이라면, 지금 예방적으로 할 수 있는 것은 무엇인가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "관계 내에서 내 한계선(경계)을 미리 정하고 연습한다",
+                    "nextNodeId": "",
+                    "resultId": "R_B1b_1"
+                },
+                {
+                    "text": "갈등을 두려워하지 않는 마음 근육을 키우는 훈련을 시작한다",
+                    "nextNodeId": "",
+                    "resultId": "R_B1b_2"
+                }
+            ]
+        },
+        "Q_4B2a": {
+            "id": "Q_4B2a",
+            "category": "친밀한 관계 - 패턴 인식 초기",
+            "text": "최근에야 패턴을 인식했다면, 변화를 위한 첫 단계로 무엇이 적합한가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "내가 어떤 상황에서 거절을 못하는지 일기나 기록으로 추적한다",
+                    "nextNodeId": "",
+                    "resultId": "R_B2a_1"
+                },
+                {
+                    "text": "가족 관계 전문 상담사와 함께 성장 환경의 영향을 탐색한다",
+                    "nextNodeId": "",
+                    "resultId": "R_B2a_2"
+                }
+            ]
+        },
+        "Q_4B2b": {
+            "id": "Q_4B2b",
+            "category": "친밀한 관계 - 변화 저항",
+            "text": "오래 알고 있었지만 변화가 어렵다면, 변화를 막는 가장 큰 장벽은 무엇인가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "변화했을 때 관계가 무너질까봐 두렵다",
+                    "nextNodeId": "",
+                    "resultId": "R_B2b_1"
+                },
+                {
+                    "text": "방법은 알지만 실제 상황에서 몸이 반응하지 않는다",
+                    "nextNodeId": "",
+                    "resultId": "R_B2b_2"
+                }
+            ]
+        },
+        "Q_4B3a": {
+            "id": "Q_4B3a",
+            "category": "친밀한 관계 - 억압된 분노",
+            "text": "억울함과 분노가 쌓여 폭발하거나 무기력해진다면, 지금 필요한 것은 무엇인가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "쌓인 감정을 안전하게 해소하는 표현 방법(글쓰기, 운동 등)을 찾는다",
+                    "nextNodeId": "",
+                    "resultId": "R_B3a_1"
+                },
+                {
+                    "text": "분노의 근원을 탐색하고 건강한 방식으로 전달하는 법을 배운다",
+                    "nextNodeId": "",
+                    "resultId": "R_B3a_2"
+                }
+            ]
+        },
+        "Q_4B3b": {
+            "id": "Q_4B3b",
+            "category": "친밀한 관계 - 감정 마비",
+            "text": "참는 것이 익숙해져 감정이 느껴지지 않는다면, 감정 회복을 위해 무엇부터 시작할까요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "하루 3번 '지금 나는 어떤 감정인가'를 체크하는 감정 일기를 쓴다",
+                    "nextNodeId": "",
+                    "resultId": "R_B3b_1"
+                },
+                {
+                    "text": "신체 감각(호흡, 긴장 부위)을 통해 감정을 역추적하는 마음챙김을 시작한다",
+                    "nextNodeId": "",
+                    "resultId": "R_B3b_2"
+                }
+            ]
+        },
+        "Q_4C1a": {
+            "id": "Q_4C1a",
+            "category": "전반적 - 자기 비난",
+            "text": "'나쁜 사람이 된 것 같다'는 자기 비난이 강하다면, 그 믿음의 뿌리는 어디에 있나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "어릴 때 '착해야 한다'는 메시지를 강하게 받았다",
+                    "nextNodeId": "",
+                    "resultId": "R_C1a_1"
+                },
+                {
+                    "text": "거절 = 이기적인 것이라는 왜곡된 신념이 있다",
+                    "nextNodeId": "",
+                    "resultId": "R_C1a_2"
+                }
+            ]
+        },
+        "Q_4C1b": {
+            "id": "Q_4C1b",
+            "category": "전반적 - 타인 시선",
+            "text": "상대방의 시선이 계속 신경 쓰인다면, 그 패턴을 바꾸기 위해 무엇이 필요한가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "타인의 반응과 내 가치를 분리하는 인지 훈련이 필요하다",
+                    "nextNodeId": "",
+                    "resultId": "R_C1b_1"
+                },
+                {
+                    "text": "거절 후 실제 상대방 반응을 관찰하며 내 예측이 틀렸음을 확인한다",
+                    "nextNodeId": "",
+                    "resultId": "R_C1b_2"
+                }
+            ]
+        },
+        "Q_4C2a": {
+            "id": "Q_4C2a",
+            "category": "전반적 - 신체 반응",
+            "text": "거절 순간 몸이 굳는다면, 이는 신체화된 불안 반응일 수 있습니다. 어떤 접근이 맞나요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "거절 전 호흡 조절과 신체 이완 루틴을 먼저 훈련한다",
+                    "nextNodeId": "",
+                    "resultId": "R_C2a_1"
+                },
+                {
+                    "text": "트라우마 기반 반응일 수 있으므로 전문 심리 치료를 받는다",
+                    "nextNodeId": "",
+                    "resultId": "R_C2a_2"
+                }
+            ]
+        },
+        "Q_4C2b": {
+            "id": "Q_4C2b",
+            "category": "전반적 - 파국적 상상",
+            "text": "거절 후 상황을 과도하게 상상하고 포기한다면, 그 상상을 다루는 방법은 무엇인가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "최악의 시나리오를 적고 실제 가능성을 논리적으로 반박하는 연습을 한다",
+                    "nextNodeId": "",
+                    "resultId": "R_C2b_1"
+                },
+                {
+                    "text": "상상 속 결과와 실제 결과를 비교하는 '거절 실험 일지'를 작성한다",
+                    "nextNodeId": "",
+                    "resultId": "R_C2b_2"
+                }
+            ]
+        },
+        "Q_4C3a": {
+            "id": "Q_4C3a",
+            "category": "전반적 - 욕구 인식 부재",
+            "text": "무엇을 원하는지 모른다면, 자기 욕구를 발견하기 위해 무엇부터 시작할까요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "매일 '오늘 내가 하고 싶었던 것'을 3가지씩 적는 욕구 탐색 일기를 쓴다",
+                    "nextNodeId": "",
+                    "resultId": "R_C3a_1"
+                },
+                {
+                    "text": "좋아하는 것과 싫어하는 것 목록을 만들며 내 기준을 재발견한다",
+                    "nextNodeId": "",
+                    "resultId": "R_C3a_2"
+                }
+            ]
+        },
+        "Q_4C3b": {
+            "id": "Q_4C3b",
+            "category": "전반적 - 타인 중심 생활",
+            "text": "타인 기분에 맞추느라 내 감정을 확인할 틈이 없다면, 어떤 변화가 필요한가요?",
+            "isRoot": false,
+            "branches": [
+                {
+                    "text": "하루 중 타인과 단절된 '나만의 시간'을 의도적으로 확보한다",
+                    "nextNodeId": "",
+                    "resultId": "R_C3b_1"
+                },
+                {
+                    "text": "타인의 감정을 내가 책임져야 한다는 신념 자체를 점검하고 수정한다",
+                    "nextNodeId": "",
+                    "resultId": "R_C3b_2"
+                }
+            ]
+        }
+    }
+}
