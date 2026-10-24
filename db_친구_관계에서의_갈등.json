@@ -1,13 +1,15 @@
 {
   "meta": {
-    "schema_version": "2.0",
+    "schema_version": "3.0",
     "revision_date": "2026-10-18",
     "category": "친구 관계의 갈등",
     "purpose": "자기이해와 행동 계획",
-    "notice": "이 안내는 선택한 응답을 바탕으로 한 자기이해 자료이며, 의학적 진단이나 법률 판단을 대신하지 않습니다.",
+    "notice": "선택한 상황에 맞춘 자기이해·행동 안내입니다. 의학적 진단, 개인별 투자 권유 또는 법률 판단을 대신하지 않습니다.",
     "clinical_validation": "임상적으로 타당화된 검사 아님; 전문가 검토 전 편집 초안",
     "source_scope": "참고 자료는 일반 원칙의 근거이며 개별 분기·결과는 편집 작성한 초안",
-    "sources": []
+    "sources": [],
+    "revision": "2026-10-18-full-v1",
+    "category_id": "friend"
   },
   "questions": {
     "Q_FOCUS": {
@@ -247,92 +249,170 @@
   "matchings": {
     "R_01": {
       "primaryRecommendation": {
-        "service": "친구 관계와 경계 설정 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "「말이 묻히는 장면 구체화하기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_02": {
       "primaryRecommendation": {
-        "service": "친구 관계와 경계 설정 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "「초대에서 빠진 사실과 해석 나누기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_03": {
       "primaryRecommendation": {
-        "service": "친구 관계와 경계 설정 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "「불확실한 관계에서 한 번의 확인」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_04": {
       "primaryRecommendation": {
-        "service": "친구 관계와 경계 설정 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "「약속의 기준과 다음 대응 정하기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_05": {
       "primaryRecommendation": {
-        "service": "친구 관계와 경계 설정 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "「불편한 표현을 구체적으로 멈춰 달라고 하기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_06": {
       "primaryRecommendation": {
-        "service": "친구 관계와 경계 설정 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "「다른 생각과 관계의 한계 구분하기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_07": {
       "primaryRecommendation": {
-        "service": "친구 관계와 경계 설정 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "「들어줄 수 있는 범위 정하기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_08": {
       "primaryRecommendation": {
-        "service": "친구 관계와 경계 설정 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "「작은 거절로 관계의 존중 확인하기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_09": {
       "primaryRecommendation": {
-        "service": "친구 관계와 경계 설정 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "「관계의 상호성을 확인하기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_10": {
       "primaryRecommendation": {
-        "service": "친구 관계와 경계 설정 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "「원하는 공감의 방식 알려주기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_11": {
       "primaryRecommendation": {
-        "service": "친구 관계와 경계 설정 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "「관계 변화의 슬픔과 다음 선택」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_12": {
       "primaryRecommendation": {
-        "service": "친구 관계와 경계 설정 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "「신뢰 회복의 조건과 정보 경계」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_UNCLEAR": {
       "primaryRecommendation": {
-        "service": "현재 상황을 정리하는 초기 상담",
-        "description": "한 가지 원인을 확정하기보다 실제 사건·생활 부담·원하는 변화를 함께 확인하는 상담을 요청해 보세요."
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "「원인을 정하기 전에 장면 하나부터」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },

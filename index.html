@@ -145,7 +145,17 @@
         .btn-modal-submit:hover { background: var(--primary-hover); }
         .btn-modal-submit:disabled { background: #94A3B8; cursor: not-allowed; }
         .btn-modal-cancel { flex: 1; padding: 0.85rem; background: var(--border); border: none; border-radius: 10px; font-weight: 600; cursor: pointer; color: var(--text-main); }
-    </style>
+    #question-text, .btn-option, .report-text, #res-short, #res-mid, .biz-info { overflow-wrap:anywhere; white-space:pre-line; }
+    
+.topic-button {margin:6px;padding:10px;border:1px solid #cbd5e1;border-radius:8px;background:white;cursor:pointer;} .biz-item {gap:12px;flex-wrap:wrap;} .biz-info {flex:1;min-width:200px;} .btn-biz {white-space:nowrap;} button:disabled{opacity:.4;}
+
+        body { flex-direction:column; }
+        footer {width:100%;max-width:680px !important;flex:none;}
+        .action-row {flex-direction:column;margin-top:1rem;}
+        .action-tag {min-width:0;}
+        .report-label {gap:8px;flex-wrap:wrap;}
+        @media(max-width:600px) {body{padding:12px;} .card-view{padding:24px 18px;} .hero-logo{font-size:2rem;} .report-label span:last-child{display:none;} .biz-info{min-width:0;width:100%;} .biz-item{align-items:stretch;flex-direction:column;} .biz-info{flex:none;width:100%;} .btn-biz{align-self:flex-start;} }
+</style>
 </head>
 <body>
 
@@ -168,7 +178,7 @@
         <div class="match-results" id="match-results">
             <span class="match-label" id="match-count-label">
                 가장 가까운 추천 경로:
-                <span class="en-sub-inline">(Recommended Diagnostic Paths)</span>
+                <span class="en-sub-inline">(Suggested Topics)</span>
             </span>
             <div id="match-list"></div>
             
@@ -183,6 +193,7 @@
                 </p>
             </div>
         </div>
+        <details style="margin-top:24px"><summary>전체 18개 고민 보기</summary><div id="all-topic-list"></div></details>
     </div>
 
     <!-- 화면 2: 질문 트리 단계형 뷰 -->
@@ -198,6 +209,7 @@
         </div>
         <h2 class="question-title" id="question-text">질문이 로딩됩니다.</h2>
         <div class="option-list" id="option-list"></div>
+        <button id="btn-back" class="btn-reset" onclick="previousQuestion()">이전 질문</button>
     </div>
 
     <!-- 화면 3: 최종 솔루션 결과 뷰 -->
@@ -205,20 +217,21 @@
         <div class="result-title-box">
             <span class="result-id" id="res-id">R_01</span>
             <h2 class="result-title" id="res-title">솔루션 제목</h2>
+            <p id="result-notice" style="font-size:0.9rem;line-height:1.6;color:#526070"></p>
         </div>
 
         <div class="report-section">
             <div class="report-label">
-                <span>원인 진단 분석</span>
-                <span>ROOT DIAGNOSIS</span>
+                <span>지금 응답에서 살펴볼 점</span>
+                <span>YOUR CURRENT SITUATION</span>
             </div>
             <p class="report-text" id="res-diagnosis"></p>
         </div>
 
         <div class="report-section">
             <div class="report-label">
-                <span>인지행동(CBT) & 심층 분석</span>
-                <span>COGNITIVE & DEEP ANALYSIS</span>
+                <span>생각과 상황을 함께 살피기</span>
+                <span>REFLECTION</span>
             </div>
             <p class="report-text" id="res-cbt"></p>
         </div>
@@ -229,23 +242,24 @@
                 <span>ACTION PLAN</span>
             </div>
             <div class="action-row">
-                <span class="action-tag">단기 실행 (Now):</span>
+                <span class="action-tag">오늘 해볼 일:</span>
                 <div id="res-short"></div>
             </div>
             <div class="action-row">
-                <span class="action-tag">중기 루틴 (Habit):</span>
+                <span class="action-tag">이후 점검과 도움 기준:</span>
                 <div id="res-mid"></div>
             </div>
         </div>
 
         <div class="biz-container">
             <div class="biz-header">
-                💼 맞춤형 연계 솔루션 (대표 채널 & 1등 서비스)
-                <span class="en-sub-inline">(Recommended Professional Referral)</span>
+                💼 도움을 찾는 방법
+                <span class="en-sub-inline">(Support Options)</span>
             </div>
             <div id="biz-list"></div>
         </div>
 
+        <button class="btn-reset" onclick="previousQuestion(true)">선택 다시 보기</button>
         <button class="btn-reset" onclick="goHome()">
             다른 고민 검색하기
             <span class="en-sub">Explore Another Challenge</span>
@@ -290,173 +304,319 @@
                 취소 <span class="en-sub" style="margin:0;">Cancel</span>
             </button>
             <button class="btn-modal-submit" id="btn-submit" onclick="submitWorryRequest()">
-                맞춤 진단 제작 신청
+                맞춤 안내 제작 신청
                 <span class="en-sub" style="color:#EEF2FF; margin:0;">Submit Request</span>
             </button>
         </div>
     </div>
 </div>
 
+<footer style="max-width:850px;margin:20px auto;padding:16px;font-size:13px;color:#526070">
+<p>수정본 2026-10-18-full-v1 · 자기이해와 다음 행동을 위한 안내입니다.</p>
+<p>기관 링크에는 이 사이트의 유입 출처가 표시됩니다. 선택한 고민·답변·결과 내용은 링크에 포함하지 않습니다. 공식 기관 안내는 제휴나 서비스 품질 보증을 의미하지 않습니다.</p>
+<div id="analytics-settings" hidden><p>동의하시면 기관 버튼 클릭을 Google Analytics로 집계합니다. 고민·답변 내용은 보내지 않습니다. 브라우저·기기 정보 등은 분석 서비스에서 처리될 수 있습니다.</p><button onclick="analyticsChoice(true)">클릭 통계 허용</button> <button onclick="analyticsChoice(false)">사용 안 함 / 철회</button> <span id="analytics-state">미동의</span></div>
+<details id="audit-panel" hidden><summary>테스트 기록 — 현재 브라우저에서만 확인</summary><p>전체 방문자 통계가 아닙니다. 새로고침하면 클릭 기록이 초기화됩니다.</p><pre id="audit-data" style="white-space:pre-wrap;overflow-wrap:anywhere"></pre></details>
+</footer>
+<script src="tracking-config.js"></script>
+<script src="referral.js"></script>
 <script>
 // ★★★ 사장님의 Formspree 발급 엔드포인트 ★★★
     const FORMSPREE_ENDPOINT = "https://formspree.io/f/mnpjzgka";
 
 
     const CATEGORY_REGISTRY = [
-        {
-            id: 'diet',
-            title: '다이어트 어려움 (대사·호르몬·폭식요요)',
-            titleEn: 'Weight Management & Metabolic Dynamics',
-            descEn: 'In-depth analysis on metabolism, hormonal cycles, and beginner-to-advanced pathways.',
-            candidates: ["db_다이어트가_너무_어려워.json"],
-            keywords: ['다이어트', '살', '체중', '대사', '호르몬', '인슐린', '혈당', '폭식', '요요', '붓기', '생리', 'diet', 'weight', 'fat', 'metabolism', 'food']
-        },
-        {
-            id: 'burnout',
-            title: '번아웃 (소진 및 만성 피로)',
-            titleEn: 'Burnout & Chronic Exhaustion',
-            descEn: 'Cognitive recovery from workplace fatigue and motivation depletion.',
-            candidates: ["db_번아웃이_온거_같아요.json"],
-            keywords: ['번아웃', '피로', '지침', '무기력', '의욕', '출근', '퇴사', '과로', 'burnout', 'fatigue', 'tired', 'exhausted', 'work']
-        },
-        {
-            id: 'people_pleaser',
-            title: '착한 사람 컴플렉스 (거절 어려움)',
-            titleEn: 'People-Pleasing & Boundary Issues',
-            descEn: 'Assertiveness training and overcoming fear of rejection.',
-            candidates: ["db_착한_사람_컴플렉스,_거절을_잘_못해요.json"],
-            keywords: ['거절', '착한사람', '부탁', '죄책감', '미안', '호구', '눈치', 'pleaser', 'saying no', 'boundary', 'reject']
-        },
-        {
-            id: 'infidelity',
-            title: '배우자 불륜 및 외도 의심',
-            titleEn: 'Spousal Infidelity & Trust Issues',
-            descEn: 'Navigating psychological trauma and legal protection protocols.',
-            candidates: ["db_배우자가_불륜을_해요.json"],
-            keywords: ['불륜', '외도', '바람', '남편', '아내', '배우자', '배신', '이혼', 'infidelity', 'affair', 'cheating', 'divorce']
-        },
-        {
-            id: 'finance',
-            title: '재테크 및 노후·저축 등 경제적 걱정',
-            titleEn: 'Financial Stress & Future Planning',
-            descEn: 'Relieving scarcity mindset and structuring actionable debt/asset plans.',
-            candidates: ["db_재테크나_노후_준비,_저축_등_경제적인_여건에_대한_걱정.json"],
-            keywords: ['돈', '경제', '생활비', '저축', '대출', '이자', '빚', '노후', 'money', 'finance', 'debt', 'saving', 'investment']
-        },
-        {
-            id: 'irritation',
-            title: '이유 없는 짜증 및 정서 과민',
-            titleEn: 'Unexplained Irritability & Mood Swings',
-            descEn: 'Identifying emotional trigger loops and physiological stress factors.',
-            candidates: ["db_요즘_이유_없이_짜증이_남.json"],
-            keywords: ['짜증', '화', '분노', '예민', '신경질', 'anger', 'irritated', 'annoyed', 'temper', 'stress']
-        },
-        {
-            id: 'depression',
-            title: '이유를 모를 우울감 및 공허',
-            titleEn: 'Unexplained Depression & Emptiness',
-            descEn: 'Deep inquiry into latent loss of meaning and gentle CBT behavioral activation.',
-            candidates: ["db_이유를_모를_우울.json"],
-            keywords: ['우울', '눈물', '슬픔', '공허', '외로움', '자책', 'depression', 'sad', 'empty', 'lonely', 'blue']
-        },
-        {
-            id: 'perfectionism',
-            title: '완벽주의 강박 및 실패 불안',
-            titleEn: 'Perfectionism & Fear of Failure',
-            descEn: 'Dismantling all-or-nothing cognitive errors and chronic pressure.',
-            candidates: ["db_뭐든_완벽하게_해내야_할_것_같아서_고민이에요.json"],
-            keywords: ['완벽', '완벽주의', '실수', '강박', '불안', 'perfection', 'flawless', 'mistake', 'pressure']
-        },
-        {
-            id: 'addiction',
-            title: '중독 의심 (알콜, 니코틴, 도박, 마약 등)',
-            titleEn: 'Addiction Concerns & Impulse Control',
-            descEn: 'Comprehensive assessment of substance/behavioral dependence loops.',
-            candidates: ["db_중독이_의심돼요(알콜,_니코틴,_도박,_마약_등).json"],
-            keywords: ['중독', '술', '알콜', '담배', '도박', 'addiction', 'alcohol', 'gambling', 'smoking']
-        },
-        {
-            id: 'health_anxiety',
-            title: '건강염려증 및 신체 불안',
-            titleEn: 'Health Anxiety & Somatic Concerns',
-            descEn: 'Reframing catastrophic misinterpretations of bodily sensations.',
-            candidates: ["db_건강염려증.json"],
-            keywords: ['건강', '질병', '암', '병원', '염려', 'health', 'illness', 'disease', 'anxiety', 'body']
-        },
-        {
-            id: 'self_doubt',
-            title: '자기 확신 결핍 및 방향 상실',
-            titleEn: 'Imposter Syndrome & Self-Doubt',
-            descEn: 'Rebuilding internal self-worth and decision-making clarity.',
-            candidates: ["db_내가_잘하고있는건지_모르겠어요.json"],
-            keywords: ['확신', '잘하고있는건지', '방향', '자존감', 'self-doubt', 'uncertain', 'direction', 'lost']
-        },
-        {
-            id: 'persistence',
-            title: '끈기 부족 및 용두사미 습관',
-            titleEn: 'Lack of Follow-Through & Habit Building',
-            descEn: 'Breaking executive dysfunction and micro-step goal execution.',
-            candidates: ["db_끈기가_없고_끝맺음을_잘_못해요.json"],
-            keywords: ['끈기', '포기', '작심삼일', '끝맺음', 'focus', 'persistence', 'procrastination', 'give up']
-        },
-        {
-            id: 'boss_conflict',
-            title: '직장 상사와의 갈등 및 스트레스',
-            titleEn: 'Workplace Hierarchy Conflict',
-            descEn: 'Professional boundaries and communication strategy with leadership.',
-            candidates: ["db_상사와의_갈등.json"],
-            keywords: ['상사', '팀장', '직장', '갑질', '갈등', 'boss', 'manager', 'workplace', 'conflict']
-        },
-        {
-            id: 'bullying',
-            title: '왕따 및 집단 따돌림 고통',
-            titleEn: 'Social Exclusion & Workplace Bullying',
-            descEn: 'Psychological stabilization and systematic countermeasures against isolation.',
-            candidates: ["db_왕따를_당하고_있는것_같아요.json"],
-            keywords: ['왕따', '따돌림', '소외', 'bullying', 'exclusion', 'isolated', 'harassment']
-        },
-        {
-            id: 'parenting',
-            title: '자녀 교육관에 대한 부부 갈등',
-            titleEn: 'Parenting & Educational Philosophy Conflict',
-            descEn: 'Bridging values discrepancy in co-parenting and child education.',
-            candidates: ["db_자녀_교육관에_대한_부부_갈등.json"],
-            keywords: ['자녀', '교육', '아이', '부부싸움', 'parenting', 'child', 'education', 'family']
-        },
-        {
-            id: 'relationship_doubt',
-            title: '연인에 대한 확신 부재',
-            titleEn: 'Relationship Ambivalence & Commitment Anxiety',
-            descEn: 'Exploring core relationship compatibility and emotional security.',
-            candidates: ["db_지금_만나고_있는_애인에_대한_확신이_없어요.json"],
-            keywords: ['애인', '연인', '확신', '결혼', '이별', 'partner', 'boyfriend', 'girlfriend', 'relationship']
-        },
-        {
-            id: 'friendship',
-            title: '친구 관계 갈등 및 소외감',
-            titleEn: 'Friendship Fractures & Peer Isolation',
-            descEn: 'Navigating peer group friction and authentic social realignment.',
-            candidates: ["db_친구_관계에서의_갈등.json"],
-            keywords: ['친구', '우정', '소외', '싸움', 'friend', 'friendship', 'peer', 'argument']
-        }
-    ];
+  {
+    "id": "finance",
+    "title": "생활비·저축·노후·투자",
+    "titleEn": "",
+    "descEn": "상황을 살펴보고 실행 가능한 다음 단계를 정리합니다.",
+    "candidates": [
+      "db_재테크나_노후_준비,_저축_등_경제적인_여건에_대한_걱정.json"
+    ],
+    "keywords": [
+      "재테크",
+      "돈",
+      "경제",
+      "저축",
+      "노후",
+      "대출",
+      "빚",
+      "투자",
+      "부업"
+    ]
+  },
+  {
+    "id": "career",
+    "title": "고등학생 진로 고민",
+    "titleEn": "",
+    "descEn": "상황을 살펴보고 실행 가능한 다음 단계를 정리합니다.",
+    "candidates": [
+      "db_고등학생의_진로_고민.json"
+    ],
+    "keywords": [
+      "고등학생",
+      "진로",
+      "학과",
+      "전공",
+      "대학",
+      "취업"
+    ]
+  },
+  {
+    "id": "confidence",
+    "title": "내가 잘하고 있는지에 대한 고민",
+    "titleEn": "",
+    "descEn": "상황을 살펴보고 실행 가능한 다음 단계를 정리합니다.",
+    "candidates": [
+      "db_내가_잘하고있는건지_모르겠어요.json"
+    ],
+    "keywords": [
+      "자기 확신",
+      "확신",
+      "잘하고",
+      "자신감",
+      "비교"
+    ]
+  },
+  {
+    "id": "persistence",
+    "title": "시작과 마무리의 어려움",
+    "titleEn": "",
+    "descEn": "상황을 살펴보고 실행 가능한 다음 단계를 정리합니다.",
+    "candidates": [
+      "db_끈기가_없고_끝맺음을_잘_못해요.json"
+    ],
+    "keywords": [
+      "끈기",
+      "마무리",
+      "끝맺음",
+      "미루기",
+      "집중"
+    ]
+  },
+  {
+    "id": "perfection",
+    "title": "완벽해야 한다는 부담",
+    "titleEn": "",
+    "descEn": "상황을 살펴보고 실행 가능한 다음 단계를 정리합니다.",
+    "candidates": [
+      "db_뭐든_완벽하게_해내야_할_것_같아서_고민이에요.json"
+    ],
+    "keywords": [
+      "완벽",
+      "완벽주의",
+      "실수"
+    ]
+  },
+  {
+    "id": "people",
+    "title": "거절과 관계의 경계",
+    "titleEn": "",
+    "descEn": "상황을 살펴보고 실행 가능한 다음 단계를 정리합니다.",
+    "candidates": [
+      "db_착한_사람_컴플렉스,_거절을_잘_못해요.json"
+    ],
+    "keywords": [
+      "착한사람",
+      "착한 사람",
+      "거절",
+      "부탁",
+      "눈치"
+    ]
+  },
+  {
+    "id": "burnout",
+    "title": "소진과 회복",
+    "titleEn": "",
+    "descEn": "상황을 살펴보고 실행 가능한 다음 단계를 정리합니다.",
+    "candidates": [
+      "db_번아웃이_온거_같아요.json"
+    ],
+    "keywords": [
+      "번아웃",
+      "소진",
+      "피로",
+      "과로"
+    ]
+  },
+  {
+    "id": "relationship",
+    "title": "연인 관계에 대한 확신",
+    "titleEn": "",
+    "descEn": "상황을 살펴보고 실행 가능한 다음 단계를 정리합니다.",
+    "candidates": [
+      "db_지금_만나고_있는_애인에_대한_확신이_없어요.json"
+    ],
+    "keywords": [
+      "연인",
+      "애인",
+      "연애",
+      "연인 확신",
+      "결혼"
+    ]
+  },
+  {
+    "id": "diet",
+    "title": "식사·활동·체중 관리",
+    "titleEn": "",
+    "descEn": "상황을 살펴보고 실행 가능한 다음 단계를 정리합니다.",
+    "candidates": [
+      "db_다이어트가_너무_어려워.json"
+    ],
+    "keywords": [
+      "다이어트",
+      "체중",
+      "식단",
+      "살",
+      "운동",
+      "폭식"
+    ]
+  },
+  {
+    "id": "depression",
+    "title": "가라앉은 기분과 일상 회복",
+    "titleEn": "",
+    "descEn": "상황을 살펴보고 실행 가능한 다음 단계를 정리합니다.",
+    "candidates": [
+      "db_이유를_모를_우울.json"
+    ],
+    "keywords": [
+      "우울",
+      "무기력",
+      "공허",
+      "기분"
+    ]
+  },
+  {
+    "id": "addiction",
+    "title": "사용·행동 조절의 어려움",
+    "titleEn": "",
+    "descEn": "상황을 살펴보고 실행 가능한 다음 단계를 정리합니다.",
+    "candidates": [
+      "db_중독이_의심돼요(알콜,_니코틴,_도박,_마약_등).json"
+    ],
+    "keywords": [
+      "중독",
+      "술",
+      "음주",
+      "담배",
+      "니코틴",
+      "도박",
+      "약물",
+      "게임",
+      "SNS"
+    ]
+  },
+  {
+    "id": "infidelity",
+    "title": "배우자의 외도와 관계 결정",
+    "titleEn": "",
+    "descEn": "상황을 살펴보고 실행 가능한 다음 단계를 정리합니다.",
+    "candidates": [
+      "db_배우자가_불륜을_해요.json"
+    ],
+    "keywords": [
+      "불륜",
+      "외도",
+      "배우자",
+      "배신"
+    ]
+  },
+  {
+    "id": "health",
+    "title": "건강 걱정",
+    "titleEn": "",
+    "descEn": "상황을 살펴보고 실행 가능한 다음 단계를 정리합니다.",
+    "candidates": [
+      "db_건강염려증.json"
+    ],
+    "keywords": [
+      "건강염려증",
+      "건강 걱정",
+      "건강불안"
+    ]
+  },
+  {
+    "id": "anger",
+    "title": "짜증과 예민함",
+    "titleEn": "",
+    "descEn": "상황을 살펴보고 실행 가능한 다음 단계를 정리합니다.",
+    "candidates": [
+      "db_요즘_이유_없이_짜증이_남.json"
+    ],
+    "keywords": [
+      "짜증",
+      "분노",
+      "예민",
+      "화"
+    ]
+  },
+  {
+    "id": "work",
+    "title": "상사와의 갈등",
+    "titleEn": "",
+    "descEn": "상황을 살펴보고 실행 가능한 다음 단계를 정리합니다.",
+    "candidates": [
+      "db_상사와의_갈등.json"
+    ],
+    "keywords": [
+      "상사",
+      "직장",
+      "괴롭힘",
+      "업무"
+    ]
+  },
+  {
+    "id": "parent",
+    "title": "자녀 교육관에 대한 부부 갈등",
+    "titleEn": "",
+    "descEn": "상황을 살펴보고 실행 가능한 다음 단계를 정리합니다.",
+    "candidates": [
+      "db_자녀_교육관에_대한_부부_갈등.json"
+    ],
+    "keywords": [
+      "자녀 교육",
+      "양육",
+      "교육관",
+      "부부 갈등"
+    ]
+  },
+  {
+    "id": "friend",
+    "title": "친구 관계의 갈등",
+    "titleEn": "",
+    "descEn": "상황을 살펴보고 실행 가능한 다음 단계를 정리합니다.",
+    "candidates": [
+      "db_친구_관계에서의_갈등.json"
+    ],
+    "keywords": [
+      "친구",
+      "우정",
+      "친구 갈등"
+    ]
+  },
+  {
+    "id": "bully",
+    "title": "따돌림과 배제",
+    "titleEn": "",
+    "descEn": "상황을 살펴보고 실행 가능한 다음 단계를 정리합니다.",
+    "candidates": [
+      "db_왕따를_당하고_있는것_같아요.json"
+    ],
+    "keywords": [
+      "왕따",
+      "따돌림",
+      "소외"
+    ]
+  }
+];
 
     let activeData = null;
     let currentDepth = 1;
-
-    function generateEnglishSubtitle(koreanText) {
-        if (!koreanText) return '';
-        if (koreanText.includes('시작') || koreanText.includes('막막')) return 'Unsure where to begin; seeking a clear starting framework for diet or exercise.';
-        if (koreanText.includes('먹는 양') || koreanText.includes('살이 안')) return 'Eating less does not lead to weight loss, suspecting metabolic decline.';
-        if (koreanText.includes('생리 주기') || koreanText.includes('피로')) return 'Body condition fluctuates heavily due to menstrual cycles or fatigue.';
-        if (koreanText.includes('폭식') || koreanText.includes('요요')) return 'Emotionally exhausted from recurrent binge-eating urges and rebound weight.';
-        if (koreanText.includes('칼로리 계산') || koreanText.includes('영양소')) return 'Struggling with calorie counting and macronutrient ratios as a beginner.';
-        if (koreanText.includes('외식') || koreanText.includes('배달')) return 'Frequent dining out makes standard diet prep feel overwhelming.';
-        if (koreanText.includes('활동') || koreanText.includes('5,000보')) return 'Sedentary daily routine with under 5,000 steps and low energy expenditure.';
-        if (koreanText.includes('근력') || koreanText.includes('기구')) return 'Intimidated by gym equipment and lack foundational weight-training form.';
-        if (koreanText.includes('조급') || koreanText.includes('목표')) return 'Overwhelmed by unrealistic short-term weight loss goals.';
-        return 'Detailed reflective inquiry into this specific psychological and physiological pattern.';
-    }
+    let questionHistory = [];
+    let loadGeneration = 0;
+    let partnerRegistry = {};
+    const partnerReady = fetch("partners.json", {cache:"no-store"}).then(r => {if(!r.ok) throw new Error("partners"); return r.json();}).then(data => { partnerRegistry=data; MNReferral.configureRegistry(data); }).catch(() => {partnerRegistry={};});
 
     const searchInput = document.getElementById('search-input');
     
@@ -495,7 +655,7 @@
         bannerKeyword.innerText = `"${query}"`;
 
         if (scored.length > 0) {
-            document.getElementById('match-count-label').innerHTML = `가장 가까운 추천 경로: <span class="en-sub-inline">(Recommended Diagnostic Paths)</span>`;
+            document.getElementById('match-count-label').innerHTML = `가장 가까운 추천 경로: <span class="en-sub-inline">(Suggested Topics)</span>`;
             scored.slice(0, 3).forEach((item, idx) => {
                 const card = document.createElement('div');
                 card.className = 'match-card';
@@ -505,7 +665,7 @@
                         <h4>${item.title}<span class="en-sub">${item.titleEn}</span></h4>
                         <p>${item.descEn}</p>
                     </div>
-                    <span class="match-badge">${idx === 0 ? '엔터 시 진입 ↵<br><span style="font-size:0.7em;">Enter</span>' : '진단 시작 →<br><span style="font-size:0.7em;">Start</span>'}</span>
+                    <span class="match-badge">${idx === 0 ? '엔터 시 진입 ↵<br><span style="font-size:0.7em;">Enter</span>' : '탐색 시작 →<br><span style="font-size:0.7em;">Start</span>'}</span>
                 `;
                 listContainer.appendChild(card);
             });
@@ -529,20 +689,28 @@
     }
 
     async function startDiagnosisWithCategory(category) {
+        const generation = ++loadGeneration;
         let loaded = false;
+        let details = [];
+        await partnerReady;
         for (const filename of category.candidates) {
             try {
-                const res = await fetch(encodeURI(filename), { cache: 'no-store' });
+                const res = await fetch(encodeURIComponent(filename), { cache: 'no-store' });
                 if (res.ok) {
-                    activeData = await res.json();
+                    const candidate = await res.json();
+                    if (!candidate.questions?.Q_START || !candidate.solutions) continue;
+                    if (generation !== loadGeneration) return;
+                    activeData = candidate;
                     loaded = true;
                     break;
                 }
-            } catch (e) {}
+                else details.push(filename + " HTTP " + res.status);
+            } catch (e) {details.push(filename + ": " + e.message);}
         }
 
+        if (generation !== loadGeneration) return;
         if (!loaded) {
-            alert(`[Notice] Diagnostic file not found. Please verify file naming.`);
+            alert(`질문 파일을 불러오지 못했습니다. 파일명과 JSON 구조를 확인해 주세요: ${category.candidates.join(", ")}\n${details.join("\n")}`);
             return;
         }
 
@@ -552,216 +720,115 @@
 
         document.getElementById('current-cat-name').innerHTML = `${category.title} <span class="en-sub-inline">(${category.titleEn})</span>`;
         currentDepth = 1;
+        questionHistory = [];
         renderNode('Q_START');
+    }
+
+    function remainingDepth(nodeId, visited = new Set()) {
+        if (visited.has(nodeId)) return 0;
+        const node = activeData.questions[nodeId];
+        if (!node) return 0;
+        const nextVisited = new Set(visited); nextVisited.add(nodeId);
+        return Math.max(0, ...(node.options || node.branches || []).map(b =>
+            b.nextNodeId ? 1 + remainingDepth(b.nextNodeId, nextVisited) : 0));
     }
 
     function renderNode(nodeId) {
         const node = activeData.questions[nodeId];
-        if (!node) return;
-
-        document.getElementById('progress-fill').style.width = (currentDepth * 25) + '%';
-        
-        const qEn = generateEnglishSubtitle(node.text);
-        document.getElementById('question-text').innerHTML = `
-            ${node.text}
-            <span class="en-sub">${qEn}</span>
-        `;
-
+        if (!node) {
+            alert('연결된 질문이 없습니다: ' + nodeId);
+            return;
+        }
+        if (questionHistory[questionHistory.length-1] !== nodeId) questionHistory.push(nodeId);
+        currentDepth=questionHistory.length;
+        const remaining = remainingDepth(nodeId);
+        document.getElementById('progress-fill').style.width =
+            Math.min(95, 100 * currentDepth / (currentDepth + remaining + 1)) + '%';
+        document.getElementById('question-text').textContent = node.text;
         const optContainer = document.getElementById('option-list');
-        optContainer.innerHTML = '';
-
-        const branchList = node.options || node.branches || [];
-        branchList.forEach(branch => {
+        optContainer.replaceChildren();
+        document.getElementById('btn-back').disabled = questionHistory.length < 2;
+        const branches = node.options || node.branches || [];
+        if (!branches.length) alert('선택지가 없는 질문입니다: ' + nodeId);
+        branches.forEach(branch => {
             const btn = document.createElement('button');
             btn.className = 'btn-option';
-            
-            const optEn = generateEnglishSubtitle(branch.text);
-            btn.innerHTML = `
-                <div>${branch.text}</div>
-                <span class="en-sub">${optEn}</span>
-            `;
-
+            btn.textContent = branch.text;
             btn.onclick = () => {
-                if (branch.resultId && branch.resultId !== "") {
-                    showResult(branch.resultId);
-                } else if (branch.nextNodeId && branch.nextNodeId !== "") {
-                    currentDepth++;
-                    renderNode(branch.nextNodeId);
-                }
+                if (branch.resultId) showResult(branch.resultId);
+                else if (branch.nextNodeId) { currentDepth++; renderNode(branch.nextNodeId); }
+                else alert('선택지의 다음 연결이 없습니다.');
             };
             optContainer.appendChild(btn);
         });
     }
 
     function showResult(resultId) {
+        const sol = activeData.solutions?.[resultId];
+        if (!sol) { alert('연결된 결과가 없습니다: ' + resultId); return; }
         document.getElementById('view-tree').style.display = 'none';
-        
-        const sol = activeData.solutions[resultId];
-        const match = activeData.matchings ? activeData.matchings[resultId] : null;
-
-        if (!sol) {
-            alert('Solution data not found: ' + resultId);
-            return;
+        document.getElementById('progress-fill').style.width = '100%';
+        document.getElementById('res-id').textContent = resultId;
+        const fields = {'res-title':'title','res-diagnosis':'diagnosis','res-cbt':'cbt_analysis',
+                        'res-short':'short_term_action','res-mid':'mid_term_action'};
+        for (const [element, field] of Object.entries(fields)) {
+            document.getElementById(element).textContent = sol[field] || '이 항목의 내용이 아직 준비되지 않았습니다.';
         }
-
-        document.getElementById('res-id').innerText = resultId;
-        document.getElementById('res-title').innerHTML = `
-            ${sol.title}
-            <span class="en-sub">Comprehensive Action Blueprint (${resultId})</span>
-        `;
-        
-        document.getElementById('res-diagnosis').innerHTML = `
-            ${sol.diagnosis}
-            <span class="en-sub">Root physiological and behavioral mechanism analyzed.</span>
-        `;
-
-        document.getElementById('res-cbt').innerHTML = `
-            ${sol.cbt_analysis}
-            <span class="en-sub">Cognitive distortion restructuring & habit intervention.</span>
-        `;
-
-        document.getElementById('res-short').innerHTML = `
-            ${sol.short_term_action}
-            <span class="en-sub">Immediate executable action starting today.</span>
-        `;
-
-        document.getElementById('res-mid').innerHTML = `
-            ${sol.mid_term_action}
-            <span class="en-sub">Sustainable 4-8 week structured lifestyle protocol.</span>
-        `;
-
+        document.getElementById('result-notice').textContent = activeData.meta?.notice ||
+            '선택한 응답을 바탕으로 한 자기이해 자료이며, 의학적 진단이나 법률 판단을 대신하지 않습니다.';
+        const match = activeData.matchings?.[resultId];
         const bizList = document.getElementById('biz-list');
-        bizList.innerHTML = '';
-
-        if (match) {
-            if (match.primaryRecommendation) {
-                bizList.innerHTML += createBizCard(match.primaryRecommendation, '주요 추천 / Primary Choice');
-            }
-            if (match.supplementaryRecommendations) {
-                match.supplementaryRecommendations.forEach(rec => {
-                    bizList.innerHTML += createBizCard(rec, '보조 연계 / Supportive');
-                });
-            }
-        }
-
+        bizList.replaceChildren();
+        if (match?.primaryRecommendation) bizList.appendChild(createBizCard(match.primaryRecommendation, 'primary'));
+        (match?.supplementaryRecommendations || []).forEach(item =>
+            bizList.appendChild(createBizCard(item, 'secondary')));
+        if (!bizList.children.length) bizList.textContent = '이 결과에 등록된 지원 정보가 없습니다.';
         document.getElementById('view-result').style.display = 'flex';
+        window.scrollTo({top:0, behavior:'auto'});
     }
 
-    const REAL_WORLD_SOLUTIONS = {
-        "홈트": {
-            name: "이지은 다이어트 (YouTube 공식 채널)",
-            url: "https://www.youtube.com/@Jieun_Diet",
-            desc: "초보자도 집에서 바로 따라 하는 루틴 & 마인드셋 가이드"
-        },
-        "운동": {
-            name: "피지컬갤러리 (YouTube 공식 채널)",
-            url: "https://www.youtube.com/@physicalgallery_official",
-            desc: "부상 없는 정석 기초 근력 운동법 및 체형 교정"
-        },
-        "활동량": {
-            name: "비타민신지니 (YouTube 공식 채널)",
-            url: "https://www.youtube.com/@VitaminJiny",
-            desc: "칼로리 소모를 극대화하는 실내 유산소 댄스 & 워킹 루틴"
-        },
-        "PT": {
-            name: "다짐 (Da-Gym)",
-            url: "https://www.da-gym.co.kr",
-            desc: "내 위치 기반 검증된 헬스장 및 1:1 초심자 PT 센터 찾기"
-        },
-        "식단": {
-            name: "랭킹닭컴 (Rankingdak)",
-            url: "https://www.rankingdak.com",
-            desc: "대한민국 1등 닭가슴살 & 맞춤 단백질 식단 전문몰"
-        },
-        "밀키트": {
-            name: "마이비밀 (Mybmeal)",
-            url: "https://mybmeal.co.kr",
-            desc: "칼로리와 영양 밸런스를 엄격히 맞춘 다이어트 도시락 구독"
-        },
-        "도시락": {
-            name: "마이비밀 (Mybmeal)",
-            url: "https://mybmeal.co.kr",
-            desc: "맛있게 챙겨 먹는 정량 다이어트 도시락 정기배송"
-        },
-        "샐러드": {
-            name: "포켓샐러드 (Pocket Salad)",
-            url: "https://www.pocketsalad.co.kr",
-            desc: "신선하고 간편한 맞춤형 진공포장 샐러드 정기배송"
-        },
-        "혈당": {
-            name: "닥터다이어리 (Dr.Diary)",
-            url: "https://drdiary.co.kr",
-            desc: "연속혈당측정기(CGM) 센서 기반 실시간 혈당 케어"
-        },
-        "심리": {
-            name: "마인드카페 (Mindcafe)",
-            url: "https://mindcafe.co.kr",
-            desc: "국내 1위 비대면 전문 1:1 심리상담 예약"
-        },
-        "폭식": {
-            name: "트로스트 (Trost)",
-            url: "https://trost.co.kr",
-            desc: "섭식장애 및 감정적 섭식 인지행동(CBT) 전문 상담"
-        },
-        "습관": {
-            name: "눔 코리아 (Noom)",
-            url: "https://www.noom.com/ko",
-            desc: "심리학 기반 1:1 행동 교정 다이어트 코칭 프로그램"
-        },
-        "검진": {
-            name: "굿닥 (Goodoc)",
-            url: "https://www.goodoc.co.kr",
-            desc: "내분비내과 및 대사 기능의학 전문 병의원 비대면 예약"
+    function createBizCard(item, placement) {
+        const card = document.createElement('div'); card.className = 'biz-item';
+        const info = document.createElement('div'); info.className = 'biz-info';
+        const partner = partnerRegistry[item.provider_id];
+        const label = document.createElement('span');
+        label.textContent = partner?.relationship === 'commercial_partner' ? '제휴 서비스 · 유료 여부 확인' : '공식 정보·지원 안내 · 제휴 아님';
+        if (!partner) label.textContent = '지원 안내';
+        const title = document.createElement('h5'); title.textContent = partner?.name || item.service || '지원 정보';
+        const desc = document.createElement('p'); desc.textContent = item.description || '';
+        const reason = document.createElement('p'); reason.textContent = item.reason || '';
+        info.append(label, title, desc, reason); card.append(info);
+        if (partner) {
+            const link = document.createElement('a'); link.className = 'btn-biz';
+            link.textContent = '기관 안내 보기';
+            if (MNReferral.attach(link, item.provider_id, placement)) card.append(link);
         }
-    };
-
-    function createBizCard(item, badge) {
-        const title = item.service || item.productName || '추천 솔루션';
-        const desc = item.description || '';
-        
-        let targetSolution = null;
-
-        for (const [key, sol] of Object.entries(REAL_WORLD_SOLUTIONS)) {
-            if (title.includes(key) || desc.includes(key)) {
-                targetSolution = sol;
-                break;
-            }
-        }
-
-        if (!targetSolution) {
-            if (badge.includes('주요') || badge.includes('Primary')) {
-                targetSolution = {
-                    name: "유튜브 인기 홈트레이닝 채널",
-                    url: `https://www.youtube.com/results?search_query=${encodeURIComponent(title + ' 홈트')}`,
-                    desc: "집에서 비용 없이 바로 시작할 수 있는 검증된 홈트레이닝 가이드"
-                };
-            } else {
-                targetSolution = {
-                    name: "네이버 스마트스토어 공식 식단관",
-                    url: `https://search.shopping.naver.com/search/all?query=${encodeURIComponent('다이어트 건강 식단 도시락')}`,
-                    desc: "구매 후기 평점 4.8 이상 검증된 클린 다이어트 식단"
-                };
-            }
-        }
-
-        const separator = targetSolution.url.includes('?') ? '&' : '?';
-        const trackingUrl = targetSolution.url.includes('youtube.com') 
-            ? targetSolution.url 
-            : `${targetSolution.url}${separator}utm_source=map-of-the-soul&utm_medium=referral&utm_campaign=diet_solutions`;
-
-        return `
-            <div class="biz-item">
-                <div class="biz-info">
-                    <span style="font-size:0.75rem; color:var(--primary); font-weight:700;">[${badge}]</span>
-                    <h5>${targetSolution.name}</h5>
-                    <p>${targetSolution.desc}</p>
-                </div>
-                <a href="${trackingUrl}" target="_blank" class="btn-biz">
-                    바로가기<br>
-                    <span style="font-size:0.75em; font-weight:400;">Explore</span>
-                </a>
-            </div>
-        `;
+        return card;
+    }
+    function previousQuestion(fromResult=false) {
+        if (!questionHistory.length) return;
+        if (!fromResult && questionHistory.length>1) questionHistory.pop();
+        document.getElementById('view-result').style.display='none';
+        document.getElementById('view-tree').style.display='flex';
+        renderNode(questionHistory[questionHistory.length-1]);
+    }
+    function allTopics() {
+        const list=document.getElementById('all-topic-list');
+        CATEGORY_REGISTRY.forEach(cat=>{const b=document.createElement('button');b.className='topic-button';b.textContent=cat.title;b.onclick=()=>startDiagnosisWithCategory(cat);list.append(b);});
+    }
+    allTopics();
+    function analyticsChoice(enabled) {
+        MNReferral.setConsent(enabled);
+        document.getElementById('analytics-state').textContent=enabled?'클릭 통계 허용':'클릭 통계 사용 안 함';
+    }
+    if (MNReferral.measurementReady()) {
+        document.getElementById('analytics-settings').hidden=false;
+        try {if(localStorage.getItem('mn_analytics_consent')==='yes') analyticsChoice(true);} catch {}
+    }
+    if (new URLSearchParams(location.search).get('audit')==='1') {
+        const panel=document.getElementById('audit-panel'); panel.hidden=false;
+        const update=()=>{document.getElementById('audit-data').textContent=JSON.stringify(MNReferral.diagnostics(),null,2);};
+        window.addEventListener('mn-resource-click',update);update();
     }
 
     function openRequestModal(defaultText) {
@@ -821,7 +888,7 @@
             alert('접수 전송 중 일시적 오류가 발생했습니다. 브라우저 저장소에 백업되었습니다.');
         } finally {
             submitBtn.disabled = false;
-            submitBtn.innerHTML = `맞춤 진단 제작 신청 <span class="en-sub" style="color:#EEF2FF; margin:0;">Submit Request</span>`;
+            submitBtn.innerHTML = `맞춤 안내 제작 신청 <span class="en-sub" style="color:#EEF2FF; margin:0;">Submit Request</span>`;
         }
     }
 
@@ -831,10 +898,13 @@
         document.getElementById('view-search').style.display = 'flex';
         document.getElementById('match-results').style.display = 'none';
         searchInput.value = '';
+        ++loadGeneration;
+        questionHistory = [];
         activeData = null;
         currentDepth = 1;
     }
 </script>
+
 
 </body>
 </html>

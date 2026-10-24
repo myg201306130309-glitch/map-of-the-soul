@@ -1,1325 +1,293 @@
 {
-    "questions": {
-        "Q_START": {
-            "id": "Q_START",
-            "category": "진로 고민 시작",
-            "text": "지금 진로 고민에서 가장 막막한 부분이 무엇인가요?",
-            "isRoot": true,
-            "branches": [
-                {
-                    "text": "하고 싶은 게 너무 많아서 하나를 못 고르겠어요",
-                    "nextNodeId": "Q_MULTI_INTEREST",
-                    "resultId": ""
-                },
-                {
-                    "text": "하고 싶은 게 아무것도 없어서 막막해요",
-                    "nextNodeId": "Q_NO_INTEREST",
-                    "resultId": ""
-                },
-                {
-                    "text": "하고 싶은 건 있는데 현실적으로 가능한지 모르겠어요",
-                    "nextNodeId": "Q_REALITY_CHECK",
-                    "resultId": ""
-                },
-                {
-                    "text": "부모님이나 주변 기대와 내 생각이 달라서 갈등이에요",
-                    "nextNodeId": "Q_CONFLICT_START",
-                    "resultId": ""
-                },
-                {
-                    "text": "어떤 직업이 미래에 유망한지 정보가 없어요",
-                    "nextNodeId": "Q_INFO_LACK",
-                    "resultId": ""
-                }
-            ]
+  "meta": {
+    "schema_version": "3.0",
+    "revision": "2026-10-18-full-v1",
+    "category": "고등학생 진로 고민",
+    "notice": "선택한 상황에 맞춘 자기이해·행동 안내입니다. 의학적 진단, 개인별 투자 권유 또는 법률 판단을 대신하지 않습니다.",
+    "clinical_validation": "임상적으로 타당화된 검사 아님; 전문가 검토 전 편집 초안",
+    "sources": [
+      "https://www.career.go.kr/"
+    ],
+    "source_scope": "기관의 공식 역할과 일반 원칙을 참고했습니다. 개별 분기·행동 계획의 효과가 검증됐다는 뜻은 아닙니다.",
+    "category_id": "career"
+  },
+  "questions": {
+    "Q_START": {
+      "text": "고등학생 진로 고민에서 오늘 먼저 다루고 싶은 부분을 골라 주세요. 여러 가지라면 현재 생활에 가장 영향을 주는 것부터 선택해 주세요.",
+      "options": [
+        {
+          "text": "관심 분야를 아직 정하지 못했어요",
+          "nextNodeId": "Q_CONTEXT_1"
         },
-        "Q_MULTI_INTEREST": {
-            "id": "Q_MULTI_INTEREST",
-            "category": "관심사 정리",
-            "text": "관심 있는 분야들을 떠올렸을 때, 그것들의 공통점을 찾아본 적 있나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "네, 찾아봤는데 공통점이 보여요",
-                    "nextNodeId": "Q_COMMON_FOUND",
-                    "resultId": ""
-                },
-                {
-                    "text": "찾아봤는데 공통점이 없는 것 같아요",
-                    "nextNodeId": "Q_NO_COMMON",
-                    "resultId": ""
-                },
-                {
-                    "text": "아직 그렇게 정리해본 적이 없어요",
-                    "nextNodeId": "Q_TRY_COMMON",
-                    "resultId": ""
-                }
-            ]
+        {
+          "text": "하고 싶은 분야의 현실성이 걱정돼요",
+          "nextNodeId": "Q_CONTEXT_2"
         },
-        "Q_COMMON_FOUND": {
-            "id": "Q_COMMON_FOUND",
-            "category": "관심사 정리",
-            "text": "공통점을 발견했군요. 그 공통점이 '사람을 돕는 것', '무언가를 만드는 것', '분석하고 연구하는 것' 중 어디에 가깝나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "사람을 돕거나 소통하는 것에 가까워요",
-                    "nextNodeId": "Q_PEOPLE_FIELD",
-                    "resultId": ""
-                },
-                {
-                    "text": "무언가를 직접 만들거나 표현하는 것에 가까워요",
-                    "nextNodeId": "Q_CREATE_FIELD",
-                    "resultId": ""
-                },
-                {
-                    "text": "데이터나 원리를 분석하고 연구하는 것에 가까워요",
-                    "nextNodeId": "Q_ANALYZE_FIELD",
-                    "resultId": ""
-                }
-            ]
+        {
+          "text": "주변 기대와 내 생각이 달라요",
+          "nextNodeId": "Q_CONTEXT_3"
         },
-        "Q_NO_COMMON": {
-            "id": "Q_NO_COMMON",
-            "category": "관심사 정리",
-            "text": "관심사들이 달라 보여도, 그 활동을 할 때 '내가 잘한다'고 느끼는 것과 '즐겁다'고 느끼는 것 중 어느 쪽이 더 강한가요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "잘한다는 느낌이 더 강해요 (성취감 중심)",
-                    "nextNodeId": "Q_STRENGTH_BASED",
-                    "resultId": ""
-                },
-                {
-                    "text": "즐겁다는 느낌이 더 강해요 (흥미 중심)",
-                    "nextNodeId": "Q_INTEREST_BASED",
-                    "resultId": ""
-                },
-                {
-                    "text": "둘 다 비슷해요",
-                    "nextNodeId": "Q_BOTH_EQUAL",
-                    "resultId": ""
-                }
-            ]
+        {
+          "text": "정보나 실행 순서가 부족해요",
+          "nextNodeId": "Q_CONTEXT_4"
         },
-        "Q_TRY_COMMON": {
-            "id": "Q_TRY_COMMON",
-            "category": "관심사 정리",
-            "text": "지금 관심 있는 분야들을 종이에 적고, 각각 '왜 끌리는지' 이유를 써본 적 있나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "해볼게요, 방법을 알려주세요",
-                    "nextNodeId": "Q_METHOD_GUIDE",
-                    "resultId": ""
-                },
-                {
-                    "text": "그런 작업 자체가 귀찮고 막막해요",
-                    "nextNodeId": "Q_AVOIDANCE_REASON",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_NO_INTEREST": {
-            "id": "Q_NO_INTEREST",
-            "category": "무관심 원인 탐색",
-            "text": "하고 싶은 게 없다고 느끼는 게 언제부터였나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "원래부터 딱히 없었어요",
-                    "nextNodeId": "Q_NEVER_HAD",
-                    "resultId": ""
-                },
-                {
-                    "text": "예전엔 있었는데 어느 순간 사라졌어요",
-                    "nextNodeId": "Q_LOST_INTEREST",
-                    "resultId": ""
-                },
-                {
-                    "text": "있긴 한데 진로로 삼기엔 부족한 것 같아서요",
-                    "nextNodeId": "Q_UNDERVALUE",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_NEVER_HAD": {
-            "id": "Q_NEVER_HAD",
-            "category": "경험 부족 점검",
-            "text": "지금까지 학교 공부 외에 직접 체험해본 활동(동아리, 봉사, 아르바이트, 취미 등)이 있나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "거의 없어요, 공부에만 집중했어요",
-                    "nextNodeId": "Q_EXPERIENCE_LACK",
-                    "resultId": ""
-                },
-                {
-                    "text": "몇 가지 해봤는데 특별히 끌리는 건 없었어요",
-                    "nextNodeId": "Q_TRIED_NOT_CLICKED",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_EXPERIENCE_LACK": {
-            "id": "Q_EXPERIENCE_LACK",
-            "category": "경험 부족 점검",
-            "text": "경험이 부족한 상태에서 진로를 정하기는 어렵습니다. 지금 당장 시도해볼 수 있는 활동 범위는 어느 정도인가요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "주말이나 방학에 시간을 낼 수 있어요",
-                    "nextNodeId": "Q_ACTION_PLAN_EXP",
-                    "resultId": ""
-                },
-                {
-                    "text": "학업 때문에 시간이 거의 없어요",
-                    "nextNodeId": "Q_TIME_CONSTRAINT",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_ACTION_PLAN_EXP": {
-            "id": "Q_ACTION_PLAN_EXP",
-            "category": "실행 계획",
-            "text": "시간을 낼 수 있다면, 다음 중 가장 먼저 시도해볼 수 있는 것은 무엇인가요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "관심 직업군의 유튜브/인터뷰 영상 탐색",
-                    "nextNodeId": "Q_MEDIA_EXPLORE",
-                    "resultId": ""
-                },
-                {
-                    "text": "학교 진로 체험 프로그램 또는 직업 체험관 방문",
-                    "nextNodeId": "Q_SCHOOL_PROGRAM",
-                    "resultId": ""
-                },
-                {
-                    "text": "관심 분야 관련 온라인 강의나 무료 자격증 도전",
-                    "nextNodeId": "Q_ONLINE_CERT",
-                    "resultId": ""
-                },
-                {
-                    "text": "해당 분야 종사자에게 직접 질문(SNS, 커뮤니티 활용)",
-                    "nextNodeId": "Q_MENTOR_CONTACT",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_MEDIA_EXPLORE": {
-            "id": "Q_MEDIA_EXPLORE",
-            "category": "정보 수집 실행",
-            "text": "영상을 탐색할 때 단순히 '멋있어 보이는' 직업보다 '실제 하루 일과'를 보여주는 콘텐츠를 찾는 게 중요합니다. 그런 현실적인 정보를 본 후 어떤 반응이 나왔나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "생각보다 힘들어 보여서 흥미가 줄었어요",
-                    "nextNodeId": "Q_REALITY_SHOCK",
-                    "resultId": ""
-                },
-                {
-                    "text": "힘들어도 해보고 싶다는 생각이 들었어요",
-                    "nextNodeId": "Q_CONFIRMED_INTEREST",
-                    "resultId": ""
-                },
-                {
-                    "text": "아직 찾아보지 않았어요",
-                    "nextNodeId": "Q_PROMPT_ACTION",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_REALITY_SHOCK": {
-            "id": "Q_REALITY_SHOCK",
-            "category": "현실 인식 후 재탐색",
-            "text": "현실을 보고 흥미가 줄었다면, 그 직업의 어떤 부분이 싫었나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "반복적이고 단조로운 업무가 싫었어요",
-                    "nextNodeId": "Q_PREFER_VARIETY",
-                    "resultId": ""
-                },
-                {
-                    "text": "사람을 많이 상대해야 하는 게 부담스러웠어요",
-                    "nextNodeId": "Q_PREFER_SOLO",
-                    "resultId": ""
-                },
-                {
-                    "text": "수입이나 안정성이 낮아 보여서요",
-                    "nextNodeId": "Q_STABILITY_PRIORITY",
-                    "resultId": ""
-                },
-                {
-                    "text": "진입 장벽(공부량, 자격증 등)이 너무 높아 보여서요",
-                    "nextNodeId": "Q_BARRIER_CONCERN",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_CONFIRMED_INTEREST": {
-            "id": "Q_CONFIRMED_INTEREST",
-            "category": "관심 확인 후 실행",
-            "text": "좋습니다. 그 분야로 진학하거나 취업하기 위해 필요한 스펙이나 경로를 구체적으로 조사해본 적 있나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "네, 어느 정도 알고 있어요",
-                    "nextNodeId": "Q_SPEC_CHECK",
-                    "resultId": ""
-                },
-                {
-                    "text": "아니요, 아직 막연하게만 알아요",
-                    "nextNodeId": "Q_SPEC_RESEARCH",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_SPEC_CHECK": {
-            "id": "Q_SPEC_CHECK",
-            "category": "스펙 및 경로 점검",
-            "text": "그 분야 진입에 필요한 조건(학과, 성적, 자격증, 포트폴리오 등) 중 현재 본인이 갖춘 것과 부족한 것을 구분해본 적 있나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "네, 갖춘 것과 부족한 것을 알고 있어요",
-                    "nextNodeId": "Q_GAP_ANALYSIS",
-                    "resultId": ""
-                },
-                {
-                    "text": "아니요, 전체적으로 막연해요",
-                    "nextNodeId": "Q_SPEC_RESEARCH",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_GAP_ANALYSIS": {
-            "id": "Q_GAP_ANALYSIS",
-            "category": "갭 분석 및 실행 계획",
-            "text": "부족한 부분을 채우기 위한 구체적인 계획(언제까지, 무엇을, 어떻게)을 세워본 적 있나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "네, 계획이 있어요",
-                    "nextNodeId": "Q_PLAN_REVIEW",
-                    "resultId": ""
-                },
-                {
-                    "text": "아니요, 계획 세우는 게 어려워요",
-                    "nextNodeId": "Q_PLAN_HELP",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_PLAN_REVIEW": {
-            "id": "Q_PLAN_REVIEW",
-            "category": "계획 점검",
-            "text": "세운 계획이 실제로 실행되고 있나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "네, 꾸준히 실행 중이에요",
-                    "nextNodeId": "Q_EXECUTION_GOOD",
-                    "resultId": ""
-                },
-                {
-                    "text": "계획은 있는데 실행이 잘 안 돼요",
-                    "nextNodeId": "Q_EXECUTION_FAIL",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_EXECUTION_FAIL": {
-            "id": "Q_EXECUTION_FAIL",
-            "category": "실행 장애 원인",
-            "text": "실행이 잘 안 되는 가장 큰 이유가 무엇인가요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "시간 관리가 안 돼요",
-                    "nextNodeId": "Q_TIME_MANAGE",
-                    "resultId": ""
-                },
-                {
-                    "text": "막상 시작하면 의욕이 사라져요",
-                    "nextNodeId": "Q_MOTIVATION_LOSS",
-                    "resultId": ""
-                },
-                {
-                    "text": "계획이 너무 막연하거나 커서 어디서 시작할지 모르겠어요",
-                    "nextNodeId": "Q_PLAN_TOO_BIG",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_PLAN_TOO_BIG": {
-            "id": "Q_PLAN_TOO_BIG",
-            "category": "실행 계획 세분화",
-            "text": "큰 목표를 이번 주 안에 할 수 있는 단 하나의 행동으로 쪼개본다면 무엇이 될 것 같나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "관련 학과 입시 요강 1개 찾아보기",
-                    "nextNodeId": "Q_SMALL_WIN_1",
-                    "resultId": ""
-                },
-                {
-                    "text": "그 직업 종사자 인터뷰 영상 1개 보기",
-                    "nextNodeId": "Q_SMALL_WIN_2",
-                    "resultId": ""
-                },
-                {
-                    "text": "진로 선생님께 상담 예약하기",
-                    "nextNodeId": "Q_SMALL_WIN_3",
-                    "resultId": ""
-                },
-                {
-                    "text": "그것조차 떠오르지 않아요",
-                    "nextNodeId": "Q_DEEP_BLOCK",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_DEEP_BLOCK": {
-            "id": "Q_DEEP_BLOCK",
-            "category": "심리적 장벽 탐색",
-            "text": "행동이 전혀 떠오르지 않을 때, 속마음에 가장 가까운 것은 무엇인가요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "어차피 해도 안 될 것 같다는 생각이 들어요",
-                    "nextNodeId": "Q_SELF_DOUBT",
-                    "resultId": ""
-                },
-                {
-                    "text": "실패하면 창피할 것 같아서 시작이 두려워요",
-                    "nextNodeId": "Q_FEAR_FAILURE",
-                    "resultId": ""
-                },
-                {
-                    "text": "내가 정말 원하는 게 맞는지 확신이 없어요",
-                    "nextNodeId": "Q_UNCERTAINTY",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_SELF_DOUBT": {
-            "id": "Q_SELF_DOUBT",
-            "category": "자기 효능감 탐색",
-            "text": "'어차피 안 될 것 같다'는 생각은 어디서 왔나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "성적이 낮아서 원하는 학과에 못 갈 것 같아요",
-                    "nextNodeId": "Q_GRADE_REALITY",
-                    "resultId": ""
-                },
-                {
-                    "text": "주변에서 계속 안 된다고 해서요",
-                    "nextNodeId": "Q_EXTERNAL_PRESSURE",
-                    "resultId": ""
-                },
-                {
-                    "text": "과거에 비슷한 걸 시도했다가 실패한 경험이 있어요",
-                    "nextNodeId": "Q_PAST_FAILURE",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_GRADE_REALITY": {
-            "id": "Q_GRADE_REALITY",
-            "category": "성적 현실 점검",
-            "text": "현재 성적과 목표 학과의 입결 사이의 차이를 구체적으로 파악하고 있나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "네, 차이가 얼마나 나는지 알아요",
-                    "nextNodeId": "Q_GRADE_GAP",
-                    "resultId": ""
-                },
-                {
-                    "text": "아니요, 막연히 낮다고만 느껴요",
-                    "nextNodeId": "Q_GRADE_CHECK_FIRST",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_GRADE_GAP": {
-            "id": "Q_GRADE_GAP",
-            "category": "성적 갭 대응 전략",
-            "text": "성적 차이를 좁히기 위해 현재 어떤 노력을 하고 있나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "학원이나 인강을 통해 집중 보완 중이에요",
-                    "nextNodeId": "Q_STUDY_PLAN_OK",
-                    "resultId": ""
-                },
-                {
-                    "text": "노력은 하는데 성적이 안 올라서 지쳐요",
-                    "nextNodeId": "Q_STUDY_BURNOUT",
-                    "resultId": ""
-                },
-                {
-                    "text": "아직 구체적인 대책이 없어요",
-                    "nextNodeId": "Q_STUDY_PLAN_NEEDED",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_STUDY_PLAN_NEEDED": {
-            "id": "Q_STUDY_PLAN_NEEDED",
-            "category": "학습 계획 수립",
-            "text": "성적을 올리기 위한 계획을 세우려면 먼저 어떤 과목이 가장 발목을 잡고 있는지 파악해야 합니다. 현재 가장 취약한 과목은 무엇인가요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "수학이 가장 약해요",
-                    "nextNodeId": "Q_MATH_PLAN",
-                    "resultId": ""
-                },
-                {
-                    "text": "영어가 가장 약해요",
-                    "nextNodeId": "Q_ENG_PLAN",
-                    "resultId": ""
-                },
-                {
-                    "text": "탐구 과목이 약해요",
-                    "nextNodeId": "Q_EXPLORE_PLAN",
-                    "resultId": ""
-                },
-                {
-                    "text": "전반적으로 다 약해요",
-                    "nextNodeId": "Q_OVERALL_WEAK",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_GRADE_CHECK_FIRST": {
-            "id": "Q_GRADE_CHECK_FIRST",
-            "category": "정보 수집 실행",
-            "text": "막연한 느낌으로 포기하는 것은 너무 이릅니다. 지금 당장 목표 학과의 최근 3년 입결을 검색해볼 수 있나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "네, 찾아볼게요",
-                    "nextNodeId": "Q_AFTER_RESEARCH",
-                    "resultId": ""
-                },
-                {
-                    "text": "찾아봐도 어떻게 해석해야 할지 모르겠어요",
-                    "nextNodeId": "Q_DATA_INTERPRET",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_AFTER_RESEARCH": {
-            "id": "Q_AFTER_RESEARCH",
-            "category": "정보 해석 및 전략",
-            "text": "입결을 찾아봤을 때 현재 성적과의 차이가 어느 정도인가요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "1~2등급 차이 정도예요",
-                    "nextNodeId": "Q_CLOSEGAP_STRATEGY",
-                    "resultId": ""
-                },
-                {
-                    "text": "3등급 이상 차이가 나요",
-                    "nextNodeId": "Q_BIGAP_STRATEGY",
-                    "resultId": ""
-                },
-                {
-                    "text": "생각보다 차이가 크지 않아서 놀랐어요",
-                    "nextNodeId": "Q_SURPRISE_CLOSE",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_BIGAP_STRATEGY": {
-            "id": "Q_BIGAP_STRATEGY",
-            "category": "대안 경로 탐색",
-            "text": "3등급 이상 차이라면 현실적인 대안 경로도 함께 검토해야 합니다. 다음 중 고려해볼 의향이 있는 것은 무엇인가요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "재수나 반수를 고려할 수 있어요",
-                    "nextNodeId": "Q_REEXAM_PLAN",
-                    "resultId": ""
-                },
-                {
-                    "text": "같은 분야의 다른 학교나 학과를 알아볼게요",
-                    "nextNodeId": "Q_ALT_SCHOOL",
-                    "resultId": ""
-                },
-                {
-                    "text": "전문대나 취업 후 편입 경로를 알아볼게요",
-                    "nextNodeId": "Q_TRANSFER_PATH",
-                    "resultId": ""
-                },
-                {
-                    "text": "진로 자체를 재검토해야 할 것 같아요",
-                    "nextNodeId": "Q_RETHINK_CAREER",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_REALITY_CHECK": {
-            "id": "Q_REALITY_CHECK",
-            "category": "현실 가능성 점검",
-            "text": "하고 싶은 것이 있군요. 그것을 직업으로 삼기 위해 필요한 조건들을 구체적으로 조사해본 적 있나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "네, 어느 정도 알고 있어요",
-                    "nextNodeId": "Q_CONDITION_KNOWN",
-                    "resultId": ""
-                },
-                {
-                    "text": "아니요, 막연하게만 알아요",
-                    "nextNodeId": "Q_CONDITION_RESEARCH",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_CONDITION_KNOWN": {
-            "id": "Q_CONDITION_KNOWN",
-            "category": "조건 점검",
-            "text": "필요한 조건 중 현재 본인이 갖추지 못한 가장 큰 장벽은 무엇인가요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "성적이나 학력 조건이 부족해요",
-                    "nextNodeId": "Q_GRADE_REALITY",
-                    "resultId": ""
-                },
-                {
-                    "text": "경제적 비용(유학, 학원비 등)이 문제예요",
-                    "nextNodeId": "Q_FINANCIAL_BARRIER",
-                    "resultId": ""
-                },
-                {
-                    "text": "특정 기술이나 자격증이 없어요",
-                    "nextNodeId": "Q_SKILL_BARRIER",
-                    "resultId": ""
-                },
-                {
-                    "text": "부모님의 반대가 장벽이에요",
-                    "nextNodeId": "Q_PARENT_OPPOSE",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_FINANCIAL_BARRIER": {
-            "id": "Q_FINANCIAL_BARRIER",
-            "category": "경제적 현실 점검",
-            "text": "경제적 비용이 문제라면, 장학금, 국가 지원 프로그램, 학자금 대출 등의 대안을 알아본 적 있나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "네, 알아봤는데 여전히 부족해요",
-                    "nextNodeId": "Q_FINANCIAL_PLAN_B",
-                    "resultId": ""
-                },
-                {
-                    "text": "아니요, 그런 방법이 있는지 몰랐어요",
-                    "nextNodeId": "Q_FINANCIAL_INFO",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_SKILL_BARRIER": {
-            "id": "Q_SKILL_BARRIER",
-            "category": "기술 습득 계획",
-            "text": "필요한 기술이나 자격증을 취득하기 위한 구체적인 경로(학원, 온라인 강의, 독학 등)를 알고 있나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "네, 경로는 알고 있어요",
-                    "nextNodeId": "Q_SKILL_TIMELINE",
-                    "resultId": ""
-                },
-                {
-                    "text": "아니요, 어디서 배워야 할지 모르겠어요",
-                    "nextNodeId": "Q_SKILL_RESEARCH",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_SKILL_TIMELINE": {
-            "id": "Q_SKILL_TIMELINE",
-            "category": "기술 습득 일정",
-            "text": "그 기술을 언제까지 갖출 계획인가요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "고등학교 졸업 전까지 갖출 수 있어요",
-                    "nextNodeId": "Q_SKILL_PLAN_OK",
-                    "resultId": ""
-                },
-                {
-                    "text": "대학 진학 후에 갖출 예정이에요",
-                    "nextNodeId": "Q_UNIV_SKILL_PLAN",
-                    "resultId": ""
-                },
-                {
-                    "text": "언제까지 해야 할지 모르겠어요",
-                    "nextNodeId": "Q_DEADLINE_UNCLEAR",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_CONFLICT_START": {
-            "id": "Q_CONFLICT_START",
-            "category": "갈등 원인 파악",
-            "text": "부모님이나 주변의 기대와 내 생각이 다를 때, 갈등의 핵심은 무엇인가요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "내가 원하는 분야가 안정적이지 않다고 반대해요",
-                    "nextNodeId": "Q_STABILITY_CONFLICT",
-                    "resultId": ""
-                },
-                {
-                    "text": "부모님이 원하는 직업이 따로 있어요 (의사, 공무원 등)",
-                    "nextNodeId": "Q_PARENT_WISH",
-                    "resultId": ""
-                },
-                {
-                    "text": "내 성적으로는 원하는 곳에 못 간다고 해요",
-                    "nextNodeId": "Q_GRADE_CONFLICT",
-                    "resultId": ""
-                }
-            ]
+        {
+          "text": "여러 문제가 겹쳐 아직 구분하기 어려워요",
+          "resultId": "R_UNCLEAR"
         }
+      ]
     },
-    "solutions": {
-        "Q_MULTI_INTEREST": {
-            "resultId": "Q_MULTI_INTEREST",
-            "title": "다양한 관심사를 가진 당신을 위한 관심사 정리 가이드",
-            "summary": "관심사가 많다는 것은 풍부한 가능성의 신호입니다. 지금 필요한 것은 억지로 하나를 고르는 것이 아니라, 관심사들 사이의 패턴을 발견하는 것입니다.",
-            "psychologicalInsight": "다양한 관심사를 가진 사람들은 종종 '멀티포텐셜라이트(Multipotentialite)'의 특성을 지닙니다. 이는 결함이 아니라 여러 분야를 통합하는 능력으로, 창의적 직업군에서 강점이 됩니다. 하나를 골라야 한다는 압박 자체가 불안을 유발하므로, 먼저 그 압박에서 벗어나는 것이 중요합니다.",
-            "actionPlan": [
-                {
-                    "step": 1,
-                    "title": "관심사 목록 작성",
-                    "description": "지금 떠오르는 관심 분야를 모두 종이에 적습니다. 현실 가능성은 일단 무시하고 순수하게 끌리는 것들을 나열하세요."
-                },
-                {
-                    "step": 2,
-                    "title": "끌리는 이유 분석",
-                    "description": "각 관심사 옆에 '왜 끌리는가?'를 한 문장으로 적습니다. 예: '요리 - 내가 만든 것으로 사람들이 행복해지는 게 좋아서'"
-                },
-                {
-                    "step": 3,
-                    "title": "공통 키워드 추출",
-                    "description": "이유들을 비교하며 반복되는 단어나 감정(예: '사람', '창작', '문제 해결')을 찾아 동그라미 칩니다."
-                },
-                {
-                    "step": 4,
-                    "title": "핵심 가치 도출",
-                    "description": "추출된 키워드들이 가리키는 핵심 가치(예: '연결', '표현', '탐구')를 정의하고, 그 가치를 중심으로 직업군을 재탐색합니다."
-                }
-            ],
-            "recommendedResources": [
-                "에밀리 와프닉 TED 강연 '왜 어떤 사람들은 하나의 소명이 없는가'",
-                "도서: 《나는 왜 이 일을 하는가》 사이먼 사이넥",
-                "커리어넷(www.career.go.kr) 직업 흥미 검사"
-            ],
-            "encouragement": "관심사가 많다는 것은 세상을 넓게 보는 눈을 가졌다는 뜻입니다. 지금 당장 하나를 고르지 않아도 됩니다. 공통점을 찾는 과정 자체가 이미 진로 탐색의 시작입니다."
+    "Q_CONTEXT_1": {
+      "text": "관심을 찾을 때 어떤 경험이 더 가까운가요?",
+      "options": [
+        {
+          "text": "좋아하는 것이 여러 개라 하나를 고르기 어려워요",
+          "resultId": "R_01"
         },
-        "Q_COMMON_FOUND": {
-            "resultId": "Q_COMMON_FOUND",
-            "title": "관심사의 공통점을 발견한 당신을 위한 방향 설정 가이드",
-            "summary": "공통점을 발견했다는 것은 자신의 핵심 동기를 이해하기 시작했다는 신호입니다. 이제 그 공통점을 직업 언어로 번역하는 단계입니다.",
-            "psychologicalInsight": "자신의 관심사에서 공통 패턴을 발견하는 능력은 자기 인식(Self-Awareness)의 핵심 요소입니다. 심리학자 에드워드 데시의 자기결정이론에 따르면, 내재적 동기(내면에서 우러나오는 흥미)에서 비롯된 진로 선택은 장기적 만족도와 지속성이 훨씬 높습니다.",
-            "actionPlan": [
-                {
-                    "step": 1,
-                    "title": "공통점을 직업 언어로 번역",
-                    "description": "발견한 공통점(예: '사람 돕기', '만들기', '분석')을 키워드로 삼아 커리어넷이나 워크넷에서 관련 직업군을 검색합니다."
-                },
-                {
-                    "step": 2,
-                    "title": "직업군 후보 3~5개 선정",
-                    "description": "검색 결과 중 '이런 일을 하는 사람이 있구나'라고 느껴지는 직업을 3~5개 골라 리스트를 만듭니다."
-                },
-                {
-                    "step": 3,
-                    "title": "각 직업의 하루 일과 조사",
-                    "description": "선정한 직업들의 실제 하루 일과를 유튜브 브이로그나 직업 인터뷰 영상으로 확인합니다. 화려한 면이 아닌 반복적인 일상 업무에 집중하세요."
-                },
-                {
-                    "step": 4,
-                    "title": "감정 반응 기록",
-                    "description": "각 직업의 일과를 보며 느낀 감정(설렘, 지루함, 부담, 흥미)을 솔직하게 기록합니다. 이 감정 데이터가 최종 선택의 근거가 됩니다."
-                }
-            ],
-            "recommendedResources": [
-                "커리어넷 직업 정보 탐색 (www.career.go.kr)",
-                "워크넷 직업 심리검사 (www.work.go.kr)",
-                "유튜브 '직업 브이로그' 검색"
-            ],
-            "encouragement": "공통점을 찾아낸 것만으로도 많은 사람들이 수년간 헤매는 과정을 이미 한 단계 앞서 나간 것입니다. 이제 그 실마리를 따라가기만 하면 됩니다."
+        {
+          "text": "특별히 좋아하는 것도 잘하는 것도 모르겠어요",
+          "resultId": "R_02"
         },
-        "Q_NO_COMMON": {
-            "resultId": "Q_NO_COMMON",
-            "title": "공통점이 없어 보이는 관심사들을 가진 당신을 위한 가이드",
-            "summary": "공통점이 없어 보이는 것은 아직 더 깊은 층의 동기를 발견하지 못했기 때문일 수 있습니다. 성취감과 즐거움 중 어느 쪽이 더 강한지 파악하는 것이 첫 번째 열쇠입니다.",
-            "psychologicalInsight": "마틴 셀리그만의 긍정심리학에서는 '강점(Strengths)'과 '흥미(Interest)'를 구분합니다. 강점 기반 진로는 탁월함과 인정을 통해 동기를 얻고, 흥미 기반 진로는 과정 자체의 즐거움에서 동기를 얻습니다. 두 가지 중 어느 쪽이 자신에게 더 강한지 아는 것이 방향 설정의 핵심입니다.",
-            "actionPlan": [
-                {
-                    "step": 1,
-                    "title": "성취 경험 목록 작성",
-                    "description": "지금까지 살면서 '내가 잘했다'고 느꼈던 순간 5가지를 적습니다. 학교 성적뿐 아니라 친구 도움, 게임 클리어, 요리 성공 등 모든 경험을 포함하세요."
-                },
-                {
-                    "step": 2,
-                    "title": "즐거움 경험 목록 작성",
-                    "description": "시간 가는 줄 모르고 몰입했던 활동 5가지를 적습니다. 잘하는지 여부와 관계없이 순수하게 즐거웠던 것들을 나열하세요."
-                },
-                {
-                    "step": 3,
-                    "title": "두 목록 비교",
-                    "description": "두 목록에 겹치는 활동이 있다면 그것이 최우선 탐색 대상입니다. 겹치지 않는다면, 성취감 목록과 즐거움 목록 중 더 긴 쪽의 방향으로 진로를 탐색합니다."
-                },
-                {
-                    "step": 4,
-                    "title": "VIA 강점 검사 실시",
-                    "description": "무료 온라인 강점 검사(VIA Character Strengths)를 통해 자신의 핵심 강점을 객관적으로 파악합니다."
-                }
-            ],
-            "recommendedResources": [
-                "VIA 강점 검사 (www.viacharacter.org)",
-                "도서: 《강점 혁명》 톰 래스",
-                "커리어넷 직업 적성 검사"
-            ],
-            "encouragement": "공통점이 없어 보이는 것은 당신이 다차원적인 사람이라는 증거입니다. 조금 더 깊이 들여다보면 반드시 연결고리가 보입니다."
-        },
-        "Q_TRY_COMMON": {
-            "resultId": "Q_TRY_COMMON",
-            "title": "관심사를 아직 정리해보지 않은 당신을 위한 첫 번째 탐색 가이드",
-            "summary": "관심사를 글로 정리해본 적이 없다면, 지금이 바로 시작할 때입니다. 머릿속에서만 맴도는 생각을 종이 위에 꺼내놓는 것만으로도 명확성이 크게 높아집니다.",
-            "psychologicalInsight": "심리학에서 '표현적 글쓰기(Expressive Writing)' 연구에 따르면, 자신의 생각과 감정을 글로 쓰는 행위 자체가 자기 이해를 높이고 불안을 감소시킵니다. 진로 탐색에서도 마찬가지로, 막연한 생각을 구체적인 언어로 표현하는 과정이 방향 설정의 첫 단계입니다.",
-            "actionPlan": [
-                {
-                    "step": 1,
-                    "title": "관심사 브레인스토밍",
-                    "description": "타이머를 10분으로 맞추고, 떠오르는 모든 관심사를 판단 없이 종이에 적습니다. 현실성, 수익성은 완전히 무시하세요."
-                },
-                {
-                    "step": 2,
-                    "title": "각 관심사에 '왜?' 질문하기",
-                    "description": "적은 각 항목 옆에 '왜 이게 끌리는가?'를 한 문장으로 답합니다. 예: '그림 그리기 → 내 머릿속 세계를 남에게 보여줄 수 있어서'"
-                },
-                {
-                    "step": 3,
-                    "title": "이유들에서 반복 단어 찾기",
-                    "description": "적은 이유들을 읽으며 반복되는 단어나 감정(예: '보여주다', '해결하다', '함께하다')에 밑줄을 칩니다."
-                },
-                {
-                    "step": 4,
-                    "title": "핵심 문장 만들기",
-                    "description": "반복 단어들을 조합해 '나는 ___을 통해 ___하는 것을 좋아한다'는 문장을 완성합니다. 이것이 당신의 진로 나침반이 됩니다."
-                }
-            ],
-            "recommendedResources": [
-                "도서: 《나는 무엇을 원하는가》 로렌스 G. 볼트",
-                "마인드맵 앱: MindMeister, XMind",
-                "커리어넷 진로 심리검사 모음"
-            ],
-            "encouragement": "정리해본 적이 없다는 것은 아직 시작하지 않았다는 뜻이지, 답이 없다는 뜻이 아닙니다. 10분의 글쓰기가 몇 년의 방황을 줄여줄 수 있습니다."
-        },
-        "Q_METHOD_GUIDE": {
-            "resultId": "Q_METHOD_GUIDE",
-            "title": "관심사 정리 방법을 배우고 싶은 당신을 위한 단계별 실행 가이드",
-            "summary": "방법을 알고 싶다는 것 자체가 변화의 의지입니다. 아래의 구체적인 방법을 따라 하면 막연했던 관심사들이 선명한 방향으로 정리됩니다.",
-            "psychologicalInsight": "인지행동치료(CBT)에서는 막연한 생각을 구체적인 행동으로 전환하는 '행동 활성화(Behavioral Activation)' 기법을 사용합니다. 진로 탐색에서도 '생각하기'에서 '쓰고 분류하기'로 전환하는 것이 인지적 명확성을 높이는 핵심 전략입니다.",
-            "actionPlan": [
-                {
-                    "step": 1,
-                    "title": "관심사 카드 만들기",
-                    "description": "포스트잇이나 작은 종이 조각에 관심사를 하나씩 적습니다. 최소 10개 이상 적는 것을 목표로 하세요."
-                },
-                {
-                    "step": 2,
-                    "title": "3가지 기준으로 분류",
-                    "description": "각 카드를 '잘할 수 있는 것', '즐거운 것', '세상에 필요한 것' 세 영역으로 분류합니다. 여러 영역에 겹치는 것이 있다면 특히 주목하세요."
-                },
-                {
-                    "step": 3,
-                    "title": "이케가이(Ikigai) 다이어그램 그리기",
-                    "description": "세 원이 겹치는 영역을 찾는 일본의 '이케가이' 개념을 활용합니다. '잘하고 + 즐겁고 + 필요한' 것이 겹치는 지점이 진로의 핵심 후보입니다."
-                },
-                {
-                    "step": 4,
-                    "title": "상위 3개 후보 선정 및 조사",
-                    "description": "겹치는 영역에서 나온 관심사 중 상위 3개를 골라, 각각 관련 직업을 최소 3가지씩 조사합니다."
-                }
-            ],
-            "recommendedResources": [
-                "이케가이 다이어그램 템플릿 (구글 이미지 검색: 'Ikigai diagram')",
-                "도서: 《이케가이》 켄 모기",
-                "워크넷 직업 정보 검색 (www.work.go.kr)"
-            ],
-            "encouragement": "방법을 알고 싶다고 한 것만으로도 이미 절반은 시작한 것입니다. 오늘 저녁 30분만 투자해서 첫 번째 단계를 실행해보세요."
-        },
-        "Q_AVOIDANCE_REASON": {
-            "resultId": "Q_AVOIDANCE_REASON",
-            "title": "정리 작업 자체가 귀찮고 막막한 당신을 위한 심리적 장벽 해소 가이드",
-            "summary": "귀찮음과 막막함은 게으름이 아니라 심리적 회피 반응일 수 있습니다. 그 이면에 있는 감정을 먼저 이해하는 것이 중요합니다.",
-            "psychologicalInsight": "심리학에서 '회피(Avoidance)'는 불안이나 두려움에 대한 자연스러운 방어 기제입니다. 진로 탐색을 회피하는 것은 종종 '탐색했다가 답이 없으면 어떡하지'라는 두려움, 또는 '어차피 해도 안 될 것 같다'는 학습된 무기력에서 비롯됩니다. 이를 인식하는 것만으로도 회피 패턴이 약해집니다.",
-            "actionPlan": [
-                {
-                    "step": 1,
-                    "title": "귀찮음의 이면 탐색",
-                    "description": "종이에 '진로 탐색이 귀찮은 이유'를 솔직하게 적어봅니다. '어차피 안 될 것 같아서', '뭘 써야 할지 몰라서', '생각하면 불안해서' 등 어떤 이유든 괜찮습니다."
-                },
-                {
-                    "step": 2,
-                    "title": "최소 행동 설정",
-                    "description": "전체 탐색 작업 대신, 오늘 할 수 있는 가장 작은 행동 하나만 정합니다. 예: '관심 있는 단어 3개만 적기'"
-                },
-                {
-                    "step": 3,
-                    "title": "2분 규칙 적용",
-                    "description": "2분 안에 끝낼 수 있는 것부터 시작합니다. 시작하면 관성이 생겨 자연스럽게 더 하게 됩니다."
-                },
-                {
-                    "step": 4,
-                    "title": "진로 상담 예약",
-                    "description": "혼자 하기 어렵다면 학교 진로 선생님이나 Wee클래스 상담사에게 도움을 요청합니다. 혼자 해결해야 한다는 부담을 내려놓으세요."
-                }
-            ],
-            "recommendedResources": [
-                "학교 Wee클래스 진로 상담",
-                "청소년 상담 1388 (전화 또는 채팅)",
-                "도서: 《아주 작은 습관의 힘》 제임스 클리어"
-            ],
-            "encouragement": "귀찮다는 감정은 당신이 나쁜 사람이라는 뜻이 아닙니다. 그 감정 뒤에 있는 두려움을 인정하는 것이 변화의 시작입니다. 오늘 딱 2분만 시도해보세요."
-        },
-        "Q_NO_INTEREST": {
-            "resultId": "Q_NO_INTEREST",
-            "title": "하고 싶은 것이 없어 막막한 당신을 위한 관심사 발굴 가이드",
-            "summary": "하고 싶은 것이 없다는 느낌은 매우 흔한 경험입니다. 이것은 당신에게 문제가 있는 것이 아니라, 아직 충분한 경험과 탐색이 이루어지지 않았다는 신호일 수 있습니다.",
-            "psychologicalInsight": "심리학자 윌리엄 데이먼의 연구에 따르면, 삶의 목적(Purpose)은 발견되는 것이 아니라 경험을 통해 서서히 형성됩니다. '하고 싶은 것이 없다'는 상태는 종종 경험 부족, 무기력, 또는 자신의 작은 관심을 '진로로 삼기엔 부족하다'고 평가절하하는 인지 왜곡에서 비롯됩니다.",
-            "actionPlan": [
-                {
-                    "step": 1,
-                    "title": "싫은 것 목록 작성",
-                    "description": "좋아하는 것을 모르겠다면, 싫은 것부터 적습니다. '절대 하기 싫은 일'을 10가지 적으면, 그 반대편에 당신이 원하는 것의 윤곽이 드러납니다."
-                },
-                {
-                    "step": 2,
-                    "title": "어린 시절 기억 탐색",
-                    "description": "초등학교 시절 가장 즐겁게 했던 놀이나 활동을 떠올립니다. 어른의 시선 없이 순수하게 좋아했던 것들이 핵심 관심사의 씨앗일 수 있습니다."
-                },
-                {
-                    "step": 3,
-                    "title": "소규모 경험 시작",
-                    "description": "관심이 조금이라도 가는 분야의 유튜브 영상을 하루 1개씩 봅니다. 관심사는 경험을 통해 자라납니다."
-                },
-                {
-                    "step": 4,
-                    "title": "감정 일기 쓰기",
-                    "description": "매일 저녁 '오늘 가장 에너지가 올라간 순간'과 '가장 에너지가 떨어진 순간'을 한 줄씩 기록합니다. 2주 후 패턴을 분석합니다."
-                }
-            ],
-            "recommendedResources": [
-                "커리어넷 직업 흥미 검사 (Holland 검사)",
-                "도서: 《무엇이 나를 행복하게 만드는가》 마틴 셀리그만",
-                "청소년 진로 상담 1588-6856"
-            ],
-            "encouragement": "하고 싶은 것이 없다는 것은 아직 만나지 못한 것이 있다는 뜻입니다. 지금 당장 열정이 없어도 괜찮습니다. 작은 경험들이 쌓이면 반드시 방향이 보입니다."
-        },
-        "Q_NEVER_HAD": {
-            "resultId": "Q_NEVER_HAD",
-            "title": "원래부터 하고 싶은 것이 없었던 당신을 위한 경험 설계 가이드",
-            "summary": "처음부터 뚜렷한 꿈이 없는 것은 매우 자연스러운 일입니다. 관심사는 타고나는 것이 아니라 경험을 통해 발견됩니다.",
-            "psychologicalInsight": "스탠퍼드 대학의 연구에 따르면, 흥미는 '고정된 것'이 아니라 '성장하는 것'입니다. 즉, 경험하기 전에는 흥미를 알 수 없습니다. 관심사가 없다고 느끼는 것은 경험의 폭이 좁았기 때문일 가능성이 높습니다.",
-            "actionPlan": [
-                {
-                    "step": 1,
-                    "title": "경험 버킷리스트 작성",
-                    "description": "한 번도 해본 적 없지만 '어떨까?' 하는 궁금증이 드는 활동을 10가지 적습니다. 현실성은 무시하고 순수한 호기심으로 작성하세요."
-                },
-                {
-                    "step": 2,
-                    "title": "가장 쉬운 것부터 시도",
-                    "description": "목록 중 돈이 들지 않거나 집에서 할 수 있는 것부터 시작합니다. 예: 유튜브로 요리 따라 해보기, 무료 코딩 강의 1시간 듣기"
-                },
-                {
-                    "step": 3,
-                    "title": "경험 후 감정 기록",
-                    "description": "각 경험 후 '더 하고 싶다 / 보통이다 / 다시는 하기 싫다'로 분류합니다. '더 하고 싶다'가 나온 것들이 탐색 방향입니다."
-                },
-                {
-                    "step": 4,
-                    "title": "반복 경험으로 관심사 키우기",
-                    "description": "'더 하고 싶다'고 느낀 활동을 한 달간 꾸준히 해봅니다. 관심사는 반복 경험을 통해 열정으로 성장합니다."
-                }
-            ],
-            "recommendedResources": [
-                "도서: 《열정의 배신》 칼 뉴포트",
-                "무료 체험 플랫폼: 클래스101, 유튜브 튜토리얼",
-                "지역 청소년 문화센터 체험 프로그램"
-            ],
-            "encouragement": "꿈이 없다는 것은 아직 꿈을 만날 경험을 하지 못했다는 뜻입니다. 지금부터 하나씩 경험해나가면 됩니다. 시작이 늦은 것이 아닙니다."
+        {
+          "text": "둘 다 맞지 않거나 아직 잘 모르겠어요",
+          "resultId": "R_UNCLEAR"
         }
+      ]
     },
-    "matchings": {
-        "Q_MULTI_INTEREST": {
-            "resultId": "Q_MULTI_INTEREST",
-            "primaryRecommendation": {
-                "type": "검사/진단",
-                "name": "커리어넷 직업 흥미 검사 (Holland)",
-                "provider": "한국직업능력연구원",
-                "url": "https://www.career.go.kr",
-                "price": "무료",
-                "description": "다양한 관심사를 6가지 흥미 유형으로 분류해 공통 패턴 도출",
-                "cta": "지금 무료 검사 시작하기"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "type": "강의/콘텐츠",
-                    "name": "클래스101 - 나만의 커리어 방향 찾기",
-                    "provider": "클래스101",
-                    "url": "https://class101.net",
-                    "price": "월 구독 15,900원~",
-                    "description": "멀티포텐셜라이트를 위한 관심사 통합 커리어 설계 강의",
-                    "cta": "강의 둘러보기"
-                },
-                {
-                    "type": "도서",
-                    "name": "《나는 왜 이 일을 하는가》 사이먼 사이넥",
-                    "provider": "교보문고/예스24",
-                    "url": "https://www.yes24.com",
-                    "price": "약 16,000원",
-                    "description": "핵심 동기(WHY) 발견을 통한 관심사 통합 방법론 제시",
-                    "cta": "도서 구매하기"
-                }
-            ],
-            "actionPriority": [
-                {
-                    "order": 1,
-                    "action": "커리어넷 Holland 검사 완료 후 결과 저장",
-                    "timeRequired": "20분"
-                },
-                {
-                    "order": 2,
-                    "action": "검사 결과 기반 관심사 공통 키워드 3개 추출 후 메모",
-                    "timeRequired": "10분"
-                }
-            ]
+    "Q_CONTEXT_2": {
+      "text": "가장 먼저 확인해야 할 현실 조건은 무엇인가요?",
+      "options": [
+        {
+          "text": "원하는 전공이 있지만 성적이나 준비 조건이 걱정돼요",
+          "resultId": "R_03"
         },
-        "Q_COMMON_FOUND": {
-            "resultId": "Q_COMMON_FOUND",
-            "primaryRecommendation": {
-                "type": "검사/플랫폼",
-                "name": "워크넷 직업 심리검사 + 직업 정보 탐색",
-                "provider": "한국고용정보원",
-                "url": "https://www.work.go.kr",
-                "price": "무료",
-                "description": "발견한 공통 키워드를 직업 언어로 번역하고 관련 직업군 3~5개 탐색",
-                "cta": "직업 정보 탐색 시작하기"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "type": "상담",
-                    "name": "커리어넷 온라인 진로 상담",
-                    "provider": "한국직업능력연구원",
-                    "url": "https://www.career.go.kr/cnet/front/counsel/onlineCounselList.do",
-                    "price": "무료",
-                    "description": "공통점 기반 직업군 후보를 전문 상담사와 함께 검증",
-                    "cta": "온라인 상담 신청하기"
-                },
-                {
-                    "type": "콘텐츠",
-                    "name": "유튜브 직업 브이로그 탐색",
-                    "provider": "유튜브",
-                    "url": "https://www.youtube.com",
-                    "price": "무료",
-                    "description": "후보 직업의 실제 하루 일과 영상으로 현실적 감정 반응 확인",
-                    "cta": "'직업명 + 브이로그' 검색하기"
-                }
-            ],
-            "actionPriority": [
-                {
-                    "order": 1,
-                    "action": "워크넷에서 공통 키워드로 직업 검색 후 후보 3~5개 리스트업",
-                    "timeRequired": "30분"
-                },
-                {
-                    "order": 2,
-                    "action": "후보 직업별 유튜브 브이로그 1편씩 시청 후 감정 반응 메모",
-                    "timeRequired": "60분"
-                }
-            ]
+        {
+          "text": "교육비나 지역 때문에 원하는 경로를 선택하기 어려워요",
+          "resultId": "R_04"
         },
-        "Q_NO_COMMON": {
-            "resultId": "Q_NO_COMMON",
-            "primaryRecommendation": {
-                "type": "검사/진단",
-                "name": "VIA 강점 검사 (무료 온라인)",
-                "provider": "VIA Institute on Character",
-                "url": "https://www.viacharacter.org",
-                "price": "무료 (기본 결과)",
-                "description": "24가지 성격 강점 중 상위 5개 도출로 공통점 없는 관심사의 숨겨진 연결고리 발견",
-                "cta": "무료 강점 검사 시작하기"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "type": "도서",
-                    "name": "《강점 혁명》 톰 래스",
-                    "provider": "교보문고/예스24",
-                    "url": "https://www.yes24.com",
-                    "price": "약 17,000원",
-                    "description": "강점 기반 진로 설계 방법론 + StrengthsFinder 2.0 검사 코드 포함",
-                    "cta": "도서 구매하기"
-                },
-                {
-                    "type": "검사",
-                    "name": "커리어넷 직업 적성 검사",
-                    "provider": "한국직업능력연구원",
-                    "url": "https://www.career.go.kr",
-                    "price": "무료",
-                    "description": "강점·흥미 분리 분석으로 성취 기반 vs 즐거움 기반 진로 방향 구분",
-                    "cta": "적성 검사 시작하기"
-                }
-            ],
-            "actionPriority": [
-                {
-                    "order": 1,
-                    "action": "VIA 강점 검사 완료 후 상위 5개 강점 기록",
-                    "timeRequired": "15분"
-                },
-                {
-                    "order": 2,
-                    "action": "성취 경험 5개 + 즐거움 경험 5개 목록 작성 후 겹치는 항목 표시",
-                    "timeRequired": "20분"
-                }
-            ]
-        },
-        "Q_TRY_COMMON": {
-            "resultId": "Q_TRY_COMMON",
-            "primaryRecommendation": {
-                "type": "도구/앱",
-                "name": "MindMeister 마인드맵 (무료 플랜)",
-                "provider": "MindMeister",
-                "url": "https://www.mindmeister.com/ko",
-                "price": "무료 (기본 3개 맵)",
-                "description": "관심사 브레인스토밍 결과를 시각적으로 정리하고 공통 키워드 연결",
-                "cta": "무료로 마인드맵 시작하기"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "type": "검사",
-                    "name": "커리어넷 진로 심리검사 모음",
-                    "provider": "한국직업능력연구원",
-                    "url": "https://www.career.go.kr/cnet/front/examen/inspctList.do",
-                    "price": "무료",
-                    "description": "글쓰기 정리 후 검사로 객관적 데이터 추가 확보",
-                    "cta": "검사 목록 보기"
-                },
-                {
-                    "type": "도서",
-                    "name": "《나는 무엇을 원하는가》 로렌스 G. 볼트",
-                    "provider": "교보문고/예스24",
-                    "url": "https://www.yes24.com",
-                    "price": "약 14,000원",
-                    "description": "표현적 글쓰기 기반 자기 탐색 워크북 형식으로 실습 가능",
-                    "cta": "도서 구매하기"
-                }
-            ],
-            "actionPriority": [
-                {
-                    "order": 1,
-                    "action": "타이머 10분 설정 후 MindMeister에서 관심사 브레인스토밍 실행",
-                    "timeRequired": "10분"
-                },
-                {
-                    "order": 2,
-                    "action": "'나는 ___을 통해 ___하는 것을 좋아한다' 핵심 문장 완성 후 저장",
-                    "timeRequired": "10분"
-                }
-            ]
-        },
-        "Q_METHOD_GUIDE": {
-            "resultId": "Q_METHOD_GUIDE",
-            "primaryRecommendation": {
-                "type": "도구/템플릿",
-                "name": "Ikigai 다이어그램 워크시트 (무료 PDF)",
-                "provider": "구글 검색 / Canva 템플릿",
-                "url": "https://www.canva.com/templates/?query=ikigai",
-                "price": "무료",
-                "description": "잘하는 것·즐거운 것·필요한 것 3축 교차 분석으로 진로 핵심 후보 도출",
-                "cta": "Ikigai 템플릿 바로 사용하기"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "type": "검사",
-                    "name": "워크넷 직업 정보 검색",
-                    "provider": "한국고용정보원",
-                    "url": "https://www.work.go.kr/occpInfo/search/occpInfoSearch.do",
-                    "price": "무료",
-                    "description": "Ikigai 교차점에서 나온 관심사 키워드로 관련 직업 3가지씩 조사",
-                    "cta": "직업 정보 검색하기"
-                },
-                {
-                    "type": "도서",
-                    "name": "《이케가이》 켄 모기",
-                    "provider": "교보문고/예스24",
-                    "url": "https://www.yes24.com",
-                    "price": "약 13,000원",
-                    "description": "이케가이 개념의 실생활 적용 사례와 진로 연결 방법 안내",
-                    "cta": "도서 구매하기"
-                }
-            ],
-            "actionPriority": [
-                {
-                    "order": 1,
-                    "action": "Canva에서 Ikigai 템플릿 열고 포스트잇 카드 10개 분류 작업 실행",
-                    "timeRequired": "30분"
-                },
-                {
-                    "order": 2,
-                    "action": "교차 영역 상위 3개 관심사로 워크넷 직업 검색 후 직업명 9개 기록",
-                    "timeRequired": "20분"
-                }
-            ]
-        },
-        "Q_AVOIDANCE_REASON": {
-            "resultId": "Q_AVOIDANCE_REASON",
-            "primaryRecommendation": {
-                "type": "상담",
-                "name": "청소년 상담 1388 (전화·채팅·문자)",
-                "provider": "한국청소년상담복지개발원",
-                "url": "https://www.cyber1388.kr",
-                "price": "무료",
-                "description": "진로 회피 이면의 불안·무기력 감정을 전문 상담사와 함께 탐색",
-                "cta": "지금 채팅 상담 시작하기"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "type": "도서",
-                    "name": "《아주 작은 습관의 힘》 제임스 클리어",
-                    "provider": "교보문고/예스24",
-                    "url": "https://www.yes24.com",
-                    "price": "약 17,000원",
-                    "description": "2분 규칙·최소 행동 설계로 회피 패턴을 작은 실행으로 전환하는 방법",
-                    "cta": "도서 구매하기"
-                },
-                {
-                    "type": "상담",
-                    "name": "학교 Wee클래스 진로 상담 예약",
-                    "provider": "교육부 Wee 프로젝트",
-                    "url": "https://www.wee.go.kr",
-                    "price": "무료",
-                    "description": "학교 내 접근 가능한 진로·심리 통합 상담으로 혼자 해결 부담 해소",
-                    "cta": "Wee클래스 찾기"
-                }
-            ],
-            "actionPriority": [
-                {
-                    "order": 1,
-                    "action": "종이에 '진로 탐색이 귀찮은 이유' 3가지만 솔직하게 적기 (2분)",
-                    "timeRequired": "2분"
-                },
-                {
-                    "order": 2,
-                    "action": "1388 채팅 상담 또는 Wee클래스 상담 예약 중 1개 선택해 실행",
-                    "timeRequired": "5분"
-                }
-            ]
-        },
-        "Q_NO_INTEREST": {
-            "resultId": "Q_NO_INTEREST",
-            "primaryRecommendation": {
-                "type": "검사/진단",
-                "name": "커리어넷 직업 흥미 검사 (Holland 유형)",
-                "provider": "한국직업능력연구원",
-                "url": "https://www.career.go.kr",
-                "price": "무료",
-                "description": "싫은 것 목록 작성 후 Holland 검사로 관심사 방향의 객관적 윤곽 확인",
-                "cta": "무료 흥미 검사 시작하기"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "type": "상담",
-                    "name": "청소년 진로 상담 전화 1588-6856",
-                    "provider": "한국직업능력연구원",
-                    "url": "https://www.career.go.kr",
-                    "price": "무료",
-                    "description": "관심사 부재 상태에서 경험 설계 방향을 전문가와 함께 수립",
-                    "cta": "전화 상담 연결하기"
-                },
-                {
-                    "type": "도서",
-                    "name": "《무엇이 나를 행복하게 만드는가》 마틴 셀리그만",
-                    "provider": "교보문고/예스24",
-                    "url": "https://www.yes24.com",
-                    "price": "약 15,000원",
-                    "description": "긍정심리학 기반 에너지 상승 활동 발견 방법론 제시",
-                    "cta": "도서 구매하기"
-                }
-            ],
-            "actionPriority": [
-                {
-                    "order": 1,
-                    "action": "'절대 하기 싫은 일' 10가지 작성 후 반대 방향 키워드 3개 추출",
-                    "timeRequired": "15분"
-                },
-                {
-                    "order": 2,
-                    "action": "오늘부터 7일간 매일 저녁 에너지 상승/하락 순간 한 줄 기록 시작",
-                    "timeRequired": "3분/일"
-                }
-            ]
-        },
-        "Q_NEVER_HAD": {
-            "resultId": "Q_NEVER_HAD",
-            "primaryRecommendation": {
-                "type": "체험 플랫폼",
-                "name": "클래스101 무료 체험 강의",
-                "provider": "클래스101",
-                "url": "https://class101.net",
-                "price": "무료 체험 강의 다수 제공",
-                "description": "요리·드로잉·코딩·음악 등 다양한 분야 무료 체험으로 경험 버킷리스트 실행",
-                "cta": "무료 강의 탐색하기"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "type": "도서",
-                    "name": "《열정의 배신》 칼 뉴포트",
-                    "provider": "교보문고/예스24",
-                    "url": "https://www.yes24.com",
-                    "price": "약 15,000원",
-                    "description": "열정은 발견이 아닌 경험 축적으로 형성된다는 근거 기반 진로 전략 제시",
-                    "cta": "도서 구매하기"
-                },
-                {
-                    "type": "오프라인 체험",
-                    "name": "지역 청소년 문화센터 체험 프로그램",
-                    "provider": "각 지역 청소년 문화센터",
-                    "url": "https://www.youth.go.kr",
-                    "price": "무료~소액",
-                    "description": "온라인 경험 외 오프라인 직접 체험으로 관심사 발굴 범위 확장",
-                    "cta": "가까운 센터 찾기"
-                }
-            ],
-            "actionPriority": [
-                {
-                    "order": 1,
-                    "action": "클래스101에서 무료 체험 강의 3개 분야 선택 후 각 1강 수강",
-                    "timeRequired": "60분"
-                },
-                {
-                    "order": 2,
-                    "action": "각 체험 후 '더 하고 싶다 / 보통 / 다시는 싫다' 분류 기록",
-                    "timeRequired": "5분/회"
-                }
-            ]
+        {
+          "text": "둘 다 맞지 않거나 아직 잘 모르겠어요",
+          "resultId": "R_UNCLEAR"
         }
+      ]
+    },
+    "Q_CONTEXT_3": {
+      "text": "진로 선택에서 어떤 압박이 있나요?",
+      "options": [
+        {
+          "text": "부모님이 원하는 진로와 제가 원하는 진로가 달라요",
+          "resultId": "R_05"
+        },
+        {
+          "text": "친구들은 다 정한 것 같아서 뒤처진 느낌이에요",
+          "resultId": "R_06"
+        },
+        {
+          "text": "둘 다 맞지 않거나 아직 잘 모르겠어요",
+          "resultId": "R_UNCLEAR"
+        }
+      ]
+    },
+    "Q_CONTEXT_4": {
+      "text": "정보를 얻은 뒤 어디에서 막히나요?",
+      "options": [
+        {
+          "text": "정보는 많이 봤지만 무엇을 믿어야 할지 모르겠어요",
+          "resultId": "R_07"
+        },
+        {
+          "text": "방향은 정했는데 준비를 어떻게 시작할지 모르겠어요",
+          "resultId": "R_08"
+        },
+        {
+          "text": "둘 다 맞지 않거나 아직 잘 모르겠어요",
+          "resultId": "R_UNCLEAR"
+        }
+      ]
     }
+  },
+  "solutions": {
+    "R_01": {
+      "title": "직업 하나 대신 활동 두 개를 비교하기",
+      "diagnosis": "현재 선택하신 상황은 ‘좋아하는 것이 여러 개라 하나를 고르기 어려워요’입니다. 아래 계획은 이 응답에 맞춘 출발점이며, 확인하지 않은 성격이나 원인을 단정하지 않습니다.",
+      "cbt_analysis": "관심사가 여러 개라는 것은 결정을 못 하는 성격의 증거가 아닙니다. 서로 다른 분야에서 실제로 하는 일을 비교하면 선택 기준이 생깁니다.",
+      "short_term_action": "관심 분야 두 개에서 실제 업무를 한 가지씩 찾아 작은 체험을 정하세요. 예를 들어 디자인 시안 한 장 만들기와 인터뷰 질문 다섯 개 작성처럼 결과가 남는 활동을 해 보세요.",
+      "mid_term_action": "각 활동 뒤 재미·어려움·다시 하고 싶은 정도를 기록하고 학교 진로교사와 비교하세요. 직업명이나 유명세보다 일하는 방식이 본인에게 맞는지 살펴보세요. 이번 선택이 평생을 확정하는 것은 아닙니다."
+    },
+    "R_02": {
+      "title": "흥미가 없다는 결론 전에 경험의 범위 넓히기",
+      "diagnosis": "현재 선택하신 상황은 ‘특별히 좋아하는 것도 잘하는 것도 모르겠어요’입니다. 아래 계획은 이 응답에 맞춘 출발점이며, 확인하지 않은 성격이나 원인을 단정하지 않습니다.",
+      "cbt_analysis": "관심 분야가 떠오르지 않는 이유는 경험 부족·피로·정보 부족 등 다양합니다. 능력이 없다고 결론내릴 근거는 아닙니다.",
+      "short_term_action": "최근 덜 지루했던 수업이나 일상 활동 세 가지를 적고, 그 안의 행동을 찾아보세요. 설명하기·정리하기·만들기처럼 적은 뒤 관련 직업 인터뷰 하나와 짧은 체험 하나를 선택하세요.",
+      "mid_term_action": "진로검사는 후보를 만드는 자료로 활용하고 정답표로 쓰지 마세요. 관심 저하가 공부뿐 아니라 모든 활동에 퍼지고 생활이 힘들다면 진로 탐색과 별도로 학교 상담실 등에 도움을 요청하세요."
+    },
+    "R_03": {
+      "title": "지원 조건과 준비 간격을 구체적으로 확인하기",
+      "diagnosis": "현재 선택하신 상황은 ‘원하는 전공이 있지만 성적이나 준비 조건이 걱정돼요’입니다. 아래 계획은 이 응답에 맞춘 출발점이며, 확인하지 않은 성격이나 원인을 단정하지 않습니다.",
+      "cbt_analysis": "현재 성적과 진로 가능성은 같은 말이 아닙니다. 지원 시기와 전형별 요구 조건을 확인해야 준비 방향을 정할 수 있습니다.",
+      "short_term_action": "희망 학과 두 곳의 해당 연도 공식 모집요강에서 필수 과목·평가 요소·일정을 확인하세요. 현재 갖춘 조건과 보완할 조건을 구분해 담임 또는 진로교사와 우선순위를 정하세요.",
+      "mid_term_action": "한 달 안에 바꿀 수 있는 학습 행동 하나와 다른 진입 경로 하나를 함께 마련하세요. 전년도 합격선이나 사설 정보만으로 가능·불가능을 확정하지 마세요. 전형 정보는 바뀔 수 있어 공식 자료를 다시 확인해야 합니다."
+    },
+    "R_04": {
+      "title": "진로 의지와 비용 제약을 분리해서 검토하기",
+      "diagnosis": "현재 선택하신 상황은 ‘교육비나 지역 때문에 원하는 경로를 선택하기 어려워요’입니다. 아래 계획은 이 응답에 맞춘 출발점이며, 확인하지 않은 성격이나 원인을 단정하지 않습니다.",
+      "cbt_analysis": "교육비·이동·돌봄 같은 제약은 노력 부족이 아닙니다. 목표를 포기하기 전에 비용과 지원 가능성을 나누어 살펴볼 수 있습니다.",
+      "short_term_action": "등록금뿐 아니라 주거·교통·준비 비용을 적고, 학교 담당자에게 장학·지원 제도와 신청 일정을 문의하세요. 같은 분야로 연결되는 가까운 학교나 단계적 교육 경로도 하나 찾아보세요.",
+      "mid_term_action": "지원 조건은 기관별로 다르므로 선정이나 금액을 확정하지 마세요. 실제 부담액을 비교한 자료를 바탕으로 가족과 가능한 범위를 협의하고, 결정 전 학교 진로상담에서 대안을 점검하세요."
+    },
+    "R_05": {
+      "title": "막연한 찬반 대신 서로의 우려를 비교하기",
+      "diagnosis": "현재 선택하신 상황은 ‘부모님이 원하는 진로와 제가 원하는 진로가 달라요’입니다. 아래 계획은 이 응답에 맞춘 출발점이며, 확인하지 않은 성격이나 원인을 단정하지 않습니다.",
+      "cbt_analysis": "의견 차이는 부모님을 따르지 않거나 설득을 못해서 생긴 문제로 단정할 수 없습니다. 안정성·비용·흥미 등 서로 중요하게 보는 기준이 다를 수 있습니다.",
+      "short_term_action": "안전하게 대화할 수 있다면 원하는 경로의 업무·교육 기간·비용·대안을 한 장에 적으세요. 부모님에게 가장 걱정되는 점 하나를 묻고, 그 우려를 확인할 자료나 체험 계획을 제안하세요.",
+      "mid_term_action": "대화가 반복해서 다툼이 되면 진로교사 등 중립적인 사람이 참여하는 자리를 요청하세요. 위협이나 폭력 때문에 말할 수 없다면 설득보다 믿을 수 있는 어른과 개별적으로 안전을 확보하는 것이 먼저입니다."
+    },
+    "R_06": {
+      "title": "비교 속도 대신 다음 탐색 행동 정하기",
+      "diagnosis": "현재 선택하신 상황은 ‘친구들은 다 정한 것 같아서 뒤처진 느낌이에요’입니다. 아래 계획은 이 응답에 맞춘 출발점이며, 확인하지 않은 성격이나 원인을 단정하지 않습니다.",
+      "cbt_analysis": "친구가 진로를 말할 수 있다는 것과 충분히 검토했다는 것은 다릅니다. 지금 필요한 것은 빠른 선언보다 본인의 판단 자료입니다.",
+      "short_term_action": "이번 주에 확인할 질문 하나를 정하세요. 그 직업의 하루 일과, 필요한 공부, 힘든 점 중 하나를 공식 직업정보나 인터뷰에서 찾아 메모하세요.",
+      "mid_term_action": "주말에 새롭게 알게 된 점과 남은 질문을 확인하세요. 불안 때문에 유료 컨설팅을 급하게 결제하기보다 학교에서 받을 수 있는 진로상담을 먼저 활용해 보세요."
+    },
+    "R_07": {
+      "title": "출처와 적용 시점을 적는 진로 정보표 만들기",
+      "diagnosis": "현재 선택하신 상황은 ‘정보는 많이 봤지만 무엇을 믿어야 할지 모르겠어요’입니다. 아래 계획은 이 응답에 맞춘 출발점이며, 확인하지 않은 성격이나 원인을 단정하지 않습니다.",
+      "cbt_analysis": "유망하다는 소개만으로 본인에게 맞는 직업을 알 수는 없습니다. 전망과 실제 업무, 교육 조건을 따로 확인해야 합니다.",
+      "short_term_action": "후보 직업 두 개에 대해 실제 업무·필요 역량·교육 경로를 표로 만드세요. 각 정보 옆에 출처와 작성 시점을 적고, 광고와 공식 자료를 구분하세요.",
+      "mid_term_action": "자료끼리 다른 부분은 현직자 인터뷰나 학교 상담에서 질문하세요. 특정 직업의 취업·소득을 보장하는 설명은 그대로 믿지 말고 근거와 조건을 확인하세요."
+    },
+    "R_08": {
+      "title": "진로 목표를 한 주의 작업으로 바꾸기",
+      "diagnosis": "현재 선택하신 상황은 ‘방향은 정했는데 준비를 어떻게 시작할지 모르겠어요’입니다. 아래 계획은 이 응답에 맞춘 출발점이며, 확인하지 않은 성격이나 원인을 단정하지 않습니다.",
+      "cbt_analysis": "목표가 있어도 첫 단계가 모호하면 시작이 어렵습니다. 더 큰 동기보다 작고 확인 가능한 작업이 도움이 될 수 있습니다.",
+      "short_term_action": "지원 시점에서 거꾸로 필요한 준비를 적고, 이번 주에 끝낼 산출물 하나를 정하세요. 포트폴리오 주제 초안·과목별 학습계획·상담 질문지처럼 완료 여부가 보이는 것으로 고르세요.",
+      "mid_term_action": "일주일 뒤 결과를 진로교사에게 보여 주고 다음 과제 하나만 정하세요. 계획이 밀리면 시간을 더 늘리기보다 과제 크기와 학교생활의 부담을 조정하세요."
+    },
+    "R_UNCLEAR": {
+      "title": "분류를 서두르지 않고 최근 장면부터 정리하기",
+      "diagnosis": "제시된 선택지로 현재 상황을 충분히 설명하기 어렵다고 선택하셨습니다. 억지로 한 유형에 맞출 필요는 없습니다.",
+      "cbt_analysis": "확인된 사실과 추측, 생활에 생긴 영향을 분리하면 다음에 물어볼 질문이 구체적이 됩니다. 이 결과는 특정 심리 원인을 뜻하지 않습니다.",
+      "short_term_action": "최근 힘들었던 장면 하나의 날짜·상황·실제 일어난 일을 적으세요. 가장 불편했던 점과 원하는 변화 하나를 따로 적고, 지금 필요한 것이 정보·실행 도움·정서적 지지 중 무엇인지 생각해 보세요.",
+      "mid_term_action": "다음에 비슷한 일이 생기면 같은 조건이 반복되는지 비교하세요. 혼자 정리가 어렵거나 생활에 지장이 크면 메모를 가지고 관련 지원기관에 초기 상담을 요청하세요."
+    }
+  },
+  "matchings": {
+    "R_01": {
+      "primaryRecommendation": {
+        "provider_id": "org_02",
+        "service": "커리어넷",
+        "description": "직업·학과 정보와 진로상담 메뉴를 확인하세요. 검사 결과는 탐색 자료로 활용하세요.",
+        "reason": "이 경로에서는 직업 하나 대신 활동 두 개를 비교하기에 필요한 정보나 지원을 먼저 확인합니다.",
+        "url": "https://www.career.go.kr/cloud/w/main/home",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
+      },
+      "supplementaryRecommendations": []
+    },
+    "R_02": {
+      "primaryRecommendation": {
+        "provider_id": "org_02",
+        "service": "커리어넷",
+        "description": "직업·학과 정보와 진로상담 메뉴를 확인하세요. 검사 결과는 탐색 자료로 활용하세요.",
+        "reason": "이 경로에서는 흥미가 없다는 결론 전에 경험의 범위 넓히기에 필요한 정보나 지원을 먼저 확인합니다.",
+        "url": "https://www.career.go.kr/cloud/w/main/home",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
+      },
+      "supplementaryRecommendations": []
+    },
+    "R_03": {
+      "primaryRecommendation": {
+        "provider_id": "org_02",
+        "service": "커리어넷",
+        "description": "직업·학과 정보와 진로상담 메뉴를 확인하세요. 검사 결과는 탐색 자료로 활용하세요.",
+        "reason": "이 경로에서는 지원 조건과 준비 간격을 구체적으로 확인하기에 필요한 정보나 지원을 먼저 확인합니다.",
+        "url": "https://www.career.go.kr/cloud/w/main/home",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
+      },
+      "supplementaryRecommendations": []
+    },
+    "R_04": {
+      "primaryRecommendation": {
+        "provider_id": "org_02",
+        "service": "커리어넷",
+        "description": "직업·학과 정보와 진로상담 메뉴를 확인하세요. 검사 결과는 탐색 자료로 활용하세요.",
+        "reason": "이 경로에서는 진로 의지와 비용 제약을 분리해서 검토하기에 필요한 정보나 지원을 먼저 확인합니다.",
+        "url": "https://www.career.go.kr/cloud/w/main/home",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
+      },
+      "supplementaryRecommendations": []
+    },
+    "R_05": {
+      "primaryRecommendation": {
+        "provider_id": "org_02",
+        "service": "커리어넷",
+        "description": "직업·학과 정보와 진로상담 메뉴를 확인하세요. 검사 결과는 탐색 자료로 활용하세요.",
+        "reason": "이 경로에서는 막연한 찬반 대신 서로의 우려를 비교하기에 필요한 정보나 지원을 먼저 확인합니다.",
+        "url": "https://www.career.go.kr/cloud/w/main/home",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
+      },
+      "supplementaryRecommendations": []
+    },
+    "R_06": {
+      "primaryRecommendation": {
+        "provider_id": "org_02",
+        "service": "커리어넷",
+        "description": "직업·학과 정보와 진로상담 메뉴를 확인하세요. 검사 결과는 탐색 자료로 활용하세요.",
+        "reason": "이 경로에서는 비교 속도 대신 다음 탐색 행동 정하기에 필요한 정보나 지원을 먼저 확인합니다.",
+        "url": "https://www.career.go.kr/cloud/w/main/home",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
+      },
+      "supplementaryRecommendations": []
+    },
+    "R_07": {
+      "primaryRecommendation": {
+        "provider_id": "org_02",
+        "service": "커리어넷",
+        "description": "직업·학과 정보와 진로상담 메뉴를 확인하세요. 검사 결과는 탐색 자료로 활용하세요.",
+        "reason": "이 경로에서는 출처와 적용 시점을 적는 진로 정보표 만들기에 필요한 정보나 지원을 먼저 확인합니다.",
+        "url": "https://www.career.go.kr/cloud/w/main/home",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
+      },
+      "supplementaryRecommendations": []
+    },
+    "R_08": {
+      "primaryRecommendation": {
+        "provider_id": "org_02",
+        "service": "커리어넷",
+        "description": "직업·학과 정보와 진로상담 메뉴를 확인하세요. 검사 결과는 탐색 자료로 활용하세요.",
+        "reason": "이 경로에서는 진로 목표를 한 주의 작업으로 바꾸기에 필요한 정보나 지원을 먼저 확인합니다.",
+        "url": "https://www.career.go.kr/cloud/w/main/home",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
+      },
+      "supplementaryRecommendations": []
+    },
+    "R_UNCLEAR": {
+      "primaryRecommendation": {
+        "provider_id": "org_02",
+        "service": "커리어넷",
+        "description": "직업·학과 정보와 진로상담 메뉴를 확인하세요. 검사 결과는 탐색 자료로 활용하세요.",
+        "reason": "상황을 구체적으로 정리할 정보나 초기 지원을 찾기 위한 선택지입니다.",
+        "url": "https://www.career.go.kr/cloud/w/main/home",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
+      },
+      "supplementaryRecommendations": []
+    }
+  }
 }

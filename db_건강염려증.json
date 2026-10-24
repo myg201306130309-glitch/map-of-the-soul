@@ -1,15 +1,17 @@
 {
   "meta": {
-    "schema_version": "2.0",
+    "schema_version": "3.0",
     "revision_date": "2026-10-18",
     "category": "건강 걱정",
     "purpose": "자기이해와 행동 계획",
-    "notice": "이 안내는 선택한 응답을 바탕으로 한 자기이해 자료이며, 의학적 진단이나 법률 판단을 대신하지 않습니다.",
+    "notice": "선택한 상황에 맞춘 자기이해·행동 안내입니다. 의학적 진단, 개인별 투자 권유 또는 법률 판단을 대신하지 않습니다.",
     "clinical_validation": "임상적으로 타당화된 검사 아님; 전문가 검토 전 편집 초안",
     "source_scope": "참고 자료는 일반 원칙의 근거이며 개별 분기·결과는 편집 작성한 초안",
     "sources": [
       "https://www.nhs.uk/mental-health/conditions/health-anxiety/"
-    ]
+    ],
+    "revision": "2026-10-18-full-v1",
+    "category_id": "health"
   },
   "questions": {
     "Q_FOCUS": {
@@ -249,92 +251,170 @@
   "matchings": {
     "R_01": {
       "primaryRecommendation": {
-        "service": "건강 걱정과 일상 부담을 함께 다루는 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "「검색을 끝내는 기준 만들기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_02": {
       "primaryRecommendation": {
-        "service": "건강 걱정과 일상 부담을 함께 다루는 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "「필요한 관찰과 반복 확인 구분하기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_03": {
       "primaryRecommendation": {
-        "service": "건강 걱정과 일상 부담을 함께 다루는 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "「안심 대신 함께 버틸 도움 요청하기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_04": {
       "primaryRecommendation": {
-        "service": "건강 걱정과 일상 부담을 함께 다루는 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "「재진 기준을 의료진과 명확히 하기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_05": {
       "primaryRecommendation": {
-        "service": "건강 걱정과 일상 부담을 함께 다루는 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "「불신의 경험을 진료 계획에 반영하기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_06": {
       "primaryRecommendation": {
-        "service": "건강 걱정과 일상 부담을 함께 다루는 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "「진료를 피하는 장벽 낮추기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_07": {
       "primaryRecommendation": {
-        "service": "건강 걱정과 일상 부담을 함께 다루는 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "「실제 질병 경험 이후의 걱정 정리하기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_08": {
       "primaryRecommendation": {
-        "service": "건강 걱정과 일상 부담을 함께 다루는 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "「불안한 시간대를 위한 저녁 계획」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_09": {
       "primaryRecommendation": {
-        "service": "건강 걱정과 일상 부담을 함께 다루는 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "「여러 걱정의 우선순위 나누기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_10": {
       "primaryRecommendation": {
-        "service": "건강 걱정과 일상 부담을 함께 다루는 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "「생활이 무너질 때 도움을 앞당기기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_11": {
       "primaryRecommendation": {
-        "service": "건강 걱정과 일상 부담을 함께 다루는 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "「줄어든 일상을 안전하게 되찾기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_12": {
       "primaryRecommendation": {
-        "service": "건강 걱정과 일상 부담을 함께 다루는 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "「걱정이 차지하는 시간을 줄이기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_UNCLEAR": {
       "primaryRecommendation": {
-        "service": "현재 상황을 정리하는 초기 상담",
-        "description": "한 가지 원인을 확정하기보다 실제 사건·생활 부담·원하는 변화를 함께 확인하는 상담을 요청해 보세요."
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "「원인을 정하기 전에 장면 하나부터」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
@@ -347,8 +427,14 @@
     },
     "R_MEDICAL": {
       "primaryRecommendation": {
-        "service": "증상 평가가 가능한 의료기관",
-        "description": "현재 증상과 시작 시점, 진행 양상을 설명하고 필요한 진료 시점을 문의하세요."
+        "provider_id": "org_12",
+        "service": "질병관리청 국가건강정보포털",
+        "description": "건강정보를 확인하고 개인별 식사·활동 계획은 의료진이나 영양 전문가와 상의하세요.",
+        "reason": "「자기해석보다 의료 평가 계획 먼저」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://health.kdca.go.kr/",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     }

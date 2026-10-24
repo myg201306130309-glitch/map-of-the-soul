@@ -1,13 +1,15 @@
 {
   "meta": {
-    "schema_version": "2.0",
+    "schema_version": "3.0",
     "revision_date": "2026-10-18",
     "category": "상사와의 갈등",
     "purpose": "자기이해와 행동 계획",
-    "notice": "이 안내는 선택한 응답을 바탕으로 한 자기이해 자료이며, 의학적 진단이나 법률 판단을 대신하지 않습니다.",
+    "notice": "선택한 상황에 맞춘 자기이해·행동 안내입니다. 의학적 진단, 개인별 투자 권유 또는 법률 판단을 대신하지 않습니다.",
     "clinical_validation": "임상적으로 타당화된 검사 아님; 전문가 검토 전 편집 초안",
     "source_scope": "참고 자료는 일반 원칙의 근거이며 개별 분기·결과는 편집 작성한 초안",
-    "sources": []
+    "sources": [],
+    "revision": "2026-10-18-full-v1",
+    "category_id": "work"
   },
   "questions": {
     "Q_FOCUS": {
@@ -240,92 +242,170 @@
   "matchings": {
     "R_01": {
       "primaryRecommendation": {
-        "service": "직장 내 갈등에 대한 개별 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_13",
+        "service": "고용노동부",
+        "description": "직장 내 문제에 관한 공식 상담·민원 안내를 확인하세요. 사건의 법적 판단을 이 사이트가 대신하지 않습니다.",
+        "reason": "「평가를 추측하지 말고 기준 확인하기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.moel.go.kr/",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_02": {
       "primaryRecommendation": {
-        "service": "직장 내 갈등에 대한 개별 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_13",
+        "service": "고용노동부",
+        "description": "직장 내 문제에 관한 공식 상담·민원 안내를 확인하세요. 사건의 법적 판단을 이 사이트가 대신하지 않습니다.",
+        "reason": "「성과 근거와 평가 대화를 분리하기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.moel.go.kr/",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_03": {
       "primaryRecommendation": {
-        "service": "직장 내 갈등에 대한 개별 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_13",
+        "service": "고용노동부",
+        "description": "직장 내 문제에 관한 공식 상담·민원 안내를 확인하세요. 사건의 법적 판단을 이 사이트가 대신하지 않습니다.",
+        "reason": "「업무 피드백과 자기 가치 구분하기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.moel.go.kr/",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_04": {
       "primaryRecommendation": {
-        "service": "직장 내 갈등에 대한 개별 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_13",
+        "service": "고용노동부",
+        "description": "직장 내 문제에 관한 공식 상담·민원 안내를 확인하세요. 사건의 법적 판단을 이 사이트가 대신하지 않습니다.",
+        "reason": "「업무량을 보이게 하고 선택 요청하기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.moel.go.kr/",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_05": {
       "primaryRecommendation": {
-        "service": "직장 내 갈등에 대한 개별 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_13",
+        "service": "고용노동부",
+        "description": "직장 내 문제에 관한 공식 상담·민원 안내를 확인하세요. 사건의 법적 판단을 이 사이트가 대신하지 않습니다.",
+        "reason": "「변경 이력과 책임 범위 명확히 하기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.moel.go.kr/",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_06": {
       "primaryRecommendation": {
-        "service": "직장 내 갈등에 대한 개별 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_13",
+        "service": "고용노동부",
+        "description": "직장 내 문제에 관한 공식 상담·민원 안내를 확인하세요. 사건의 법적 판단을 이 사이트가 대신하지 않습니다.",
+        "reason": "「이견을 선택지와 영향으로 제시하기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.moel.go.kr/",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_07": {
       "primaryRecommendation": {
-        "service": "직장 내 갈등에 대한 개별 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_13",
+        "service": "고용노동부",
+        "description": "직장 내 문제에 관한 공식 상담·민원 안내를 확인하세요. 사건의 법적 판단을 이 사이트가 대신하지 않습니다.",
+        "reason": "「모욕을 업무 피드백과 분리하기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.moel.go.kr/",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_08": {
       "primaryRecommendation": {
-        "service": "직장 내 갈등에 대한 개별 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_13",
+        "service": "고용노동부",
+        "description": "직장 내 문제에 관한 공식 상담·민원 안내를 확인하세요. 사건의 법적 판단을 이 사이트가 대신하지 않습니다.",
+        "reason": "「배제의 장면과 업무 영향을 확인하기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.moel.go.kr/",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_09": {
       "primaryRecommendation": {
-        "service": "직장 내 갈등에 대한 개별 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_13",
+        "service": "고용노동부",
+        "description": "직장 내 문제에 관한 공식 상담·민원 안내를 확인하세요. 사건의 법적 판단을 이 사이트가 대신하지 않습니다.",
+        "reason": "「말하기 전에 보호 조건 확인하기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.moel.go.kr/",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_10": {
       "primaryRecommendation": {
-        "service": "직장 내 갈등에 대한 개별 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_13",
+        "service": "고용노동부",
+        "description": "직장 내 문제에 관한 공식 상담·민원 안내를 확인하세요. 사건의 법적 판단을 이 사이트가 대신하지 않습니다.",
+        "reason": "「퇴근 이후까지 이어지는 부담 줄이기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.moel.go.kr/",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_11": {
       "primaryRecommendation": {
-        "service": "직장 내 갈등에 대한 개별 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_13",
+        "service": "고용노동부",
+        "description": "직장 내 문제에 관한 공식 상담·민원 안내를 확인하세요. 사건의 법적 판단을 이 사이트가 대신하지 않습니다.",
+        "reason": "「남기와 떠나기의 조건 비교하기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.moel.go.kr/",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_12": {
       "primaryRecommendation": {
-        "service": "직장 내 갈등에 대한 개별 상담",
-        "description": "기관을 선택할 때 담당자의 자격·다루는 문제·비용·비밀보장 범위를 확인해 주세요. 특정 업체의 검증·제휴를 뜻하지 않습니다."
+        "provider_id": "org_13",
+        "service": "고용노동부",
+        "description": "직장 내 문제에 관한 공식 상담·민원 안내를 확인하세요. 사건의 법적 판단을 이 사이트가 대신하지 않습니다.",
+        "reason": "「갈등 해결 목표 한 가지 정하기」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.moel.go.kr/",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },
     "R_UNCLEAR": {
       "primaryRecommendation": {
-        "service": "현재 상황을 정리하는 초기 상담",
-        "description": "한 가지 원인을 확정하기보다 실제 사건·생활 부담·원하는 변화를 함께 확인하는 상담을 요청해 보세요."
+        "provider_id": "org_13",
+        "service": "고용노동부",
+        "description": "직장 내 문제에 관한 공식 상담·민원 안내를 확인하세요. 사건의 법적 판단을 이 사이트가 대신하지 않습니다.",
+        "reason": "「원인을 정하기 전에 장면 하나부터」에 필요한 정보나 지원을 확인합니다.",
+        "url": "https://www.moel.go.kr/",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
       },
       "supplementaryRecommendations": []
     },

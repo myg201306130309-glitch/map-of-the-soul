@@ -1,820 +1,322 @@
 {
-    "meta": {
-        "version": "2.0",
-        "title": "이유를 모를 우울 원인 탐색 및 CBT 솔루션 시스템",
-        "description": "이유를 알 수 없는 우울감의 내면 원인을 5단계 질문 트리로 탐색하고, 맞춤형 인지행동 솔루션 및 비즈니스 매칭을 제공하는 통합 데이터",
-        "totalQuestions": 20,
-        "totalSolutions": 4,
-        "totalBusinessMatchings": 4
-    },
-    "questions": {
-        "Q_START": {
-            "id": "Q_START",
-            "category": "이유를 모를 우울 - 초기 탐색",
-            "text": "요즘 이유 없이 우울한 느낌이 드시나요? 그 감각이 가장 강하게 느껴지는 순간은 언제인가요?",
-            "isRoot": true,
-            "branches": [
-                {
-                    "text": "혼자 있을 때 특히 공허하고 무기력해진다",
-                    "nextNodeId": "Q_2A",
-                    "resultId": ""
-                },
-                {
-                    "text": "사람들과 함께 있을 때 오히려 더 외롭고 지친다",
-                    "nextNodeId": "Q_2B",
-                    "resultId": ""
-                },
-                {
-                    "text": "아침에 눈을 뜨는 순간부터 이유 없이 무겁다",
-                    "nextNodeId": "Q_2C",
-                    "resultId": ""
-                },
-                {
-                    "text": "뭔가를 해내고 난 직후에 갑자기 허탈해진다",
-                    "nextNodeId": "Q_2D",
-                    "resultId": ""
-                }
-            ]
+  "meta": {
+    "schema_version": "3.0",
+    "revision": "2026-10-18-full-v1",
+    "category": "가라앉은 기분과 일상 회복",
+    "notice": "선택한 상황에 맞춘 자기이해·행동 안내입니다. 의학적 진단, 개인별 투자 권유 또는 법률 판단을 대신하지 않습니다.",
+    "clinical_validation": "임상적으로 타당화된 검사 아님; 전문가 검토 전 편집 초안",
+    "sources": [
+      "https://www.mentalhealth.go.kr/",
+      "https://www.nhs.uk/mental-health/conditions/depression-in-adults/overview/"
+    ],
+    "source_scope": "기관의 공식 역할과 일반 원칙을 참고했습니다. 개별 분기·행동 계획의 효과가 검증됐다는 뜻은 아닙니다.",
+    "category_id": "depression"
+  },
+  "questions": {
+    "Q_FOCUS": {
+      "text": "가라앉은 기분과 일상 회복에서 오늘 먼저 다루고 싶은 부분을 골라 주세요. 여러 가지라면 현재 생활에 가장 영향을 주는 것부터 선택해 주세요.",
+      "options": [
+        {
+          "text": "기운과 기본 생활이 달라졌어요",
+          "nextNodeId": "Q_CONTEXT_1"
         },
-        "Q_2A": {
-            "id": "Q_2A",
-            "category": "고독과 공허 - 원인 탐색",
-            "text": "혼자 있을 때 공허함이 밀려온다면, 그 시간 동안 주로 어떤 생각이 머릿속을 채우나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "'나는 왜 이렇게 아무것도 아닌 것 같지?'라는 생각이 반복된다",
-                    "nextNodeId": "Q_3A",
-                    "resultId": ""
-                },
-                {
-                    "text": "특별한 생각 없이 그냥 멍하고 아무것도 하기 싫다",
-                    "nextNodeId": "Q_3B",
-                    "resultId": ""
-                },
-                {
-                    "text": "과거의 실수나 후회스러운 장면들이 자꾸 떠오른다",
-                    "nextNodeId": "Q_3C",
-                    "resultId": ""
-                },
-                {
-                    "text": "미래가 막막하고 어떻게 살아야 할지 모르겠다는 생각이 든다",
-                    "nextNodeId": "Q_3D",
-                    "resultId": ""
-                }
-            ]
+        {
+          "text": "혼자 있거나 관계 속에서 외로워요",
+          "nextNodeId": "Q_CONTEXT_2"
         },
-        "Q_2B": {
-            "id": "Q_2B",
-            "category": "관계 속 고립 - 원인 탐색",
-            "text": "사람들과 함께 있을 때 더 외롭다면, 그 관계에서 어떤 패턴이 반복되고 있나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "내 진짜 감정이나 생각을 말하지 못하고 늘 맞춰주는 편이다",
-                    "nextNodeId": "Q_3E",
-                    "resultId": ""
-                },
-                {
-                    "text": "열심히 노력하는데 상대방이 알아주지 않는다는 느낌이 든다",
-                    "nextNodeId": "Q_3F",
-                    "resultId": ""
-                },
-                {
-                    "text": "대화는 하지만 진짜로 연결된 느낌이 없고 표면적인 관계만 있다",
-                    "nextNodeId": "Q_3G",
-                    "resultId": ""
-                },
-                {
-                    "text": "내가 없어도 아무도 신경 쓰지 않을 것 같다는 생각이 든다",
-                    "nextNodeId": "Q_3A",
-                    "resultId": ""
-                }
-            ]
+        {
+          "text": "생각이 반복되거나 의미가 없게 느껴져요",
+          "nextNodeId": "Q_CONTEXT_3"
         },
-        "Q_2C": {
-            "id": "Q_2C",
-            "category": "일상 기능 저하 - 원인 탐색",
-            "text": "아침부터 무겁다면, 현재 일상의 기본 루틴 상태는 어떤가요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "수면이 불규칙하고 자도 자도 피곤하다",
-                    "nextNodeId": "Q_3H",
-                    "resultId": ""
-                },
-                {
-                    "text": "식사를 제대로 못 하거나 폭식과 거식이 반복된다",
-                    "nextNodeId": "Q_3H",
-                    "resultId": ""
-                },
-                {
-                    "text": "루틴 자체는 유지되는데 그냥 모든 게 의미 없게 느껴진다",
-                    "nextNodeId": "Q_3D",
-                    "resultId": ""
-                },
-                {
-                    "text": "해야 할 일들이 쌓여 있는데 아무것도 손에 잡히지 않는다",
-                    "nextNodeId": "Q_3B",
-                    "resultId": ""
-                }
-            ]
+        {
+          "text": "도움을 받고 싶은데 막혀 있어요",
+          "nextNodeId": "Q_CONTEXT_4"
         },
-        "Q_2D": {
-            "id": "Q_2D",
-            "category": "성취 후 공허 - 원인 탐색",
-            "text": "무언가를 해낸 직후에 허탈해진다면, 그 감정의 정체가 무엇에 가깝다고 느끼시나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "'이걸 해냈는데 왜 아무도 특별히 반응하지 않지?'라는 서운함",
-                    "nextNodeId": "Q_3F",
-                    "resultId": ""
-                },
-                {
-                    "text": "'이게 다야? 이게 내가 원하던 건가?'라는 의문과 공허함",
-                    "nextNodeId": "Q_3I",
-                    "resultId": ""
-                },
-                {
-                    "text": "목표가 사라지니 내가 누구인지 모르겠다는 혼란",
-                    "nextNodeId": "Q_3I",
-                    "resultId": ""
-                },
-                {
-                    "text": "잘 해냈는데도 '이 정도면 충분한가?'라는 불안이 밀려온다",
-                    "nextNodeId": "Q_3C",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_3A": {
-            "id": "Q_3A",
-            "category": "자기 존재감 결핍 - 심층 탐색",
-            "text": "'나는 아무것도 아닌 것 같다'는 느낌, 언제부터 이런 생각이 자신 안에 자리 잡았다고 느끼시나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "어릴 때부터 칭찬보다 지적을 더 많이 받으며 자랐다",
-                    "nextNodeId": "Q_4A",
-                    "resultId": ""
-                },
-                {
-                    "text": "특정 실패나 상처 이후로 자신감이 무너진 것 같다",
-                    "nextNodeId": "Q_4B",
-                    "resultId": ""
-                },
-                {
-                    "text": "주변에 뛰어난 사람들과 비교하면서 점점 작아진 것 같다",
-                    "nextNodeId": "Q_4C",
-                    "resultId": ""
-                },
-                {
-                    "text": "언제부터인지 모르겠지만 원래 이런 사람인 것 같다",
-                    "nextNodeId": "Q_4A",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_3B": {
-            "id": "Q_3B",
-            "category": "무기력 - 심층 탐색",
-            "text": "무기력하고 아무것도 하기 싫은 상태, 현재 삶에서 '내가 진짜 원해서 하는 것'이 있나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "솔직히 내가 뭘 원하는지 모르겠다",
-                    "nextNodeId": "Q_4D",
-                    "resultId": ""
-                },
-                {
-                    "text": "원하는 건 있는데 현실적으로 할 수 없는 상황이다",
-                    "nextNodeId": "Q_4E",
-                    "resultId": ""
-                },
-                {
-                    "text": "예전엔 좋아하는 게 있었는데 지금은 그것도 재미없다",
-                    "nextNodeId": "Q_4B",
-                    "resultId": ""
-                },
-                {
-                    "text": "남들이 원하는 것만 해오다 보니 내 것이 없다",
-                    "nextNodeId": "Q_4A",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_3C": {
-            "id": "Q_3C",
-            "category": "자기 비판과 완벽주의 - 심층 탐색",
-            "text": "과거 실수나 '충분하지 않다'는 불안이 반복된다면, 스스로에게 어떤 기준을 적용하고 있나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "실수하면 오래도록 자책하고 쉽게 넘기지 못한다",
-                    "nextNodeId": "Q_4B",
-                    "resultId": ""
-                },
-                {
-                    "text": "남들보다 잘해야 한다는 압박이 항상 있다",
-                    "nextNodeId": "Q_4C",
-                    "resultId": ""
-                },
-                {
-                    "text": "잘해도 '운이 좋았을 뿐'이라고 생각하고 인정하지 못한다",
-                    "nextNodeId": "Q_4A",
-                    "resultId": ""
-                },
-                {
-                    "text": "기준이 너무 높아서 시작조차 못 하고 미루는 일이 많다",
-                    "nextNodeId": "Q_4E",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_3D": {
-            "id": "Q_3D",
-            "category": "삶의 의미 상실 - 심층 탐색",
-            "text": "미래가 막막하거나 모든 것이 의미 없게 느껴진다면, 지금 삶에서 가장 결핍된 것이 무엇인가요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "내가 왜 이걸 하는지 이유와 목적을 모르겠다",
-                    "nextNodeId": "Q_4D",
-                    "resultId": ""
-                },
-                {
-                    "text": "진심으로 나를 이해해주는 사람이 없다는 외로움",
-                    "nextNodeId": "Q_4F",
-                    "resultId": ""
-                },
-                {
-                    "text": "노력해도 달라지지 않는다는 무력감과 체념",
-                    "nextNodeId": "Q_4E",
-                    "resultId": ""
-                },
-                {
-                    "text": "내가 원하는 삶과 실제 삶의 괴리가 너무 크다",
-                    "nextNodeId": "Q_4D",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_3E": {
-            "id": "Q_3E",
-            "category": "자기 억압과 관계 패턴 - 심층 탐색",
-            "text": "늘 맞춰주고 진짜 감정을 숨긴다면, 그렇게 하는 이유가 무엇에 가깝나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "내 감정을 표현하면 관계가 깨질 것 같아 두렵다",
-                    "nextNodeId": "Q_4F",
-                    "resultId": ""
-                },
-                {
-                    "text": "어릴 때부터 감정을 드러내면 안 된다고 배웠다",
-                    "nextNodeId": "Q_4A",
-                    "resultId": ""
-                },
-                {
-                    "text": "내 감정보다 상대방의 감정이 더 중요하게 느껴진다",
-                    "nextNodeId": "Q_4F",
-                    "resultId": ""
-                },
-                {
-                    "text": "솔직하게 말했다가 거절당한 경험이 있어서 못 하겠다",
-                    "nextNodeId": "Q_4B",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_3F": {
-            "id": "Q_3F",
-            "category": "인정욕구 결핍 - 심층 탐색",
-            "text": "노력해도 알아주지 않는다는 서운함이 있다면, 인정받고 싶은 대상이 주로 누구인가요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "부모님 혹은 가족에게 인정받고 싶다",
-                    "nextNodeId": "Q_4A",
-                    "resultId": ""
-                },
-                {
-                    "text": "직장 상사나 사회적으로 나를 평가하는 사람들에게 인정받고 싶다",
-                    "nextNodeId": "Q_4C",
-                    "resultId": ""
-                },
-                {
-                    "text": "친구나 연인 등 가까운 사람에게 인정받고 싶다",
-                    "nextNodeId": "Q_4F",
-                    "resultId": ""
-                },
-                {
-                    "text": "특정 누군가가 아니라 그냥 세상에 내 존재가 의미 있길 바란다",
-                    "nextNodeId": "Q_4D",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_3G": {
-            "id": "Q_3G",
-            "category": "관계의 깊이 결핍 - 심층 탐색",
-            "text": "표면적인 관계만 있고 진짜 연결감이 없다면, 깊은 관계를 맺지 못하는 이유가 무엇 같나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "나를 깊이 보여줬다가 실망시킬까봐 두렵다",
-                    "nextNodeId": "Q_4F",
-                    "resultId": ""
-                },
-                {
-                    "text": "먼저 다가가면 부담스러워할 것 같아 망설여진다",
-                    "nextNodeId": "Q_4F",
-                    "resultId": ""
-                },
-                {
-                    "text": "깊어지려 했는데 상대가 떠나거나 배신한 경험이 있다",
-                    "nextNodeId": "Q_4B",
-                    "resultId": ""
-                },
-                {
-                    "text": "어떻게 깊은 관계를 만드는지 방법 자체를 모르겠다",
-                    "nextNodeId": "Q_4E",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_3H": {
-            "id": "Q_3H",
-            "category": "신체-심리 연결 - 심층 탐색",
-            "text": "수면, 식사 등 기본 루틴이 무너져 있다면, 그 상태가 언제부터 시작되었나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "특정 사건이나 스트레스 이후로 무너지기 시작했다",
-                    "nextNodeId": "Q_4B",
-                    "resultId": ""
-                },
-                {
-                    "text": "서서히 무너졌고 언제부터인지 정확히 모르겠다",
-                    "nextNodeId": "Q_4E",
-                    "resultId": ""
-                },
-                {
-                    "text": "오래전부터 이랬고 원래 이런 체질인 줄 알았다",
-                    "nextNodeId": "Q_4E",
-                    "resultId": ""
-                },
-                {
-                    "text": "루틴을 회복하려 시도했지만 번번이 실패했다",
-                    "nextNodeId": "Q_4E",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_3I": {
-            "id": "Q_3I",
-            "category": "정체성 혼란 - 심층 탐색",
-            "text": "'이게 내가 원하던 건가?', '나는 누구인가?'라는 혼란이 있다면, 지금까지 삶의 방향을 주로 누가 정해왔나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "부모님이나 가족의 기대에 따라 살아왔다",
-                    "nextNodeId": "Q_4A",
-                    "resultId": ""
-                },
-                {
-                    "text": "사회적으로 '성공'이라 불리는 기준을 따라왔다",
-                    "nextNodeId": "Q_4C",
-                    "resultId": ""
-                },
-                {
-                    "text": "나름 내가 선택했다고 생각했는데 돌아보니 확신이 없다",
-                    "nextNodeId": "Q_4D",
-                    "resultId": ""
-                },
-                {
-                    "text": "그냥 흘러가는 대로 살다 보니 여기까지 왔다",
-                    "nextNodeId": "Q_4D",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_4A": {
-            "id": "Q_4A",
-            "category": "원가족과 내면화된 기준 - 핵심 탐색",
-            "text": "부모님이나 어린 시절 환경이 지금의 나에게 남긴 가장 큰 영향은 무엇인가요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "조건부 사랑 - '잘해야만 사랑받는다'는 믿음이 생겼다",
-                    "nextNodeId": "Q_5A",
-                    "resultId": ""
-                },
-                {
-                    "text": "감정 억압 - '감정을 드러내면 약하다'는 메시지를 받았다",
-                    "nextNodeId": "Q_5B",
-                    "resultId": ""
-                },
-                {
-                    "text": "비교와 경쟁 - 항상 형제나 다른 아이와 비교당했다",
-                    "nextNodeId": "Q_5C",
-                    "resultId": ""
-                },
-                {
-                    "text": "방임 혹은 무관심 - 내 감정이나 필요가 자주 무시되었다",
-                    "nextNodeId": "Q_5D",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_4B": {
-            "id": "Q_4B",
-            "category": "상처와 트라우마 - 핵심 탐색",
-            "text": "자신감을 무너뜨리거나 마음에 깊이 남은 경험이 있다면, 그 이후 자신을 어떻게 대해왔나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "그 일을 계기로 더 완벽해지려고 스스로를 몰아붙였다",
-                    "nextNodeId": "Q_5C",
-                    "resultId": ""
-                },
-                {
-                    "text": "비슷한 상황을 피하기 위해 도전 자체를 줄였다",
-                    "nextNodeId": "Q_5E",
-                    "resultId": ""
-                },
-                {
-                    "text": "겉으론 괜찮은 척했지만 속으로는 계속 자책했다",
-                    "nextNodeId": "Q_5B",
-                    "resultId": ""
-                },
-                {
-                    "text": "그 경험을 제대로 소화하지 못하고 묻어둔 것 같다",
-                    "nextNodeId": "Q_5D",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_4C": {
-            "id": "Q_4C",
-            "category": "사회적 비교와 외부 기준 - 핵심 탐색",
-            "text": "남들과 비교하거나 사회적 기준을 따르는 삶에서, 지금 가장 지치는 부분은 무엇인가요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "아무리 노력해도 '충분하다'는 느낌이 오지 않는다",
-                    "nextNodeId": "Q_5C",
-                    "resultId": ""
-                },
-                {
-                    "text": "SNS나 주변 사람들의 삶과 비교할 때마다 초라해진다",
-                    "nextNodeId": "Q_5C",
-                    "resultId": ""
-                },
-                {
-                    "text": "성공해도 기쁘지 않고 다음 목표로 바로 넘어가게 된다",
-                    "nextNodeId": "Q_5A",
-                    "resultId": ""
-                },
-                {
-                    "text": "내가 진짜 원하는 것과 사회가 원하는 것이 다른 것 같다",
-                    "nextNodeId": "Q_5E",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_4D": {
-            "id": "Q_4D",
-            "category": "자기 이해와 방향성 결핍 - 핵심 탐색",
-            "text": "'내가 뭘 원하는지 모르겠다'는 상태, 지금까지 자신을 탐색해본 경험이 있나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "진지하게 나 자신에 대해 생각해본 시간이 거의 없었다",
-                    "nextNodeId": "Q_5E",
-                    "resultId": ""
-                },
-                {
-                    "text": "생각해봤지만 답이 나오지 않아 포기했다",
-                    "nextNodeId": "Q_5D",
-                    "resultId": ""
-                },
-                {
-                    "text": "원하는 게 있었는데 현실적 이유로 포기한 것들이 있다",
-                    "nextNodeId": "Q_5E",
-                    "resultId": ""
-                },
-                {
-                    "text": "원하는 것을 알면 이룰 수 없을까봐 알고 싶지 않은 것 같다",
-                    "nextNodeId": "Q_5B",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_4E": {
-            "id": "Q_4E",
-            "category": "현실적 제약과 무력감 - 핵심 탐색",
-            "text": "노력해도 달라지지 않는다는 무력감이 있다면, 현재 변화를 가로막는 가장 큰 장벽은 무엇인가요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "경제적 상황, 시간, 환경 등 외부 조건이 너무 열악하다",
-                    "nextNodeId": "Q_5F",
-                    "resultId": ""
-                },
-                {
-                    "text": "무엇을 해야 할지 알지만 실행이 안 된다",
-                    "nextNodeId": "Q_5D",
-                    "resultId": ""
-                },
-                {
-                    "text": "시작했다가 포기한 경험이 반복되어 이제 시도가 두렵다",
-                    "nextNodeId": "Q_5B",
-                    "resultId": ""
-                },
-                {
-                    "text": "도움을 받고 싶지만 어디서 어떻게 받아야 할지 모른다",
-                    "nextNodeId": "Q_5F",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_4F": {
-            "id": "Q_4F",
-            "category": "관계 속 자기 상실 - 핵심 탐색",
-            "text": "관계에서 진짜 나를 드러내지 못하거나 연결감을 느끼지 못한다면, 이상적인 관계에서 가장 원하는 것은 무엇인가요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "있는 그대로의 나를 판단 없이 받아들여 주는 것",
-                    "nextNodeId": "Q_5A",
-                    "resultId": ""
-                },
-                {
-                    "text": "내가 힘들 때 먼저 알아채고 다가와 주는 것",
-                    "nextNodeId": "Q_5A",
-                    "resultId": ""
-                },
-                {
-                    "text": "내 말을 끝까지 들어주고 공감해주는 것",
-                    "nextNodeId": "Q_5D",
-                    "resultId": ""
-                },
-                {
-                    "text": "함께 있어도 나답게 있을 수 있는 편안한 관계",
-                    "nextNodeId": "Q_5E",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_5A": {
-            "id": "Q_5A",
-            "category": "인정욕구와 조건부 자기가치 - 최종 결과",
-            "text": "지금까지의 탐색을 통해, 당신의 우울 아래에는 '조건 없이 존재 자체로 충분하다'는 느낌의 결핍이 있는 것 같습니다. 지금 이 순간 가장 필요한 것은 무엇인가요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "나 자신을 있는 그대로 인정하는 연습을 시작하고 싶다",
-                    "nextNodeId": "",
-                    "resultId": "R_SELF_ACCEPTANCE"
-                },
-                {
-                    "text": "이 감정의 뿌리를 전문가와 함께 더 깊이 탐색하고 싶다",
-                    "nextNodeId": "",
-                    "resultId": "R_THERAPY"
-                },
-                {
-                    "text": "나를 조건 없이 받아들여 주는 관계를 찾고 싶다",
-                    "nextNodeId": "",
-                    "resultId": "R_CONNECTION"
-                },
-                {
-                    "text": "일단 지금 당장 기분이 나아지는 작은 행동을 해보고 싶다",
-                    "nextNodeId": "",
-                    "resultId": "R_SMALL_ACTION"
-                }
-            ]
-        },
-        "Q_5B": {
-            "id": "Q_5B",
-            "category": "감정 억압과 자기 자책 - 최종 결과",
-            "text": "오랫동안 감정을 억누르고 스스로를 자책하느라 지쳐있으셨군요. 지금 마음의 짐을 덜기 위해 가장 시도하고 싶은 것은 무엇인가요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "혼자 억누르지 않고 안전한 곳에서 감정을 털어놓고 치유받고 싶다",
-                    "nextNodeId": "",
-                    "resultId": "R_THERAPY"
-                },
-                {
-                    "text": "나 자신을 탓하지 않고 따뜻하게 품어주는 자기자비를 배우고 싶다",
-                    "nextNodeId": "",
-                    "resultId": "R_SELF_ACCEPTANCE"
-                },
-                {
-                    "text": "감정을 표현해도 안전하다는 것을 경험할 수 있는 진실된 소통을 하고 싶다",
-                    "nextNodeId": "",
-                    "resultId": "R_CONNECTION"
-                },
-                {
-                    "text": "자책하는 생각을 멈추기 위해 몸을 움직이거나 가벼운 환기를 하고 싶다",
-                    "nextNodeId": "",
-                    "resultId": "R_SMALL_ACTION"
-                }
-            ]
-        },
-        "Q_5C": {
-            "id": "Q_5C",
-            "category": "비교와 완벽주의 - 최종 결과",
-            "text": "남들과의 비교와 완벽주의적 기준 속에서 끊임없이 스스로를 채찍질해오셨군요. 지금 당신에게 가장 필요한 전환은 무엇인가요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "외부의 평가와 무관하게 나의 고유한 가치를 세우고 싶다",
-                    "nextNodeId": "",
-                    "resultId": "R_SELF_ACCEPTANCE"
-                },
-                {
-                    "text": "완벽하지 않아도 괜찮다는 안도감을 주는 편안한 사람들과 연결되고 싶다",
-                    "nextNodeId": "",
-                    "resultId": "R_CONNECTION"
-                },
-                {
-                    "text": "내면화된 가혹한 기준을 전문가와 상담하며 내려놓고 싶다",
-                    "nextNodeId": "",
-                    "resultId": "R_THERAPY"
-                },
-                {
-                    "text": "비교를 유발하는 환경(SNS 등)을 잠시 끄고 나만의 작은 일상에 집중하고 싶다",
-                    "nextNodeId": "",
-                    "resultId": "R_SMALL_ACTION"
-                }
-            ]
-        },
-        "Q_5D": {
-            "id": "Q_5D",
-            "category": "방임과 깊은 외로움 - 최종 결과",
-            "text": "내 감정과 필요가 오랫동안 수용되지 못해 깊은 고립감과 공허함을 겪고 계십니다. 지금 이 결핍을 채우기 위해 어떤 지원을 원하시나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "나의 존재와 이야기를 있는 그대로 깊이 경청해줄 전문 상담을 원한다",
-                    "nextNodeId": "",
-                    "resultId": "R_THERAPY"
-                },
-                {
-                    "text": "진심으로 마음을 나누고 온기를 느낄 수 있는 건강한 유대관계를 맺고 싶다",
-                    "nextNodeId": "",
-                    "resultId": "R_CONNECTION"
-                },
-                {
-                    "text": "남들이 채워주지 못한 사랑을 내가 나 자신에게 먼저 건네고 싶다",
-                    "nextNodeId": "",
-                    "resultId": "R_SELF_ACCEPTANCE"
-                },
-                {
-                    "text": "막막한 고립감에서 벗어나 하루 10분 햇볕을 쬐며 걷는 것부터 시작하고 싶다",
-                    "nextNodeId": "",
-                    "resultId": "R_SMALL_ACTION"
-                }
-            ]
-        },
-        "Q_5E": {
-            "id": "Q_5E",
-            "category": "자기 상실과 삶의 방향성 - 최종 결과",
-            "text": "타인의 기대에 맞추느라 정작 '내가 누구이며 무엇을 원하는지' 잃어버리셨군요. 잃어버린 나를 되찾기 위해 지금 가장 필요한 것은 무엇인가요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "내가 좋아하는 것과 내 감정을 하나씩 찾아가는 작은 탐색을 시작하고 싶다",
-                    "nextNodeId": "",
-                    "resultId": "R_SMALL_ACTION"
-                },
-                {
-                    "text": "역할이나 기대 밖에서도 충분히 존귀한 나 자신을 발견하고 수용하고 싶다",
-                    "nextNodeId": "",
-                    "resultId": "R_SELF_ACCEPTANCE"
-                },
-                {
-                    "text": "나의 정체성과 가치관을 체계적으로 탐색하는 라이프 코칭이나 전문 상담을 받고 싶다",
-                    "nextNodeId": "",
-                    "resultId": "R_THERAPY"
-                },
-                {
-                    "text": "가면을 쓰지 않고도 솔직한 내 모습을 보여줄 수 있는 지지적인 친구를 만나고 싶다",
-                    "nextNodeId": "",
-                    "resultId": "R_CONNECTION"
-                }
-            ]
-        },
-        "Q_5F": {
-            "id": "Q_5F",
-            "category": "현실적 압박과 극심한 무력감 - 최종 결과",
-            "text": "복합적인 현실 여건과 무력감 속에서 혼자 감당하기 어려운 한계에 부딪힌 상태입니다. 지금 가장 안전하고 실질적인 해결책은 무엇인가요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "위기 상태에서 벗어날 수 있도록 공공 지원이나 전문 치료 기관의 도움을 즉시 받고 싶다",
-                    "nextNodeId": "",
-                    "resultId": "R_THERAPY"
-                },
-                {
-                    "text": "압도당하지 않도록 오늘 당장 할 수 있는 최소한의 일상 루틴 하나만 회복하고 싶다",
-                    "nextNodeId": "",
-                    "resultId": "R_SMALL_ACTION"
-                },
-                {
-                    "text": "혼자 고립되어 끙끙 앓지 않고 가족이나 지인에게 나의 어려운 상황을 솔직히 알리고 싶다",
-                    "nextNodeId": "",
-                    "resultId": "R_CONNECTION"
-                },
-                {
-                    "text": "힘겨운 상황 속에서도 버텨내고 있는 내 자신을 탓하지 않고 위로하고 싶다",
-                    "nextNodeId": "",
-                    "resultId": "R_SELF_ACCEPTANCE"
-                }
-            ]
+        {
+          "text": "여러 문제가 겹쳐 아직 구분하기 어려워요",
+          "resultId": "R_UNCLEAR"
         }
+      ]
     },
-    "solutions": {
-        "R_SELF_ACCEPTANCE": {
-            "title": "자기 자비 기반의 무조건적 자기가치 재건",
-            "diagnosis": "조건부 인정과 사회적 비교로 인해 '있는 그대로의 나'를 수용하지 못하고 깊은 공허와 우울을 겪는 상태입니다.",
-            "cbt_analysis": "'성취해야만, 혹은 남에게 인정받아야만 가치 있다'는 조건부 자기가치 도식이 내면화되어 있습니다.",
-            "short_term_action": "성과와 상관없이 오늘 내가 스스로를 향해 건넬 수 있는 따뜻한 한 문장을 적어보세요.",
-            "mid_term_action": "크리스틴 네프의 자기자비(Self-Compassion) 훈련을 통해 존재 자체를 긍정하는 인지 구조를 확립하세요."
+    "Q_CONTEXT_1": {
+      "text": "어떤 변화가 가장 크게 느껴지나요?",
+      "options": [
+        {
+          "text": "씻기·식사·출근 같은 기본적인 일도 버거워요",
+          "resultId": "R_01"
         },
-        "R_THERAPY": {
-            "title": "심층 인지치료 및 정서 치유 전문 개입",
-            "diagnosis": "과거 상처, 누적된 무력감, 정서 억압이 만성화되어 혼자만의 힘으로는 인지적 왜곡을 해소하기 어려운 상태입니다.",
-            "cbt_analysis": "파국화 사고와 학습된 무기력이 뇌의 전두엽 기능을 억제하고 부정적 정서 고리를 강화하고 있습니다.",
-            "short_term_action": "오늘 전문 심리상담 센터 또는 정신건강의학과에 예약 문의를 남겨 전문가와의 접점을 만드세요.",
-            "mid_term_action": "인지행동치료(CBT) 또는 수용전념치료(ACT) 프로그램을 통해 핵심 신념을 근본적으로 재구조화하세요."
+        {
+          "text": "잠이나 식사 패턴이 달라지고 몸도 무거워요",
+          "resultId": "R_02"
         },
-        "R_CONNECTION": {
-            "title": "정서적 고립 탈출과 진실된 사회적 연결",
-            "diagnosis": "관계 안에서 가면을 쓰고 맞추느라 깊은 외로움을 느끼며 정서적 단절 상태에 놓여 있습니다.",
-            "cbt_analysis": "'있는 그대로의 나를 드러내면 거절당할 것이다'라는 관계 파국화 신념이 진정한 연결을 차단합니다.",
-            "short_term_action": "신뢰할 수 있는 사람 1명에게 나의 현재 힘든 기분을 가감 없이 한 문장으로 전해보세요.",
-            "mid_term_action": "판단 없는 공감 집단 프로그램에 참여해 취약성을 드러내도 안전하다는 교정적 정서 경험을 쌓으세요."
-        },
-        "R_SMALL_ACTION": {
-            "title": "행동 활성화를 통한 무기력과 반추 단절",
-            "diagnosis": "부정적 생각의 반추와 신체적 무기력이 상호작용하여 우울의 늪에서 빠져나오지 못하는 상태입니다.",
-            "cbt_analysis": "'의욕이 생겨야 움직인다'는 생각은 왜곡입니다. 행동이 아주 작게라도 먼저 일어나야 도파민이 분비됩니다.",
-            "short_term_action": "지금 자리에서 일어나 물 한 잔을 마시거나 창문을 열고 3분간 심호흡을 하세요.",
-            "mid_term_action": "하루 10분 산책, 가벼운 스트레칭 등 '실패하기 불가능할 정도로 작은' 일상 루틴을 꾸준히 누적하세요."
+        {
+          "text": "둘 다 맞지 않거나 아직 잘 모르겠어요",
+          "resultId": "R_UNCLEAR"
         }
+      ]
     },
-    "matchings": {
-        "R_SELF_ACCEPTANCE": {
-            "primaryRecommendation": {
-                "service": "마음챙김 명상 앱 마보 (자기자비 프로그램)",
-                "description": "비교 강박 완화 및 존재 자체의 가치를 수용하는 데일리 명상"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "트로스트 1:1 심리상담 (자존감 재건)",
-                    "description": "조건부 자기가치 도식 교정 전문 개인상담"
-                }
-            ]
+    "Q_CONTEXT_2": {
+      "text": "외로움이 나타나는 상황은 무엇인가요?",
+      "options": [
+        {
+          "text": "혼자 있을 때 공허하고 연락할 사람이 떠오르지 않아요",
+          "resultId": "R_03"
         },
-        "R_THERAPY": {
-            "primaryRecommendation": {
-                "service": "마음이음 CBT 임상 심리상담",
-                "description": "만성 우울 및 인지 왜곡 교정을 위한 공인 임상심리 전문가 1:1 치료"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "정신건강복지센터 (1577-0199)",
-                    "description": "공공 정신건강 평가 및 위기 상담 지원"
-                }
-            ]
+        {
+          "text": "사람들과 있어도 맞춰주기만 해서 더 지쳐요",
+          "resultId": "R_04"
         },
-        "R_CONNECTION": {
-            "primaryRecommendation": {
-                "service": "마인드카페 비대면 집단상담",
-                "description": "동일한 고민을 가진 사람들과 안전하게 정서를 공유하는 공감 커뮤니티"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "소모임 가치관 기반 독서/취미 모임",
-                    "description": "가면 없는 자연스러운 유대감을 형성하는 소규모 오프라인 연결"
-                }
-            ]
-        },
-        "R_SMALL_ACTION": {
-            "primaryRecommendation": {
-                "service": "루티너리(Routinery) 행동 활성화 습관 앱",
-                "description": "무기력을 깨는 초소형 루틴(물 마시기, 햇볕 쬐기) 알림 및 타이머"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "나이키 런 클럽 (가벼운 걷기 코칭)",
-                    "description": "정서적 반추를 끊어내는 10분 일상 걷기 오디오 가이드"
-                }
-            ]
+        {
+          "text": "둘 다 맞지 않거나 아직 잘 모르겠어요",
+          "resultId": "R_UNCLEAR"
         }
+      ]
+    },
+    "Q_CONTEXT_3": {
+      "text": "어떤 생각이 일상을 붙잡나요?",
+      "options": [
+        {
+          "text": "실수나 후회가 계속 떠올라 다른 일을 못 해요",
+          "resultId": "R_05"
+        },
+        {
+          "text": "좋아하던 것도 재미없고 앞으로의 의미가 안 느껴져요",
+          "resultId": "R_06"
+        },
+        {
+          "text": "둘 다 맞지 않거나 아직 잘 모르겠어요",
+          "resultId": "R_UNCLEAR"
+        }
+      ]
+    },
+    "Q_CONTEXT_4": {
+      "text": "도움을 받기 어렵게 하는 것은 무엇인가요?",
+      "options": [
+        {
+          "text": "비용이나 예약·설명 부담 때문에 상담을 미루고 있어요",
+          "resultId": "R_07"
+        },
+        {
+          "text": "이미 상담·치료를 받고 있는데 효과가 불분명해요",
+          "resultId": "R_08"
+        },
+        {
+          "text": "둘 다 맞지 않거나 아직 잘 모르겠어요",
+          "resultId": "R_UNCLEAR"
+        }
+      ]
+    },
+    "Q_START": {
+      "text": "현재 안전을 먼저 확인합니다. 이 사이트는 실시간 응급 대응을 제공하지 않습니다.",
+      "options": [
+        {
+          "text": "나나 다른 사람을 다칠 위험, 폭력·위협 등으로 즉각적인 도움이 필요해요",
+          "resultId": "R_PRIORITY"
+        },
+        {
+          "text": "현재 즉각적인 위험은 없고 상황을 살펴보고 싶어요",
+          "nextNodeId": "Q_FOCUS"
+        }
+      ]
     }
+  },
+  "solutions": {
+    "R_01": {
+      "title": "기본 생활을 줄여서 유지하고 평가 연결하기",
+      "diagnosis": "현재 선택하신 상황은 ‘씻기·식사·출근 같은 기본적인 일도 버거워요’입니다. 아래 계획은 이 응답에 맞춘 출발점이며, 확인하지 않은 성격이나 원인을 단정하지 않습니다.",
+      "cbt_analysis": "기본 기능이 어려워진 상태를 의지 부족으로 볼 수 없습니다. 생활 부담을 낮추면서 현재 상태를 평가받는 것이 필요합니다.",
+      "short_term_action": "오늘 필요한 일 중 식사·씻기·필수 연락 하나를 골라 가장 작은 단계로 하세요. 혼자 어렵다면 신뢰하는 사람에게 구체적인 도움을 부탁하고 상담·진료 예약을 함께 준비하세요.",
+      "mid_term_action": "변화의 시작과 일상 영향을 의료진이나 상담자에게 설명하세요. 상태가 악화되거나 안전을 유지하기 어렵다면 예약 날짜까지 기다리지 말고 즉각적인 도움을 요청하세요."
+    },
+    "R_02": {
+      "title": "몸의 변화까지 함께 설명할 자료 만들기",
+      "diagnosis": "현재 선택하신 상황은 ‘잠이나 식사 패턴이 달라지고 몸도 무거워요’입니다. 아래 계획은 이 응답에 맞춘 출발점이며, 확인하지 않은 성격이나 원인을 단정하지 않습니다.",
+      "cbt_analysis": "기분과 신체 변화가 함께 있을 때 원인을 혼자 정하기 어렵습니다. 수면·건강·약물·생활 변화 등을 함께 살펴야 합니다.",
+      "short_term_action": "최근 수면과 식사, 복용약 변화, 시작 시점을 간단히 적고 진료를 문의하세요. 오늘은 무리한 생활 개편보다 가능한 식사와 휴식 일정을 하나씩 유지해 보세요.",
+      "mid_term_action": "치료 중이라면 변화와 불편을 담당자에게 알리고 약을 임의로 바꾸지 마세요. 기록이 부담되면 하루 한 줄 정도로 줄이거나 예약 때 말로 설명해도 됩니다."
+    },
+    "R_03": {
+      "title": "넓은 관계보다 연결 하나 만들기",
+      "diagnosis": "현재 선택하신 상황은 ‘혼자 있을 때 공허하고 연락할 사람이 떠오르지 않아요’입니다. 아래 계획은 이 응답에 맞춘 출발점이며, 확인하지 않은 성격이나 원인을 단정하지 않습니다.",
+      "cbt_analysis": "혼자 있는 시간의 공허함을 개인의 가치나 매력과 연결할 필요는 없습니다. 부담이 작은 접촉부터 만들 수 있습니다.",
+      "short_term_action": "연락해도 비교적 편한 사람 한 명에게 잠깐 이야기하거나 함께 식사할 수 있는지 구체적으로 물어보세요. 떠오르는 사람이 없으면 지역 지원기관의 초기 상담을 문의할 수 있습니다.",
+      "mid_term_action": "한 번의 반응으로 관계 전체를 평가하지 말고 가능한 연락 방식과 시간을 조정하세요. 외로움과 함께 생활 기능 저하가 지속되면 전문적인 도움을 병행하세요."
+    },
+    "R_04": {
+      "title": "접촉의 양보다 관계에서 필요한 도움 말하기",
+      "diagnosis": "현재 선택하신 상황은 ‘사람들과 있어도 맞춰주기만 해서 더 지쳐요’입니다. 아래 계획은 이 응답에 맞춘 출발점이며, 확인하지 않은 성격이나 원인을 단정하지 않습니다.",
+      "cbt_analysis": "사람을 많이 만난다고 정서적으로 연결되는 것은 아닙니다. 부담되는 역할과 원하는 지원이 다를 수 있습니다.",
+      "short_term_action": "안전한 사람 한 명에게 조언보다는 잠깐 들어주었으면 한다고 말해 보세요. 이번 주에는 에너지가 많이 드는 만남 하나를 줄이고 회복 시간을 확보하세요.",
+      "mid_term_action": "상대가 요청을 존중하는지 확인하세요. 모든 관계에서 자신의 마음을 숨기게 된다면 상담에서 구체적인 장면과 경계를 함께 살펴볼 수 있습니다."
+    },
+    "R_05": {
+      "title": "반복 생각과 실제 해결할 일을 나누기",
+      "diagnosis": "현재 선택하신 상황은 ‘실수나 후회가 계속 떠올라 다른 일을 못 해요’입니다. 아래 계획은 이 응답에 맞춘 출발점이며, 확인하지 않은 성격이나 원인을 단정하지 않습니다.",
+      "cbt_analysis": "후회를 반복한다고 과거가 수정되지는 않지만, 그 생각을 멈추기 어려운 상태 자체가 힘들 수 있습니다. 스스로를 꾸짖는 방식은 부담을 더할 수 있습니다.",
+      "short_term_action": "떠오른 일에서 지금 수정할 수 있는 행동 하나가 있는지 적으세요. 있다면 작은 실행 시간을 정하고, 없다면 현재 하는 짧은 활동으로 주의를 돌려 보세요.",
+      "mid_term_action": "생각을 억지로 없앴는지보다 일상으로 돌아올 수 있었는지 확인하세요. 반복 생각이 수면·일·관계를 계속 방해하면 상담이나 진료에서 함께 다루세요."
+    },
+    "R_06": {
+      "title": "의미를 찾아내기보다 상태 평가와 작은 접촉부터",
+      "diagnosis": "현재 선택하신 상황은 ‘좋아하던 것도 재미없고 앞으로의 의미가 안 느껴져요’입니다. 아래 계획은 이 응답에 맞춘 출발점이며, 확인하지 않은 성격이나 원인을 단정하지 않습니다.",
+      "cbt_analysis": "흥미 저하와 막막함은 여러 이유로 나타날 수 있습니다. 이 답변으로 원인을 확정하거나 감사하는 마음이 부족하다고 설명하지 않겠습니다.",
+      "short_term_action": "이런 변화가 언제부터인지, 줄어든 활동은 무엇인지 적고 상담·진료를 문의하세요. 오늘은 즐거워야 한다는 목표 없이 익숙한 활동 하나를 짧게 접해 보세요.",
+      "mid_term_action": "활동 후 기분이 바로 좋아지지 않아도 실패는 아닙니다. 평가와 지원 계획을 이어 가고 안전이 걱정될 정도로 상태가 나빠지면 즉시 사람의 도움을 요청하세요."
+    },
+    "R_07": {
+      "title": "상담의 첫 단계를 작은 문의로 줄이기",
+      "diagnosis": "현재 선택하신 상황은 ‘비용이나 예약·설명 부담 때문에 상담을 미루고 있어요’입니다. 아래 계획은 이 응답에 맞춘 출발점이며, 확인하지 않은 성격이나 원인을 단정하지 않습니다.",
+      "cbt_analysis": "도움을 받고 싶어도 비용·시간·설명 부담이 장벽이 될 수 있습니다. 도움 요청 자체를 의지 시험으로 만들 필요는 없습니다.",
+      "short_term_action": "기관 한 곳에 비용·예약 가능 시간·초기 상담 절차를 문의하세요. 말하기 어렵다면 최근 달라진 점 세 줄을 써서 가져가거나 신뢰하는 사람에게 예약을 도와 달라고 요청하세요.",
+      "mid_term_action": "제공 범위와 담당자의 자격, 비밀보장 범위를 확인하세요. 한 기관의 대기나 비용 때문에 도움 전체를 포기하지 말고 지역 공공 지원도 함께 알아보세요."
+    },
+    "R_08": {
+      "title": "변화와 불편을 담당자에게 구체적으로 공유하기",
+      "diagnosis": "현재 선택하신 상황은 ‘이미 상담·치료를 받고 있는데 효과가 불분명해요’입니다. 아래 계획은 이 응답에 맞춘 출발점이며, 확인하지 않은 성격이나 원인을 단정하지 않습니다.",
+      "cbt_analysis": "효과를 느끼지 못하는 상황은 혼자 견디거나 치료를 갑자기 중단할 이유로만 다룰 수 없습니다. 목표와 계획을 함께 점검해야 합니다.",
+      "short_term_action": "시작 이후 달라진 점·달라지지 않은 점·불편한 점을 적어 다음 상담이나 진료에서 설명하세요. 어떤 변화를 언제 다시 평가할지 질문하세요.",
+      "mid_term_action": "필요한 조정은 담당자와 논의하고 약을 임의로 끊거나 바꾸지 마세요. 설명이 충분하지 않다면 기록을 갖고 다른 전문 의견을 구할 수 있습니다."
+    },
+    "R_UNCLEAR": {
+      "title": "분류를 서두르지 않고 최근 장면부터 정리하기",
+      "diagnosis": "제시된 선택지로 현재 상황을 충분히 설명하기 어렵다고 선택하셨습니다. 억지로 한 유형에 맞출 필요는 없습니다.",
+      "cbt_analysis": "확인된 사실과 추측, 생활에 생긴 영향을 분리하면 다음에 물어볼 질문이 구체적이 됩니다. 이 결과는 특정 심리 원인을 뜻하지 않습니다.",
+      "short_term_action": "최근 힘들었던 장면 하나의 날짜·상황·실제 일어난 일을 적으세요. 가장 불편했던 점과 원하는 변화 하나를 따로 적고, 지금 필요한 것이 정보·실행 도움·정서적 지지 중 무엇인지 생각해 보세요.",
+      "mid_term_action": "다음에 비슷한 일이 생기면 같은 조건이 반복되는지 비교하세요. 혼자 정리가 어렵거나 생활에 지장이 크면 메모를 가지고 관련 지원기관에 초기 상담을 요청하세요."
+    },
+    "R_PRIORITY": {
+      "title": "지금은 안전과 직접적인 도움을 먼저",
+      "diagnosis": "즉각적인 도움이 필요한 상황을 선택하셨습니다. 질문을 더 진행하기보다 현재의 안전을 확보하는 것이 먼저입니다.",
+      "cbt_analysis": "이 화면만으로 위험의 원인과 정도를 평가할 수 없습니다. 원인을 설명하거나 혼자 버티려 하기보다 사람의 도움을 받으세요.",
+      "short_term_action": "가능하면 위험한 상황에서 벗어나 안전한 곳에서 신뢰하는 사람에게 현재 상황을 알리고 곁에 있어 달라고 요청하세요. 위험이 임박했거나 심각한 신체 증상이 있으면 현지 응급서비스의 도움을 받으세요.",
+      "mid_term_action": "안전을 확보한 뒤 관련 전문가와 치료·보호·생활 지원 계획을 세우세요. 관계의 위협이 있는 경우 혼자 대면하거나 공동 상담을 먼저 시도하지 말고 개별 지원을 요청하세요."
+    }
+  },
+  "matchings": {
+    "R_01": {
+      "primaryRecommendation": {
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "이 경로에서는 기본 생활을 줄여서 유지하고 평가 연결하기에 필요한 정보나 지원을 먼저 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
+      },
+      "supplementaryRecommendations": []
+    },
+    "R_02": {
+      "primaryRecommendation": {
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "이 경로에서는 몸의 변화까지 함께 설명할 자료 만들기에 필요한 정보나 지원을 먼저 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
+      },
+      "supplementaryRecommendations": []
+    },
+    "R_03": {
+      "primaryRecommendation": {
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "이 경로에서는 넓은 관계보다 연결 하나 만들기에 필요한 정보나 지원을 먼저 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
+      },
+      "supplementaryRecommendations": []
+    },
+    "R_04": {
+      "primaryRecommendation": {
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "이 경로에서는 접촉의 양보다 관계에서 필요한 도움 말하기에 필요한 정보나 지원을 먼저 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
+      },
+      "supplementaryRecommendations": []
+    },
+    "R_05": {
+      "primaryRecommendation": {
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "이 경로에서는 반복 생각과 실제 해결할 일을 나누기에 필요한 정보나 지원을 먼저 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
+      },
+      "supplementaryRecommendations": []
+    },
+    "R_06": {
+      "primaryRecommendation": {
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "이 경로에서는 의미를 찾아내기보다 상태 평가와 작은 접촉부터에 필요한 정보나 지원을 먼저 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
+      },
+      "supplementaryRecommendations": []
+    },
+    "R_07": {
+      "primaryRecommendation": {
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "이 경로에서는 상담의 첫 단계를 작은 문의로 줄이기에 필요한 정보나 지원을 먼저 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
+      },
+      "supplementaryRecommendations": []
+    },
+    "R_08": {
+      "primaryRecommendation": {
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "이 경로에서는 변화와 불편을 담당자에게 구체적으로 공유하기에 필요한 정보나 지원을 먼저 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
+      },
+      "supplementaryRecommendations": []
+    },
+    "R_UNCLEAR": {
+      "primaryRecommendation": {
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "상황을 구체적으로 정리할 정보나 초기 지원을 찾기 위한 선택지입니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
+      },
+      "supplementaryRecommendations": []
+    },
+    "R_PRIORITY": {
+      "primaryRecommendation": {
+        "service": "직접적인 의료·보호 지원",
+        "description": "위급한 경우 현지 응급서비스에 도움을 요청하세요. 이 화면의 링크 검색을 위해 도움 요청을 늦추지 마세요.",
+        "relationship": "guidance"
+      },
+      "supplementaryRecommendations": []
+    }
+  }
 }

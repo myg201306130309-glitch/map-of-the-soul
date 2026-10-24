@@ -1,1000 +1,295 @@
 {
-    "questions": {
-        "Q_START": {
-            "id": "Q_START",
-            "category": "완벽주의",
-            "text": "완벽하게 해내야 한다는 압박감이 가장 강하게 느껴지는 상황은 어떤 건가요?",
-            "isRoot": true,
-            "branches": [
-                {
-                    "text": "일이나 학업에서 성과를 낼 때",
-                    "nextNodeId": "Q_2A",
-                    "resultId": ""
-                },
-                {
-                    "text": "다른 사람들과 관계를 맺거나 평가받을 때",
-                    "nextNodeId": "Q_2B",
-                    "resultId": ""
-                },
-                {
-                    "text": "나 자신의 모습이나 생활 방식을 돌아볼 때",
-                    "nextNodeId": "Q_2C",
-                    "resultId": ""
-                }
-            ]
+  "meta": {
+    "schema_version": "3.0",
+    "revision": "2026-10-18-full-v1",
+    "category": "완벽해야 한다는 부담",
+    "notice": "선택한 상황에 맞춘 자기이해·행동 안내입니다. 의학적 진단, 개인별 투자 권유 또는 법률 판단을 대신하지 않습니다.",
+    "clinical_validation": "임상적으로 타당화된 검사 아님; 전문가 검토 전 편집 초안",
+    "sources": [
+      "https://www.mentalhealth.go.kr/",
+      "https://www.work24.go.kr/",
+      "https://www.familynet.or.kr/"
+    ],
+    "source_scope": "기관의 공식 역할과 일반 원칙을 참고했습니다. 개별 분기·행동 계획의 효과가 검증됐다는 뜻은 아닙니다.",
+    "category_id": "perfection"
+  },
+  "questions": {
+    "Q_START": {
+      "text": "완벽해야 한다는 부담에서 오늘 먼저 다루고 싶은 부분을 골라 주세요. 여러 가지라면 현재 생활에 가장 영향을 주는 것부터 선택해 주세요.",
+      "options": [
+        {
+          "text": "시작·제출이 늦어져요",
+          "nextNodeId": "Q_CONTEXT_1"
         },
-        "Q_2A": {
-            "id": "Q_2A",
-            "category": "완벽주의",
-            "text": "일이나 학업에서 완벽해야 한다는 압박이 생길 때, 주로 어떤 반응이 나타나나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "시작 자체가 두려워서 미루거나 회피하게 된다",
-                    "nextNodeId": "Q_3A",
-                    "resultId": ""
-                },
-                {
-                    "text": "시작은 하지만 중간에 포기하거나 번아웃이 온다",
-                    "nextNodeId": "Q_3B",
-                    "resultId": ""
-                },
-                {
-                    "text": "끝까지 하긴 하는데 결과에 늘 불만족스럽다",
-                    "nextNodeId": "Q_3C",
-                    "resultId": ""
-                }
-            ]
+        {
+          "text": "실수나 평가가 두려워요",
+          "nextNodeId": "Q_CONTEXT_2"
         },
-        "Q_2B": {
-            "id": "Q_2B",
-            "category": "완벽주의",
-            "text": "다른 사람들과의 관계에서 완벽해야 한다는 느낌은 주로 어디서 비롯되나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "타인의 기대나 시선이 두렵고 실망시킬까 봐 불안하다",
-                    "nextNodeId": "Q_3D",
-                    "resultId": ""
-                },
-                {
-                    "text": "내가 먼저 높은 기준을 세우고 그걸 지키려 한다",
-                    "nextNodeId": "Q_3E",
-                    "resultId": ""
-                }
-            ]
+        {
+          "text": "쉬거나 맡기는 것이 어려워요",
+          "nextNodeId": "Q_CONTEXT_3"
         },
-        "Q_2C": {
-            "id": "Q_2C",
-            "category": "완벽주의",
-            "text": "자신의 모습을 돌아볼 때 완벽해야 한다는 생각은 어떤 형태로 나타나나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "외모, 건강, 생활습관 등 자기 관리에서 기준이 너무 높다",
-                    "nextNodeId": "Q_3F",
-                    "resultId": ""
-                },
-                {
-                    "text": "감정이나 생각 자체도 '올바르게' 느껴야 한다는 압박이 있다",
-                    "nextNodeId": "Q_3G",
-                    "resultId": ""
-                }
-            ]
+        {
+          "text": "성과가 나와도 편하지 않아요",
+          "nextNodeId": "Q_CONTEXT_4"
         },
-        "Q_3A": {
-            "id": "Q_3A",
-            "category": "완벽주의",
-            "text": "시작을 미루게 될 때, 그 두려움의 핵심은 무엇에 가깝나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "실패했을 때 나 자신이 무너질 것 같은 두려움",
-                    "nextNodeId": "Q_4A",
-                    "resultId": ""
-                },
-                {
-                    "text": "실패가 다른 사람들에게 알려질 것 같은 두려움",
-                    "nextNodeId": "Q_4B",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_3B": {
-            "id": "Q_3B",
-            "category": "완벽주의",
-            "text": "중간에 번아웃이 올 때, 자신에게 어떤 말을 하게 되나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "'이 정도밖에 못 하는 나는 부족해'라고 자책한다",
-                    "nextNodeId": "Q_4C",
-                    "resultId": ""
-                },
-                {
-                    "text": "'이렇게까지 해야 하나'라는 회의감과 무기력함이 온다",
-                    "nextNodeId": "Q_4D",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_3C": {
-            "id": "Q_3C",
-            "category": "완벽주의",
-            "text": "결과에 불만족스러울 때, 그 감정이 이후 행동에 어떤 영향을 주나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "더 높은 기준을 세우고 다시 도전하려 한다",
-                    "nextNodeId": "Q_4E",
-                    "resultId": ""
-                },
-                {
-                    "text": "의욕이 떨어지고 다음 시도가 더 두려워진다",
-                    "nextNodeId": "Q_4F",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_3D": {
-            "id": "Q_3D",
-            "category": "완벽주의",
-            "text": "타인의 실망이 두려울 때, 그 감정이 관계에서 어떻게 나타나나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "거절하지 못하고 무리한 요구도 들어주게 된다",
-                    "nextNodeId": "Q_4G",
-                    "resultId": ""
-                },
-                {
-                    "text": "관계 자체를 피하거나 깊어지는 것을 두려워한다",
-                    "nextNodeId": "Q_4H",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_3E": {
-            "id": "Q_3E",
-            "category": "완벽주의",
-            "text": "스스로 높은 기준을 세울 때, 그 기준은 주로 어디서 왔다고 느끼나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "어릴 때부터 형성된 가족이나 환경의 영향인 것 같다",
-                    "nextNodeId": "Q_4I",
-                    "resultId": ""
-                },
-                {
-                    "text": "나 자신이 그렇게 되고 싶어서 스스로 만든 기준이다",
-                    "nextNodeId": "Q_4J",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_3F": {
-            "id": "Q_3F",
-            "category": "완벽주의",
-            "text": "자기 관리에서 기준을 못 지켰을 때 어떤 감정이 드나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "심한 죄책감과 자기혐오가 밀려온다",
-                    "nextNodeId": "Q_4K",
-                    "resultId": ""
-                },
-                {
-                    "text": "무너진 것 같아서 모든 걸 포기하고 싶어진다",
-                    "nextNodeId": "Q_4L",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_3G": {
-            "id": "Q_3G",
-            "category": "완벽주의",
-            "text": "감정이나 생각도 '올바르게' 느껴야 한다는 압박은 어떤 형태인가요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "부정적인 감정을 느끼는 자체가 잘못된 것 같아 억누른다",
-                    "nextNodeId": "Q_4M",
-                    "resultId": ""
-                },
-                {
-                    "text": "내 생각이나 판단이 틀릴까 봐 결정을 내리지 못한다",
-                    "nextNodeId": "Q_4N",
-                    "resultId": ""
-                }
-            ]
-        },
-        "Q_4A": {
-            "id": "Q_4A",
-            "category": "완벽주의",
-            "text": "실패했을 때 자신이 무너질 것 같다는 느낌, 그 감각이 지금 삶에 얼마나 영향을 주고 있나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "거의 매일 무언가를 시작하는 것 자체가 힘들다",
-                    "nextNodeId": "",
-                    "resultId": "R_01"
-                },
-                {
-                    "text": "특정 상황에서만 그 두려움이 강하게 올라온다",
-                    "nextNodeId": "",
-                    "resultId": "R_02"
-                }
-            ]
-        },
-        "Q_4B": {
-            "id": "Q_4B",
-            "category": "완벽주의",
-            "text": "실패가 타인에게 알려지는 것이 두려울 때, 가장 신경 쓰이는 대상은 누구인가요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "가족이나 가까운 사람들의 시선이 가장 두렵다",
-                    "nextNodeId": "",
-                    "resultId": "R_03"
-                },
-                {
-                    "text": "직장 동료나 사회적 관계에서의 평판이 더 두렵다",
-                    "nextNodeId": "",
-                    "resultId": "R_04"
-                }
-            ]
-        },
-        "Q_4C": {
-            "id": "Q_4C",
-            "category": "완벽주의",
-            "text": "자책이 반복될 때, 그 자책의 목소리는 어떤 느낌인가요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "마치 오래전부터 내 안에 있던 익숙한 목소리 같다",
-                    "nextNodeId": "",
-                    "resultId": "R_05"
-                },
-                {
-                    "text": "최근 들어 더 심해진 것 같고 낯설게 느껴진다",
-                    "nextNodeId": "",
-                    "resultId": "R_06"
-                }
-            ]
-        },
-        "Q_4D": {
-            "id": "Q_4D",
-            "category": "완벽주의",
-            "text": "회의감과 무기력함이 올 때, 그 감정이 얼마나 지속되나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "며칠씩 지속되며 일상 전반에 영향을 준다",
-                    "nextNodeId": "",
-                    "resultId": "R_07"
-                },
-                {
-                    "text": "잠깐 왔다가 다시 억지로 털고 일어나는 편이다",
-                    "nextNodeId": "",
-                    "resultId": "R_08"
-                }
-            ]
-        },
-        "Q_4E": {
-            "id": "Q_4E",
-            "category": "완벽주의",
-            "text": "더 높은 기준을 세우고 다시 도전할 때, 그 과정에서 어떤 감정이 드나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "설레기보다는 또 다른 압박감이 먼저 온다",
-                    "nextNodeId": "",
-                    "resultId": "R_09"
-                },
-                {
-                    "text": "도전 자체에서 에너지를 얻는 편이지만 지칠 때가 있다",
-                    "nextNodeId": "",
-                    "resultId": "R_10"
-                }
-            ]
-        },
-        "Q_4F": {
-            "id": "Q_4F",
-            "category": "완벽주의",
-            "text": "다음 시도가 두려워질 때, 자신을 다시 움직이게 하는 것은 무엇인가요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "외부의 마감이나 압박이 없으면 좀처럼 시작하기 어렵다",
-                    "nextNodeId": "",
-                    "resultId": "R_11"
-                },
-                {
-                    "text": "스스로 동기를 찾으려 하지만 점점 더 힘들어지고 있다",
-                    "nextNodeId": "",
-                    "resultId": "R_12"
-                }
-            ]
-        },
-        "Q_4G": {
-            "id": "Q_4G",
-            "category": "완벽주의",
-            "text": "무리한 요구도 들어주게 될 때, 그 이후 자신에게 어떤 감정이 남나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "억울하고 지치지만 거절했을 때의 불안이 더 클 것 같다",
-                    "nextNodeId": "",
-                    "resultId": "R_13"
-                },
-                {
-                    "text": "잘 해줬다는 안도감이 있지만 나 자신은 소진된다",
-                    "nextNodeId": "",
-                    "resultId": "R_14"
-                }
-            ]
-        },
-        "Q_4H": {
-            "id": "Q_4H",
-            "category": "완벽주의",
-            "text": "관계가 깊어지는 것이 두려울 때, 그 두려움의 핵심은 무엇인가요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "가까워질수록 내 부족한 모습이 드러날 것 같다",
-                    "nextNodeId": "",
-                    "resultId": "R_15"
-                },
-                {
-                    "text": "상대의 기대를 충족시키지 못할까 봐 미리 거리를 둔다",
-                    "nextNodeId": "",
-                    "resultId": "R_16"
-                }
-            ]
-        },
-        "Q_4I": {
-            "id": "Q_4I",
-            "category": "완벽주의",
-            "text": "가족이나 환경의 영향으로 형성된 기준, 지금 그 기준에 대해 어떻게 느끼나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "벗어나고 싶지만 어떻게 해야 할지 모르겠다",
-                    "nextNodeId": "",
-                    "resultId": "R_17"
-                },
-                {
-                    "text": "그 기준이 나를 지탱해 주기도 하지만 너무 무겁다",
-                    "nextNodeId": "",
-                    "resultId": "R_18"
-                }
-            ]
-        },
-        "Q_4J": {
-            "id": "Q_4J",
-            "category": "완벽주의",
-            "text": "스스로 만든 높은 기준, 그 기준이 지금의 나에게 어떤 역할을 하고 있나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "나를 성장시키는 원동력이지만 동시에 나를 가장 힘들게 한다",
-                    "nextNodeId": "",
-                    "resultId": "R_19"
-                },
-                {
-                    "text": "기준을 낮추면 내가 나태해질 것 같아서 놓지 못하고 있다",
-                    "nextNodeId": "",
-                    "resultId": "R_20"
-                }
-            ]
-        },
-        "Q_4K": {
-            "id": "Q_4K",
-            "category": "완벽주의",
-            "text": "자기혐오가 밀려올 때, 그 감정을 어떻게 다루고 있나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "혼자 삭이거나 더 강하게 자신을 몰아붙인다",
-                    "nextNodeId": "",
-                    "resultId": "R_21"
-                },
-                {
-                    "text": "감정을 표현하거나 해소할 방법을 찾지 못해 막막하다",
-                    "nextNodeId": "",
-                    "resultId": "R_22"
-                }
-            ]
-        },
-        "Q_4L": {
-            "id": "Q_4L",
-            "category": "완벽주의",
-            "text": "모든 걸 포기하고 싶어질 때, 그 감각이 삶의 다른 영역으로도 번지나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "한 가지가 무너지면 다른 것들도 다 의미 없게 느껴진다",
-                    "nextNodeId": "",
-                    "resultId": "R_23"
-                },
-                {
-                    "text": "그 영역에서만 무너지고 다른 부분은 유지하려 애쓴다",
-                    "nextNodeId": "",
-                    "resultId": "R_24"
-                }
-            ]
-        },
-        "Q_4M": {
-            "id": "Q_4M",
-            "category": "완벽주의",
-            "text": "부정적인 감정을 억누를 때, 그 감정은 결국 어떤 방식으로 표출되나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "갑작스러운 감정 폭발이나 신체 증상으로 나타난다",
-                    "nextNodeId": "",
-                    "resultId": "R_25"
-                },
-                {
-                    "text": "표출되지 않고 내면에서 무감각해지거나 공허해진다",
-                    "nextNodeId": "",
-                    "resultId": "R_26"
-                }
-            ]
-        },
-        "Q_4N": {
-            "id": "Q_4N",
-            "category": "완벽주의",
-            "text": "결정을 내리지 못할 때, 그 상태가 일상에 어떤 영향을 주나요?",
-            "isRoot": false,
-            "branches": [
-                {
-                    "text": "작은 선택도 오래 고민하느라 에너지가 많이 소진된다",
-                    "nextNodeId": "",
-                    "resultId": "R_27"
-                },
-                {
-                    "text": "결국 타인에게 결정을 맡기거나 아무것도 선택하지 않는다",
-                    "nextNodeId": "",
-                    "resultId": "R_28"
-                }
-            ]
+        {
+          "text": "여러 문제가 겹쳐 아직 구분하기 어려워요",
+          "resultId": "R_UNCLEAR"
         }
+      ]
     },
-    "solutions": {
-        "R_01": {
-            "title": "매일의 시작 공포 처방",
-            "diagnosis": "실패 공포로 인해 매일 시작 자체가 마비된 상태다.",
-            "cbt_analysis": "파국화 오류로 실패를 자기 붕괴와 동일시하고 있다.",
-            "short_term_action": "오늘 단 5분만 시작하는 '최소 행동 실험'을 실행하라.",
-            "mid_term_action": "실패 일지를 써서 실패 후에도 삶이 지속됨을 확인하라."
+    "Q_CONTEXT_1": {
+      "text": "어느 단계에서 시간이 길어지나요?",
+      "options": [
+        {
+          "text": "준비가 충분하지 않은 것 같아 시작하지 못해요",
+          "resultId": "R_01"
         },
-        "R_02": {
-            "title": "상황별 공포 패턴 처방",
-            "diagnosis": "특정 상황에서 실패 공포가 집중적으로 폭발하는 상태다.",
-            "cbt_analysis": "선택적 추상화로 특정 맥락을 과도하게 위협으로 해석한다.",
-            "short_term_action": "공포가 올라오는 상황을 목록으로 기록하고 패턴을 파악하라.",
-            "mid_term_action": "해당 상황에 단계적으로 노출하는 체계적 둔감화를 연습하라."
+        {
+          "text": "완성한 것도 계속 확인하고 수정해요",
+          "resultId": "R_02"
         },
-        "R_03": {
-            "title": "가족 시선 공포 처방",
-            "diagnosis": "가족 등 가까운 사람의 시선에 극도로 취약한 상태다.",
-            "cbt_analysis": "독심술 오류로 가족이 실망할 것이라 단정 짓고 있다.",
-            "short_term_action": "가족의 실제 반응을 확인하는 소규모 대화 실험을 해보라.",
-            "mid_term_action": "가족 기대와 나의 기대를 분리하는 경계 설정 훈련을 하라."
-        },
-        "R_04": {
-            "title": "사회적 평판 불안 처방",
-            "diagnosis": "직장·사회적 평판 손상에 대한 과도한 불안이 있는 상태다.",
-            "cbt_analysis": "과잉 일반화로 한 번의 실수가 평판 전체를 망친다고 믿는다.",
-            "short_term_action": "실제로 평판이 손상된 증거가 있는지 객관적으로 점검하라.",
-            "mid_term_action": "자기 가치를 평판이 아닌 내적 기준에 두는 연습을 하라."
-        },
-        "R_05": {
-            "title": "내면 자책 목소리 처방",
-            "diagnosis": "오래된 내면의 자책 목소리가 자아의 일부가 된 상태다.",
-            "cbt_analysis": "내면화된 비판자가 자동적 부정 사고로 고착화되어 있다.",
-            "short_term_action": "자책 목소리를 외부인의 말처럼 적고 반박문을 써보라.",
-            "mid_term_action": "자기 자비 명상으로 내면 비판자를 지지자로 전환하라."
-        },
-        "R_06": {
-            "title": "심화 자책 조기 개입 처방",
-            "diagnosis": "최근 자책이 급격히 심해져 낯설고 불안한 상태다.",
-            "cbt_analysis": "최근 스트레스가 인지 왜곡을 강화해 자책 루프를 만들었다.",
-            "short_term_action": "자책이 시작되는 순간 '멈춤' 신호어를 정해 즉시 사용하라.",
-            "mid_term_action": "자책 촉발 상황을 분석하고 스트레스 원인을 구조적으로 줄여라."
-        },
-        "R_07": {
-            "title": "지속성 무기력 처방",
-            "diagnosis": "회의감과 무기력이 며칠씩 지속되며 일상을 잠식하는 상태다.",
-            "cbt_analysis": "흑백논리로 완벽하지 않으면 전부 무의미하다고 판단한다.",
-            "short_term_action": "무기력한 날에도 한 가지 소소한 성취를 기록하라.",
-            "mid_term_action": "행동 활성화 기법으로 작은 즐거운 활동을 일정에 배치하라."
-        },
-        "R_08": {
-            "title": "억지 회복 패턴 처방",
-            "diagnosis": "무기력을 억지로 털어내며 감정을 억압하는 상태다.",
-            "cbt_analysis": "감정 억압이 장기적으로 번아웃과 신체화를 유발할 수 있다.",
-            "short_term_action": "무기력 감정을 3분간 그대로 허용하고 관찰하는 연습을 하라.",
-            "mid_term_action": "감정 일기를 통해 억압된 감정의 패턴을 인식하고 해소하라."
-        },
-        "R_09": {
-            "title": "도전 압박 악순환 처방",
-            "diagnosis": "새 도전을 앞두고 설렘보다 압박감이 먼저 오는 상태다.",
-            "cbt_analysis": "당위적 사고로 반드시 더 잘해야 한다는 강박이 작동한다.",
-            "short_term_action": "도전 전 '잘 못해도 괜찮다'는 허용 문장을 3번 소리 내어 말하라.",
-            "mid_term_action": "과정 중심 목표를 설정해 결과 집착에서 벗어나는 훈련을 하라."
-        },
-        "R_10": {
-            "title": "에너지 고갈 예방 처방",
-            "diagnosis": "도전에서 에너지를 얻지만 지속적 소진 위험이 있는 상태다.",
-            "cbt_analysis": "성취 중독 패턴이 회복 없는 과부하로 이어질 수 있다.",
-            "short_term_action": "이번 주 의도적 휴식 시간을 일정에 먼저 블록으로 잡아라.",
-            "mid_term_action": "에너지 충전 활동과 소진 활동의 균형 비율을 주간 단위로 관리하라."
-        },
-        "R_11": {
-            "title": "외부 의존 동기 처방",
-            "diagnosis": "외부 압박 없이는 스스로 시작하지 못하는 상태다.",
-            "cbt_analysis": "내적 동기가 약화되고 외부 통제에 의존하는 패턴이 고착됐다.",
-            "short_term_action": "스스로 작은 마감을 만들고 달성 시 보상을 설계하라.",
-            "mid_term_action": "자기 결정 이론 기반으로 내적 가치와 연결된 목표를 재설정하라."
-        },
-        "R_12": {
-            "title": "동기 고갈 위기 처방",
-            "diagnosis": "스스로 동기를 찾으려 하지만 점점 더 힘들어지는 상태다.",
-            "cbt_analysis": "반복된 실망이 학습된 무기력으로 굳어지고 있는 상태다.",
-            "short_term_action": "과거에 즐거웠던 활동 목록을 작성하고 하나를 오늘 실행하라.",
-            "mid_term_action": "전문 상담을 통해 동기 고갈의 근본 원인을 탐색하고 재건하라."
-        },
-        "R_13": {
-            "title": "거절 불안 과부하 처방",
-            "diagnosis": "거절 불안이 커서 무리한 요구도 수용하며 소진되는 상태다.",
-            "cbt_analysis": "거절이 관계 파괴를 초래한다는 파국화 오류가 작동한다.",
-            "short_term_action": "오늘 작은 요청 하나에 '지금은 어렵다'고 말하는 연습을 하라.",
-            "mid_term_action": "거절 후 관계가 유지된 경험을 기록해 파국화 오류를 수정하라."
-        },
-        "R_14": {
-            "title": "자기 소진 돌봄 처방",
-            "diagnosis": "타인을 돌보며 안도하지만 자신은 지속적으로 소진되는 상태다.",
-            "cbt_analysis": "자기 희생을 미덕으로 내면화해 자기 돌봄을 죄책감으로 느낀다.",
-            "short_term_action": "오늘 자신만을 위한 15분을 확보하고 그 시간을 지켜라.",
-            "mid_term_action": "자기 돌봄이 타인 돌봄의 전제임을 인식하는 가치 재정립을 하라."
-        },
-        "R_15": {
-            "title": "친밀감 노출 공포 처방",
-            "diagnosis": "가까워질수록 부족한 모습이 드러날까 봐 관계를 회피하는 상태다.",
-            "cbt_analysis": "자기 결함 과대평가로 타인이 진짜 나를 보면 떠날 것이라 믿는다.",
-            "short_term_action": "신뢰하는 한 사람에게 작은 약점 하나를 솔직하게 나눠보라.",
-            "mid_term_action": "취약성 노출 실험을 통해 관계가 오히려 깊어짐을 경험하라."
-        },
-        "R_16": {
-            "title": "기대 충족 회피 처방",
-            "diagnosis": "상대 기대를 못 채울까 봐 미리 거리를 두는 상태다.",
-            "cbt_analysis": "독심술 오류로 상대의 기대를 실제보다 높게 추정하고 있다.",
-            "short_term_action": "상대가 실제로 원하는 것을 직접 물어보는 대화를 시도하라.",
-            "mid_term_action": "관계에서 기대를 명확히 소통하는 표현 훈련을 꾸준히 하라."
-        },
-        "R_17": {
-            "title": "가족 기준 탈피 처방",
-            "diagnosis": "가족 환경에서 형성된 기준에서 벗어나고 싶지만 방법을 모르는 상태다.",
-            "cbt_analysis": "내면화된 타인 기준을 자신의 것으로 착각하는 인지 융합이 있다.",
-            "short_term_action": "내가 진짜 원하는 것과 가족이 원하는 것을 두 칸으로 나눠 써라.",
-            "mid_term_action": "상담을 통해 원가족 기준을 탐색하고 자신만의 기준을 재정립하라."
-        },
-        "R_18": {
-            "title": "기준 무게 균형 처방",
-            "diagnosis": "가족 기준이 지탱이 되기도 하지만 동시에 너무 무거운 상태다.",
-            "cbt_analysis": "양가적 인지로 기준을 버리면 자신이 무너진다는 두려움이 있다.",
-            "short_term_action": "기준 중 나에게 도움이 되는 것과 해로운 것을 분류해 보라.",
-            "mid_term_action": "도움이 되는 기준만 선택적으로 유지하는 자기화 작업을 하라."
-        },
-        "R_19": {
-            "title": "성장 강박 균형 처방",
-            "diagnosis": "스스로 만든 기준이 성장 동력이자 가장 큰 고통의 원천인 상태다.",
-            "cbt_analysis": "자기 부과 완벽주의가 성취와 소진을 동시에 만들어내고 있다.",
-            "short_term_action": "오늘 기준의 80%만 달성해도 성공으로 인정하는 실험을 하라.",
-            "mid_term_action": "성장 기준을 결과가 아닌 과정과 노력으로 재정의하는 훈련을 하라."
-        },
-        "R_20": {
-            "title": "나태 공포 기준 처방",
-            "diagnosis": "기준을 낮추면 나태해질 것 같아 놓지 못하는 상태다.",
-            "cbt_analysis": "흑백논리로 완벽 아니면 나태라는 이분법적 사고가 작동한다.",
-            "short_term_action": "기준을 10% 낮춘 날의 실제 결과를 기록해 나태 여부를 확인하라.",
-            "mid_term_action": "유연한 기준이 지속 가능한 성과를 만든다는 증거를 축적하라."
-        },
-        "R_21": {
-            "title": "자기 혐오 자학 처방",
-            "diagnosis": "자기혐오를 혼자 삭이거나 더 강한 자기 채찍질로 대응하는 상태다.",
-            "cbt_analysis": "자기 처벌이 동기를 높인다는 역기능적 믿음이 고착되어 있다.",
-            "short_term_action": "자책 대신 친한 친구에게 하듯 자신에게 위로 문장을 써보라.",
-            "mid_term_action": "자기 자비 훈련을 통해 자기 처벌 없이도 성장할 수 있음을 학습하라."
-        },
-        "R_22": {
-            "title": "감정 해소 막막함 처방",
-            "diagnosis": "자기혐오 감정을 표현하거나 해소할 방법을 찾지 못해 막막한 상태다.",
-            "cbt_analysis": "감정 표현 억제가 내면 압력을 높여 심리적 위기를 키우고 있다.",
-            "short_term_action": "감정을 글로 쓰는 표현적 글쓰기를 오늘 10분간 시도하라.",
-            "mid_term_action": "신뢰할 수 있는 상담사와 함께 감정 해소 경로를 체계적으로 만들어라."
-        },
-        "R_23": {
-            "title": "전면 붕괴 방지 처방",
-            "diagnosis": "한 가지가 무너지면 모든 것이 무의미해지는 전면 붕괴 패턴이 있다.",
-            "cbt_analysis": "과잉 일반화로 한 영역의 실패를 전체 삶의 실패로 확장한다.",
-            "short_term_action": "지금 잘 유지되고 있는 삶의 영역 3가지를 즉시 목록으로 써라.",
-            "mid_term_action": "삶의 영역을 분리해서 평가하는 구획화 훈련을 꾸준히 연습하라."
-        },
-        "R_24": {
-            "title": "부분 붕괴 소진 처방",
-            "diagnosis": "한 영역이 무너져도 다른 부분을 억지로 유지하려 소진되는 상태다.",
-            "cbt_analysis": "통제 강박으로 무너진 영역을 인정하지 않고 과잉 보상한다.",
-            "short_term_action": "무너진 영역을 일시적으로 내려놓는 것을 허락하는 선언을 하라.",
-            "mid_term_action": "회복 우선순위를 정해 에너지를 전략적으로 배분하는 계획을 세워라."
-        },
-        "R_25": {
-            "title": "감정 폭발 신체화 처방",
-            "diagnosis": "억눌린 감정이 갑작스러운 폭발이나 신체 증상으로 표출되는 상태다.",
-            "cbt_analysis": "감정 억압이 임계점을 넘어 비자발적 방출로 이어지고 있다.",
-            "short_term_action": "감정이 올라올 때 4-7-8 호흡법으로 즉각 신체 반응을 조절하라.",
-            "mid_term_action": "감정을 일상적으로 소량씩 표현하는 습관을 만들어 폭발을 예방하라."
-        },
-        "R_26": {
-            "title": "감정 무감각 공허 처방",
-            "diagnosis": "감정이 표출되지 않고 내면에서 무감각해지거나 공허해진 상태다.",
-            "cbt_analysis": "만성적 감정 억압이 정서 마비와 자아 분리를 초래하고 있다.",
-            "short_term_action": "오늘 느낀 감정을 단어 하나로만 표현하는 감정 명명 연습을 하라.",
-            "mid_term_action": "신체 감각 기반 마음챙김으로 감정과의 연결을 점진적으로 회복하라."
-        },
-        "R_27": {
-            "title": "결정 장애 에너지 소진 처방",
-            "diagnosis": "작은 선택도 오래 고민하며 에너지가 과도하게 소진되는 상태다.",
-            "cbt_analysis": "완벽한 선택을 해야 한다는 당위적 사고가 결정 마비를 만든다.",
-            "short_term_action": "일상 소결정은 2분 규칙을 적용해 즉시 선택하고 넘어가라.",
-            "mid_term_action": "결정의 가역성을 인식하고 틀린 선택도 수정 가능함을 학습하라."
-        },
-        "R_28": {
-            "title": "결정 회피 의존 처방",
-            "diagnosis": "결정을 타인에게 맡기거나 아무것도 선택하지 않는 회피 패턴이 있다.",
-            "cbt_analysis": "자기 판단 불신이 결정 책임을 외부로 전가하게 만들고 있다.",
-            "short_term_action": "오늘 사소한 결정 하나를 타인 의견 없이 스스로 내리고 기록하라.",
-            "mid_term_action": "자기 결정 경험을 축적해 자기 판단에 대한 신뢰를 점진적으로 회복하라."
+        {
+          "text": "둘 다 맞지 않거나 아직 잘 모르겠어요",
+          "resultId": "R_UNCLEAR"
         }
+      ]
     },
-    "matchings": {
-        "R_01": {
-            "primaryRecommendation": {
-                "service": "트로스트 1:1 CBT 상담",
-                "description": "시작 마비 극복 인지 재구조화"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "마이다스 마음챙김 앱",
-                    "description": "5분 최소 행동 루틴 형성"
-                }
-            ]
+    "Q_CONTEXT_2": {
+      "text": "어떤 평가가 가장 부담인가요?",
+      "options": [
+        {
+          "text": "작은 실수도 남들이 크게 실망할 것 같아요",
+          "resultId": "R_03"
         },
-        "R_02": {
-            "primaryRecommendation": {
-                "service": "트로스트 노출치료 전문 상담",
-                "description": "상황별 공포 패턴 체계적 둔감화"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "마음이음 불안 코칭",
-                    "description": "공포 상황 목록화 및 단계 노출"
-                }
-            ]
+        {
+          "text": "기대에 못 미치면 제 가치까지 떨어지는 느낌이에요",
+          "resultId": "R_04"
         },
-        "R_03": {
-            "primaryRecommendation": {
-                "service": "가족상담연구소 1:1 상담",
-                "description": "가족 시선 불안 경계 설정 훈련"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "트로스트 인지치료 상담",
-                    "description": "독심술 오류 수정 대화 실험"
-                }
-            ]
-        },
-        "R_04": {
-            "primaryRecommendation": {
-                "service": "마음사랑 인지행동치료 센터",
-                "description": "평판 불안 내적 기준 재정립"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "직장인 심리지원 EAP 프로그램",
-                    "description": "직장 내 평판 불안 객관적 점검"
-                }
-            ]
-        },
-        "R_05": {
-            "primaryRecommendation": {
-                "service": "트로스트 자기자비 전문 상담",
-                "description": "내면 비판자를 지지자로 전환"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "마음챙김 기반 자기자비(MSC) 워크숍",
-                    "description": "자책 목소리 반박 훈련 실습"
-                }
-            ]
-        },
-        "R_06": {
-            "primaryRecommendation": {
-                "service": "정신건강의학과 외래 진료",
-                "description": "급격한 자책 심화 조기 개입"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "트로스트 긴급 심리 상담",
-                    "description": "자책 루프 즉각 차단 코칭"
-                }
-            ]
-        },
-        "R_07": {
-            "primaryRecommendation": {
-                "service": "트로스트 행동활성화 CBT 상담",
-                "description": "무기력 지속 패턴 행동 활성화"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "마음챙김 명상 앱 (코끼리)",
-                    "description": "소소한 성취 기록 루틴 형성"
-                }
-            ]
-        },
-        "R_08": {
-            "primaryRecommendation": {
-                "service": "마음사랑 감정조절 전문 상담",
-                "description": "감정 억압 해소 번아웃 예방"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "감정일기 앱 (Daylio)",
-                    "description": "억압 감정 패턴 인식 및 해소"
-                }
-            ]
-        },
-        "R_09": {
-            "primaryRecommendation": {
-                "service": "트로스트 스트레스 코칭 상담",
-                "description": "도전 압박 당위적 사고 완화"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "과정중심 목표 설정 코칭 (클래스101)",
-                    "description": "결과 집착 탈피 과정 목표 훈련"
-                }
-            ]
-        },
-        "R_10": {
-            "primaryRecommendation": {
-                "service": "번아웃 예방 코칭 (코치닷컴)",
-                "description": "성취 소진 균형 에너지 관리"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "정신건강의학과 외래 진료",
-                    "description": "성취 중독 과부하 의학적 점검"
-                }
-            ]
-        },
-        "R_11": {
-            "primaryRecommendation": {
-                "service": "자기계발 코칭 (PCCK 코칭센터)",
-                "description": "내적 동기 재건 자기결정 훈련"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "포레스트 집중력 앱",
-                    "description": "자체 마감 설계 보상 루틴 형성"
-                }
-            ]
-        },
-        "R_12": {
-            "primaryRecommendation": {
-                "service": "트로스트 1:1 심층 심리 상담",
-                "description": "학습된 무기력 근본 원인 탐색"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "정신건강의학과 외래 진료",
-                    "description": "동기 고갈 우울 여부 의학적 평가"
-                }
-            ]
-        },
-        "R_13": {
-            "primaryRecommendation": {
-                "service": "트로스트 경계설정 CBT 상담",
-                "description": "거절 불안 파국화 오류 수정"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "자기주장 훈련 그룹 워크숍",
-                    "description": "거절 표현 단계적 실습 훈련"
-                }
-            ]
-        },
-        "R_14": {
-            "primaryRecommendation": {
-                "service": "마음사랑 자기돌봄 전문 상담",
-                "description": "자기희생 패턴 자기돌봄 재정립"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "마음챙김 기반 스트레스 감소(MBSR) 프로그램",
-                    "description": "자기 돌봄 15분 루틴 정착"
-                }
-            ]
-        },
-        "R_15": {
-            "primaryRecommendation": {
-                "service": "트로스트 애착 전문 상담",
-                "description": "친밀감 회피 취약성 노출 훈련"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "대인관계치료(IPT) 전문 센터",
-                    "description": "관계 깊이 형성 단계적 실험"
-                }
-            ]
-        },
-        "R_16": {
-            "primaryRecommendation": {
-                "service": "커플 및 대인관계 코칭 (코치닷컴)",
-                "description": "기대 소통 표현 훈련 관계 개선"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "트로스트 인지치료 상담",
-                    "description": "독심술 오류 수정 직접 확인 훈련"
-                }
-            ]
-        },
-        "R_17": {
-            "primaryRecommendation": {
-                "service": "트로스트 원가족 탐색 심층 상담",
-                "description": "가족 기준 분리 자기 기준 재정립"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "가족상담연구소 개인 상담",
-                    "description": "인지 융합 해소 자기화 작업"
-                }
-            ]
-        },
-        "R_18": {
-            "primaryRecommendation": {
-                "service": "마음사랑 심리상담 센터",
-                "description": "양가적 기준 선택적 자기화 훈련"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "트로스트 CBT 상담",
-                    "description": "도움·해로운 기준 분류 실습"
-                }
-            ]
-        },
-        "R_19": {
-            "primaryRecommendation": {
-                "service": "번아웃 전문 코칭 (PCCK)",
-                "description": "자기부과 완벽주의 과정 재정의"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "트로스트 인지행동 상담",
-                    "description": "80% 성공 기준 실험 훈련"
-                }
-            ]
-        },
-        "R_20": {
-            "primaryRecommendation": {
-                "service": "트로스트 CBT 전문 상담",
-                "description": "흑백논리 유연한 기준 재설정"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "자기계발 코칭 (클래스101)",
-                    "description": "유연 기준 지속 성과 증거 축적"
-                }
-            ]
-        },
-        "R_21": {
-            "primaryRecommendation": {
-                "service": "트로스트 자기자비 CBT 상담",
-                "description": "자기처벌 믿음 해체 자비 훈련"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "MSC 자기자비 8주 프로그램",
-                    "description": "자책 없는 성장 동기 학습"
-                }
-            ]
-        },
-        "R_22": {
-            "primaryRecommendation": {
-                "service": "정신건강의학과 외래 진료",
-                "description": "감정 억제 심리적 위기 전문 개입"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "트로스트 감정표현 전문 상담",
-                    "description": "표현적 글쓰기 감정 해소 경로 구축"
-                }
-            ]
-        },
-        "R_23": {
-            "primaryRecommendation": {
-                "service": "트로스트 인지재구조화 상담",
-                "description": "전면 붕괴 과잉일반화 구획화 훈련"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "마음챙김 명상 앱 (코끼리)",
-                    "description": "유지 영역 인식 안정감 회복"
-                }
-            ]
-        },
-        "R_24": {
-            "primaryRecommendation": {
-                "service": "마음사랑 번아웃 전문 상담",
-                "description": "통제 강박 회복 우선순위 재배분"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "번아웃 코칭 (코치닷컴)",
-                    "description": "에너지 전략 배분 계획 수립"
-                }
-            ]
-        },
-        "R_25": {
-            "primaryRecommendation": {
-                "service": "정신건강의학과 외래 진료",
-                "description": "감정 폭발 신체화 의학적 평가 치료"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "트로스트 감정조절 CBT 상담",
-                    "description": "4-7-8 호흡 감정 표현 습관화"
-                }
-            ]
-        },
-        "R_26": {
-            "primaryRecommendation": {
-                "service": "트로스트 정서마비 전문 상담",
-                "description": "감정 무감각 정서 연결 점진 회복"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "MBSR 마음챙김 기반 프로그램",
-                    "description": "신체 감각 기반 감정 명명 훈련"
-                }
-            ]
-        },
-        "R_27": {
-            "primaryRecommendation": {
-                "service": "트로스트 결정장애 CBT 상담",
-                "description": "완벽 선택 강박 결정 마비 해소"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "생산성 코칭 앱 (Notion 템플릿)",
-                    "description": "2분 규칙 즉시 결정 루틴 형성"
-                }
-            ]
-        },
-        "R_28": {
-            "primaryRecommendation": {
-                "service": "트로스트 자기신뢰 회복 상담",
-                "description": "자기판단 불신 결정 자율성 회복"
-            },
-            "supplementaryRecommendations": [
-                {
-                    "service": "자기결정 코칭 (PCCK 코칭센터)",
-                    "description": "자기 결정 경험 축적 신뢰 재건"
-                }
-            ]
+        {
+          "text": "둘 다 맞지 않거나 아직 잘 모르겠어요",
+          "resultId": "R_UNCLEAR"
         }
+      ]
+    },
+    "Q_CONTEXT_3": {
+      "text": "부담을 덜기 어렵게 만드는 것은 무엇인가요?",
+      "options": [
+        {
+          "text": "일이 남아 있으면 쉬는 것이 불편해요",
+          "resultId": "R_05"
+        },
+        {
+          "text": "다른 사람에게 맡기면 제대로 안 될까 봐 제가 다 해요",
+          "resultId": "R_06"
+        },
+        {
+          "text": "둘 다 맞지 않거나 아직 잘 모르겠어요",
+          "resultId": "R_UNCLEAR"
+        }
+      ]
+    },
+    "Q_CONTEXT_4": {
+      "text": "완료 이후 어떤 일이 반복되나요?",
+      "options": [
+        {
+          "text": "목표를 이루면 바로 더 높은 목표가 생겨요",
+          "resultId": "R_07"
+        },
+        {
+          "text": "제 기준을 못 맞추는 가족이나 동료에게 예민해져요",
+          "resultId": "R_08"
+        },
+        {
+          "text": "둘 다 맞지 않거나 아직 잘 모르겠어요",
+          "resultId": "R_UNCLEAR"
+        }
+      ]
     }
+  },
+  "solutions": {
+    "R_01": {
+      "title": "준비 완료 기준을 작게 정하기",
+      "diagnosis": "현재 선택하신 상황은 ‘준비가 충분하지 않은 것 같아 시작하지 못해요’입니다. 아래 계획은 이 응답에 맞춘 출발점이며, 확인하지 않은 성격이나 원인을 단정하지 않습니다.",
+      "cbt_analysis": "더 준비하는 것이 도움이 되는지, 불확실함을 견디기 어려워 준비가 늘어나는지 구분해 볼 수 있습니다.",
+      "short_term_action": "시작에 꼭 필요한 자료 세 개를 정하고 그 자료가 모이면 거친 초안을 만드세요. 아직 모르는 항목은 표시해 두고 모든 답을 찾은 뒤 시작하려 하지 마세요.",
+      "mid_term_action": "초안에서 실제로 부족했던 정보만 추가하세요. 준비 시간이 계속 늘면 확인할 질문과 종료 시점을 함께 정해 보세요."
+    },
+    "R_02": {
+      "title": "중요한 오류와 취향 수정을 분리하기",
+      "diagnosis": "현재 선택하신 상황은 ‘완성한 것도 계속 확인하고 수정해요’입니다. 아래 계획은 이 응답에 맞춘 출발점이며, 확인하지 않은 성격이나 원인을 단정하지 않습니다.",
+      "cbt_analysis": "검토가 필요한 일도 있지만 모든 수정의 중요도가 같지는 않습니다. 반복 횟수보다 오류의 영향을 기준으로 삼아 보세요.",
+      "short_term_action": "필수 점검표를 만들고 수치·사실·누락 등 중요한 항목을 먼저 확인하세요. 취향에 따른 표현 수정은 별도 목록에 두고 검토 시간을 정해 마칩니다.",
+      "mid_term_action": "실제 피드백을 다음 점검표에 반영하세요. 안전에 중요한 확인을 생략하는 연습은 하지 말고, 영향이 작은 수정부터 범위를 제한하세요."
+    },
+    "R_03": {
+      "title": "예상한 평가와 확인된 반응 나누기",
+      "diagnosis": "현재 선택하신 상황은 ‘작은 실수도 남들이 크게 실망할 것 같아요’입니다. 아래 계획은 이 응답에 맞춘 출발점이며, 확인하지 않은 성격이나 원인을 단정하지 않습니다.",
+      "cbt_analysis": "실수를 걱정하는 마음이 곧 실제 평가를 뜻하지는 않습니다. 다만 잘못된 부분이 있다면 구체적인 수정은 필요합니다.",
+      "short_term_action": "최근 실수 하나에서 확인된 영향과 예상만 한 반응을 두 칸으로 적으세요. 필요한 수정·사과를 하고, 평가를 알아야 한다면 상대에게 구체적으로 물어보세요.",
+      "mid_term_action": "상대의 실제 반응을 기록해 예측과 비교하세요. 불안 때문에 반복 사과나 확인이 늘면 한 번의 후속 점검으로 범위를 정해 보세요."
+    },
+    "R_04": {
+      "title": "한 번의 성과로 사람 전체를 평가하지 않기",
+      "diagnosis": "현재 선택하신 상황은 ‘기대에 못 미치면 제 가치까지 떨어지는 느낌이에요’입니다. 아래 계획은 이 응답에 맞춘 출발점이며, 확인하지 않은 성격이나 원인을 단정하지 않습니다.",
+      "cbt_analysis": "성과는 특정 상황의 결과입니다. 이번 결과를 아쉬워하는 것과 본인의 가치 전체를 낮게 판단하는 것은 분리할 수 있습니다.",
+      "short_term_action": "결과에 영향을 준 준비·환경·도움·우연을 나눠 적으세요. 다음에 바꿀 수 있는 행동 하나를 정하고, 일과 무관하게 유지하고 싶은 관계나 활동도 한 가지 적으세요.",
+      "mid_term_action": "실패 이후 자기비난이 수면이나 생활을 계속 해치면 상담에서 성과와 자기평가의 관계를 다뤄 보세요. 긍정적으로 생각하라는 말보다 구체적인 장면에서 연습하는 것이 좋습니다."
+    },
+    "R_05": {
+      "title": "끝없는 목록과 오늘의 종료 시점 분리하기",
+      "diagnosis": "현재 선택하신 상황은 ‘일이 남아 있으면 쉬는 것이 불편해요’입니다. 아래 계획은 이 응답에 맞춘 출발점이며, 확인하지 않은 성격이나 원인을 단정하지 않습니다.",
+      "cbt_analysis": "해야 할 일이 모두 없어져야 쉰다는 기준은 현실에서 충족되기 어려울 수 있습니다. 필요한 회복도 일정에 포함해야 합니다.",
+      "short_term_action": "오늘 반드시 끝낼 일과 내일로 넘길 일을 구분하고 종료 시각을 정하세요. 남은 일의 다음 행동만 메모한 뒤 휴식 시간에는 작업 목록을 닫으세요.",
+      "mid_term_action": "계획한 휴식을 지켰을 때 실제 문제가 생겼는지 확인하세요. 업무량 자체가 과하면 개인의 휴식 습관뿐 아니라 담당자와 요구량을 조정해야 합니다."
+    },
+    "R_06": {
+      "title": "위임할 범위와 확인 시점 합의하기",
+      "diagnosis": "현재 선택하신 상황은 ‘다른 사람에게 맡기면 제대로 안 될까 봐 제가 다 해요’입니다. 아래 계획은 이 응답에 맞춘 출발점이며, 확인하지 않은 성격이나 원인을 단정하지 않습니다.",
+      "cbt_analysis": "믿음의 문제뿐 아니라 업무 기준이나 역할이 모호해서 직접 맡게 될 수도 있습니다. 책임 범위를 명확히 하는 것이 먼저입니다.",
+      "short_term_action": "영향이 비교적 작은 작업 하나를 골라 결과물·기한·필수 기준을 전달하세요. 매 단계에 개입하기보다 중간 확인 시점을 합의하세요.",
+      "mid_term_action": "결과가 다르면 방식의 차이와 실제 오류를 나누세요. 필요한 피드백을 구체적으로 주고, 역량이나 자원이 부족하면 그 조건을 조정하세요."
+    },
+    "R_07": {
+      "title": "완료한 일의 의미를 남긴 뒤 다음 목표 정하기",
+      "diagnosis": "현재 선택하신 상황은 ‘목표를 이루면 바로 더 높은 목표가 생겨요’입니다. 아래 계획은 이 응답에 맞춘 출발점이며, 확인하지 않은 성격이나 원인을 단정하지 않습니다.",
+      "cbt_analysis": "목표를 높이는 것이 나쁜 것은 아니지만 완료를 인정할 시간이 없으면 부담만 계속 커질 수 있습니다.",
+      "short_term_action": "처음 정한 기준과 실제 달성한 일을 비교해 완료 기록을 남기세요. 다음 목표는 오늘 바로 확정하지 않고 그 목표에 필요한 시간과 포기할 일을 함께 적으세요.",
+      "mid_term_action": "성과가 삶에 실제로 어떤 이익을 줬는지 돌아보세요. 필요보다 비교나 불안 때문에 목표를 높인다면 유지·축소도 선택지로 두세요."
+    },
+    "R_08": {
+      "title": "공동 기준과 개인 취향을 구분하기",
+      "diagnosis": "현재 선택하신 상황은 ‘제 기준을 못 맞추는 가족이나 동료에게 예민해져요’입니다. 아래 계획은 이 응답에 맞춘 출발점이며, 확인하지 않은 성격이나 원인을 단정하지 않습니다.",
+      "cbt_analysis": "나에게 중요한 방식이 모두에게 필수 기준인 것은 아닙니다. 반대로 안전·책임에 관한 요구는 분명히 합의할 필요가 있습니다.",
+      "short_term_action": "최근 갈등 하나에서 반드시 지켜야 할 기준과 나의 선호를 나누세요. 상대에게 결과 기준을 설명하고 방법에는 어느 정도 선택권을 줄 수 있는지 협의하세요.",
+      "mid_term_action": "합의 후 달라진 행동을 확인하세요. 이미 상처 주는 말을 했다면 기준 설명과 별도로 구체적으로 사과하고 다음 대화 방식을 정하세요."
+    },
+    "R_UNCLEAR": {
+      "title": "분류를 서두르지 않고 최근 장면부터 정리하기",
+      "diagnosis": "제시된 선택지로 현재 상황을 충분히 설명하기 어렵다고 선택하셨습니다. 억지로 한 유형에 맞출 필요는 없습니다.",
+      "cbt_analysis": "확인된 사실과 추측, 생활에 생긴 영향을 분리하면 다음에 물어볼 질문이 구체적이 됩니다. 이 결과는 특정 심리 원인을 뜻하지 않습니다.",
+      "short_term_action": "최근 힘들었던 장면 하나의 날짜·상황·실제 일어난 일을 적으세요. 가장 불편했던 점과 원하는 변화 하나를 따로 적고, 지금 필요한 것이 정보·실행 도움·정서적 지지 중 무엇인지 생각해 보세요.",
+      "mid_term_action": "다음에 비슷한 일이 생기면 같은 조건이 반복되는지 비교하세요. 혼자 정리가 어렵거나 생활에 지장이 크면 메모를 가지고 관련 지원기관에 초기 상담을 요청하세요."
+    }
+  },
+  "matchings": {
+    "R_01": {
+      "primaryRecommendation": {
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "이 경로에서는 준비 완료 기준을 작게 정하기에 필요한 정보나 지원을 먼저 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
+      },
+      "supplementaryRecommendations": []
+    },
+    "R_02": {
+      "primaryRecommendation": {
+        "provider_id": "org_01",
+        "service": "고용24",
+        "description": "직업정보·취업지원 메뉴에서 필요한 교육과 지원 조건을 확인하세요.",
+        "reason": "이 경로에서는 중요한 오류와 취향 수정을 분리하기에 필요한 정보나 지원을 먼저 확인합니다.",
+        "url": "https://www.work24.go.kr/cm/main.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
+      },
+      "supplementaryRecommendations": []
+    },
+    "R_03": {
+      "primaryRecommendation": {
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "이 경로에서는 예상한 평가와 확인된 반응 나누기에 필요한 정보나 지원을 먼저 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
+      },
+      "supplementaryRecommendations": []
+    },
+    "R_04": {
+      "primaryRecommendation": {
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "이 경로에서는 한 번의 성과로 사람 전체를 평가하지 않기에 필요한 정보나 지원을 먼저 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
+      },
+      "supplementaryRecommendations": []
+    },
+    "R_05": {
+      "primaryRecommendation": {
+        "provider_id": "org_01",
+        "service": "고용24",
+        "description": "직업정보·취업지원 메뉴에서 필요한 교육과 지원 조건을 확인하세요.",
+        "reason": "이 경로에서는 끝없는 목록과 오늘의 종료 시점 분리하기에 필요한 정보나 지원을 먼저 확인합니다.",
+        "url": "https://www.work24.go.kr/cm/main.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
+      },
+      "supplementaryRecommendations": []
+    },
+    "R_06": {
+      "primaryRecommendation": {
+        "provider_id": "org_01",
+        "service": "고용24",
+        "description": "직업정보·취업지원 메뉴에서 필요한 교육과 지원 조건을 확인하세요.",
+        "reason": "이 경로에서는 위임할 범위와 확인 시점 합의하기에 필요한 정보나 지원을 먼저 확인합니다.",
+        "url": "https://www.work24.go.kr/cm/main.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
+      },
+      "supplementaryRecommendations": []
+    },
+    "R_07": {
+      "primaryRecommendation": {
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "이 경로에서는 완료한 일의 의미를 남긴 뒤 다음 목표 정하기에 필요한 정보나 지원을 먼저 확인합니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
+      },
+      "supplementaryRecommendations": []
+    },
+    "R_08": {
+      "primaryRecommendation": {
+        "provider_id": "org_10",
+        "service": "가족센터",
+        "description": "지역센터별 상담·교육 프로그램과 이용 조건을 확인하세요. 제공 내용과 비용은 센터별로 확인해야 합니다.",
+        "reason": "이 경로에서는 공동 기준과 개인 취향을 구분하기에 필요한 정보나 지원을 먼저 확인합니다.",
+        "url": "https://www.familynet.or.kr/web/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
+      },
+      "supplementaryRecommendations": []
+    },
+    "R_UNCLEAR": {
+      "primaryRecommendation": {
+        "provider_id": "org_07",
+        "service": "국가정신건강정보포털",
+        "description": "정신건강관련기관 메뉴에서 지역 지원기관을 찾으세요. 실시간 상담이나 자동 예약 링크는 아닙니다.",
+        "reason": "상황을 구체적으로 정리할 정보나 초기 지원을 찾기 위한 선택지입니다.",
+        "url": "https://www.mentalhealth.go.kr/portal/main/index.do",
+        "relationship": "public_resource",
+        "verified_scope": "공식 홈페이지와 기관 역할 확인; 개별 프로그램 자격·비용·예약 가능 여부는 미확인",
+        "checked_on": "2026-10-18"
+      },
+      "supplementaryRecommendations": []
+    }
+  }
 }
